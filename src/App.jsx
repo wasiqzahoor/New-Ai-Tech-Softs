@@ -1,39 +1,40 @@
-import React, { useEffect, Suspense, lazy } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
-// Components (always needed on every page, so these stay eager)
+// Components
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
-import WhatsAppButton from './components/WhatsAppButton'; // Import check kar lena
+import WhatsAppButton from './components/WhatsAppButton';
+import Chatbot from './components/Chatbot';
+import AnimatedBackground from './components/AnimatedBackground';
+import LoadingScreen from './components/LoadingScreen';
 
-// Pages — lazy loaded so each route's JS is only downloaded when that
-// route is actually visited, instead of bundling all pages into the
-// initial page load (this is what was causing the "unused JavaScript"
-// warning in PageSpeed Insights).
-const Home = lazy(() => import('./pages/Home'));
-const About = lazy(() => import('./pages/About'));
-const Services = lazy(() => import('./pages/Services'));
-const Portfolio = lazy(() => import('./pages/Portfolio'));
-const ProjectDetail = lazy(() => import('./pages/ProjectDetail'));
-const ServiceDetail = lazy(() => import('./pages/ServiceDetail'));
-const Contact = lazy(() => import('./pages/Contact'));
-const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
-const Terms = lazy(() => import('./pages/Terms'));
-const Blog = lazy(() => import('./pages/Blog'));
-const BlogDetail = lazy(() => import('./pages/BlogDetail'));
-const ProductPage = lazy(() => import('./pages/Product'));
+// Background resource loader
+import { prefetchResource, BACKGROUND_RESOURCES } from './utils/resourcePreloader';
 
-// Lightweight fallback shown for the brief moment a route's JS chunk
-// is being fetched (only happens once per chunk, then it's cached).
-const PageLoader = () => (
-  <div className="flex items-center justify-center min-h-[100vh]">
-    <div className="w-10 h-10 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin" />
+// Lazy-loaded Pages
+const Home = React.lazy(() => import('./pages/Home'));
+const About = React.lazy(() => import('./pages/About'));
+const Services = React.lazy(() => import('./pages/Services'));
+const Portfolio = React.lazy(() => import('./pages/Portfolio'));
+const ProjectDetail = React.lazy(() => import('./pages/ProjectDetail'));
+const ServiceDetail = React.lazy(() => import('./pages/ServiceDetail'));
+const Contact = React.lazy(() => import('./pages/Contact'));
+const PrivacyPolicy = React.lazy(() => import('./pages/PrivacyPolicy'));
+const Terms = React.lazy(() => import('./pages/Terms'));
+const Blog = React.lazy(() => import('./pages/Blog'));
+const BlogDetail = React.lazy(() => import('./pages/BlogDetail'));
+const ProductPage = React.lazy(() => import('./pages/Product'));
+const ProductDetail = React.lazy(() => import('./pages/ProductDetail'));
+
+const LoadingFallback = () => (
+  <div className="flex items-center justify-center min-h-[60vh]">
+    <div className="w-10 h-10 border-2 border-brand-cyan/20 border-t-brand-cyan rounded-full animate-spin" />
   </div>
 );
 
-// --- Google Analytics Tracker ---
 const AnalyticsTracker = () => {
   const location = useLocation();
   useEffect(() => {
@@ -46,45 +47,99 @@ const AnalyticsTracker = () => {
   return null;
 };
 
+// Background loader - prefetches other page resources after Home loads
+const BackgroundResourceLoader = ({ enabled }) => {
+  useEffect(() => {
+    if (!enabled) return;
+
+    const timer = setTimeout(() => {
+      BACKGROUND_RESOURCES.pages.forEach((page) => {
+        prefetchResource(page, 'document');
+      });
+      BACKGROUND_RESOURCES.images.forEach((img) => {
+        prefetchResource(img, 'image');
+      });
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, [enabled]);
+
+  return null;
+};
+
 function App() {
+  const [loading, setLoading] = useState(true);
+  const [homeReady, setHomeReady] = useState(false);
+
+  // Prevent scroll during loading
+  useEffect(() => {
+    if (loading) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [loading]);
+
+  // Ensure scroll at top after preloader completes
+  useEffect(() => {
+    if (!loading) {
+      // Force scroll to top immediately
+      window.scrollTo(0, 0);
+
+      // Mark home as ready after brief mount delay
+      const timer = setTimeout(() => setHomeReady(true), 100);
+      return () => clearTimeout(timer);
+    }
+  }, [loading]);
+
   return (
     <HelmetProvider>
-    <Router>
-      <AnalyticsTracker />
-      <ScrollToTop />
-      
-      {/* Main Container */}
-      <div className="flex flex-col min-h-screen relative">
-        <Navbar />
+      <Router>
+        {/* Smart Preloader */}
+        {loading && (
+          <LoadingScreen
+            onComplete={() => setLoading(false)}
+            maxTimeout={4000}
+          />
+        )}
 
-        {/* Content Area - flex-grow ensure karega ke footer neeche rahe */}
-        <main className="flex-grow">
-          <Suspense fallback={<PageLoader />}>
-            <Routes>
-              <Route path="*" element={<Home />} />
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/portfolio" element={<Portfolio />} />
-              <Route path="/project/:slug" element={<ProjectDetail />} />
-              <Route path="/service/:slug" element={<ServiceDetail />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/privacy" element={<PrivacyPolicy/>} />
-              <Route path="/terms" element={<Terms/>} />
-              <Route path="/products" element={<ProductPage/>} />
+        <AnalyticsTracker />
+        <ScrollToTop />
+        <AnimatedBackground />
 
-              <Route path="/blog" element={<Blog/>} />
-              <Route path="/blog/:slug" element={<BlogDetail />} />
-            </Routes>
-          </Suspense>
-        </main>
+        <div className="flex flex-col min-h-screen relative z-10">
+          <Navbar />
 
-        <Footer />
-        
-        {/* WhatsApp Button ko yahan sab se end mein rakhein */}
-        <WhatsAppButton />
-      </div>
-    </Router>
+          <main className="flex-grow">
+            <Suspense fallback={<LoadingFallback />}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/portfolio" element={<Portfolio />} />
+                <Route path="/project/:slug" element={<ProjectDetail />} />
+                <Route path="/service/:slug" element={<ServiceDetail />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/privacy" element={<PrivacyPolicy />} />
+                <Route path="/terms" element={<Terms />} />
+                <Route path="/products" element={<ProductPage />} />
+                <Route path="/product/:slug" element={<ProductDetail />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:slug" element={<BlogDetail />} />
+                <Route path="*" element={<Home />} />
+              </Routes>
+            </Suspense>
+          </main>
+
+          <Footer />
+          <WhatsAppButton />
+          <Chatbot />
+        </div>
+
+        {/* Background Resource Loader */}
+        <BackgroundResourceLoader enabled={homeReady} />
+      </Router>
     </HelmetProvider>
   );
 }

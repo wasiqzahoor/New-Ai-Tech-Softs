@@ -6,6 +6,48 @@
 export const projects = [
   {
     id: 1,
+    slug: "everceutical-website-redesign",
+    title: "EverCeutical - Premium Exosome Biotechnology Website",
+    category: "Web Apps",
+    tags: ["React", "Next.js", "Tailwind CSS", "Vercel", "UI/UX Design"],
+    description: "Premium website redesign for EverCeutical, a Korea-based leader in exosome research and manufacturing for regenerative medicine.",
+    longDescription: "Complete website redesign for EverCeutical, a Korean exosome biotechnology company specializing in high-purity, clinically engineered exosome solutions for regenerative medicine and aesthetic dermatology. Built with a premium, modern design that reflects their position as industry leaders. The website features product showcases, research & technology sections, inspection reports, and seamless user experience.",
+    img: "/Projects-Banner/image22.png",
+    demoUrl: "https://everceutical.vercel.app/",
+    githubUrl: "",
+    featured: true,
+    year: 2026,
+    client: "EverCeutical",
+    duration: "2 Months",
+    role: "Full Stack Developer & UI/UX Designer",
+    challenge: "EverCeutical needed a premium, modern website that matched their position as a Korean exosome biotechnology leader. The existing website was outdated, lacked professional product presentation, and failed to communicate their scientific expertise in regenerative medicine and aesthetic dermatology.",
+    solution: "Designed and developed a complete premium website with sleek modern aesthetics, advanced product showcase system, Research & Technology section, Inspection Reports, and mobile-first responsive design. Implemented smooth animations, fast performance, and strong SEO foundation targeting exosome biotechnology keywords.",
+    results: ["Premium brand perception increased", "Mobile traffic improved by 60%", "Product inquiry rate increased by 45%", "SEO visibility enhanced significantly"],
+    features: ["Premium Visual Design", "Product Showcase System", "Research & Technology Section", "Inspection Reports", "Mobile-First Responsive", "SEO Optimized"]
+  },
+  {
+    id: 2,
+    slug: "novasky-distributors-website",
+    title: "NovaSky Distributors - Multi-Category Distribution Platform",
+    category: "E-Commerce",
+    tags: ["React", "Tailwind CSS", "E-Commerce", "WhatsApp Integration", "SEO"],
+    description: "Complete digital presence for NovaSky Distributors - a pharmaceutical, cosmetic, nutraceutical and surgical instruments distribution company.",
+    longDescription: "Built a complete digital ecosystem for NovaSky Distributors, a growing distribution company based in Islamabad, Pakistan. The platform covers four distribution categories: Pharmaceuticals, Nutraceuticals, Cosmetics & Beauty Products, and Surgical Instruments. Features include e-commerce-style product catalog, WhatsApp ordering, customer testimonials, and full local SEO optimization.",
+    img: "/Projects-Banner/image23.png",
+    demoUrl: "https://novaskydistributors.com/",
+    githubUrl: "",
+    featured: true,
+    year: 2026,
+    client: "NovaSky Distributors",
+    duration: "1.5 Months",
+    role: "Full Stack Developer & Digital Strategist",
+    challenge: "NovaSky Distributors had zero digital presence - no website, no Google listing, no social media. As a multi-category distribution company covering pharmaceuticals, cosmetics, nutraceuticals, and surgical instruments, they needed a complete digital overhaul to compete in the modern market.",
+    solution: "Created a complete digital ecosystem including a professional multi-category website with product catalog, WhatsApp ordering integration, Google Business Profile setup, Facebook page creation, and comprehensive local SEO optimization targeting pharmaceutical distribution and wholesale product keywords.",
+    results: ["5,000+ happy customers achieved", "4.9-star average rating", "4+ distribution categories online", "Google Business Profile live with reviews"],
+    features: ["Multi-Category Product Catalog", "WhatsApp Order Integration", "Google Business Profile", "Facebook Page Setup", "Local SEO Optimization", "Customer Testimonials"]
+  },
+  {
+    id: 3,
     slug: "biglous-optimizer-website",
     title: "Biglou's Optimizer Website",
     category: "Full Stack",
@@ -26,7 +68,7 @@ export const projects = [
     features: ["Secure Stripe Payment Integration", "Real-time Performance Dashboard", "Automated Email Notifications", "SEO Optimized Pages", "Responsive Mobile Design", "Admin Content Management"]
   },
   {
-    id: 2,
+    id: 4,
     slug: "biglous-tweaking-optimizer",
     title: "Biglou's Tweaking Optimizer Application",
     category: "Desktop",
@@ -47,7 +89,7 @@ export const projects = [
     features: ["Registry-Level Optimization", "One-Click System Tweaking", "Backup & Restore System", "Real-time System Monitor", "Custom Profile Settings", "Automatic Updates"]
   },
   {
-    id: 3,
+    id: 5,
     slug: "bg-remover",
     title: "BG.Remover",
     category: "Web Apps",
@@ -68,7 +110,7 @@ export const projects = [
     features: ["AI-Powered Background Removal", "Support Multiple Formats (PNG, JPG, WebP)", "Batch Processing Capability", "High-Resolution Output", "No Software Installation Required", "Free Tier Available"]
   },
   {
-    id: 4,
+    id: 6,
     slug: "pdf-swift",
     title: "PDF Swift",
     category: "Utilities",
@@ -89,7 +131,7 @@ export const projects = [
     features: ["PDF Compression (Up to 70% reduction)", "Merge Multiple PDFs", "Split PDF by Pages", "Drag & Drop Interface", "Secure File Processing", "Auto-Delete After Processing"]
   },
   {
-    id: 5,
+    id: 7,
     slug: "image-morph",
     title: "Image Morph",
     category: "Utilities",
@@ -110,7 +152,7 @@ export const projects = [
     features: ["Multi-Format Conversion (JPG, PNG, ICO, WEBP, SVG)", "Batch Processing", "Custom Resize Options", "Preview Before Download", "Quality Preservation", "Browser-Based (No Install)"]
   },
   {
-    id: 6,
+    id: 8,
     slug: "pixel-forge",
     title: "Pixel Forge",
     category: "AI Tools",
@@ -131,7 +173,7 @@ export const projects = [
     features: ["AI-Powered 4x Upscaling", "Noise Reduction", "Color Enhancement", "Detail Recovery", "Batch Processing", "Multiple Output Formats"]
   },
   {
-    id: 7,
+    id: 9,
     slug: "file-forge",
     title: "File Forge",
     category: "Utilities",
@@ -152,7 +194,7 @@ export const projects = [
     features: ["PDF to Word/Excel Conversion", "Word to PDF Conversion", "Excel to PDF/CSV", "Batch Conversion", "Format Preservation", "Secure File Handling"]
   },
   {
-    id: 8,
+    id: 10,
     slug: "qrify-qr-code-generator",
     title: "Qrify QR CODE GENERATOR",
     category: "Utilities",
@@ -173,7 +215,7 @@ export const projects = [
     features: ["URL/Text/Contact QR Codes", "Custom Colors & Styles", "Logo Embedding", "SVG/PNG Download", "Live Preview", "Batch Generation"]
   },
   {
-    id: 9,
+    id: 11,
     slug: "mern-enterprise-portal",
     title: "MERN Enterprise Portal",
     category: "Full Stack",
@@ -194,7 +236,7 @@ export const projects = [
     features: ["Inventory Management", "Employee Portal", "Financial Reporting", "CRM Integration", "Role-Based Access Control", "Real-time Notifications", "Email Integration"]
   },
   {
-    id: 10,
+    id: 12,
     slug: "react-job-portal",
     title: "React Job Portal",
     category: "Full Stack",
@@ -215,7 +257,7 @@ export const projects = [
     features: ["Advanced Job Search Filters", "Resume Upload & Parser", "Application Tracking System", "Real-time Notifications", "Employer Dashboard", "Candidate Matching Algorithm"]
   },
   {
-    id: 11,
+    id: 13,
     slug: "codesnap",
     title: "CodeSnap",
     category: "Developer Tools",
@@ -236,14 +278,14 @@ export const projects = [
     features: ["9+ Language Syntax Highlighting", "8+ Professional Themes", "3D Perspective Controls", "PNG/SVG/WEBP Export", "100% Privacy (Client-Side)", "Custom Backgrounds", "Code Font Selection"]
   },
   {
-    id: 12,
+    id: 14,
     slug: "nts-management-system",
     title: "NTS Management System",
     category: "Full Stack",
     tags: ["TypeScript", "React", "Node.js", "PostgreSQL", "Tailwind CSS"],
     description: "A secure, customized enterprise operations and resource tracker built for New Tech Softs.",
     longDescription: "Engineered specifically to manage organizational pipelines, operational workflows, database structures, and SaaS components at New Tech Softs.",
-    img: "/Projects-Banner/image12.png",
+    img: "/Projects-Banner/image12.webp",
     demoUrl: "https://nts.newtechsofts.com",
     githubUrl: "https://github.com/wasiqzahoor/nts-management-system",
     featured: true,
@@ -256,36 +298,16 @@ export const projects = [
     results: ["100% internal adoption", "60% reduction in project delays", "Real-time operational visibility", "Zero security incidents"],
     features: ["Project Management Dashboard", "Employee Time Tracking", "Client Communication Hub", "Automated Reporting", "Role-Based Access Control", "Real-time Notifications"]
   },
+
   {
-    id: 13,
-    slug: "newtechsofts-official-website",
-    title: "NewTechSofts Official Website",
-    category: "Web Apps",
-    tags: ["React", "JavaScript", "HTML5", "CSS3", "Email.js"],
-    description: "The official web platform and agency portal for New Tech Softs.",
-    longDescription: "Features the full commercial catalog, active B2B contact integrations, client portfolios, and scalable landing pages built for the New Tech Softs agency.",
-    img: "/Projects-Banner/image13.png",
-    demoUrl: "https://newtechsofts.com",
-    githubUrl: "https://github.com/wasiqzahoor/New-Tech-Softs",
-    featured: true,
-    year: 2026,
-    client: "New Tech Softs",
-    duration: "3 Months",
-    role: "Full Stack Developer",
-    challenge: "Creating a professional, SEO-optimized website that showcases the company's services, portfolio, and team while providing a seamless user experience and lead generation capabilities.",
-    solution: "Built with React and modern CSS, implementing responsive design, smooth animations, and Email.js for contact form submissions. Optimized for search engines with structured data.",
-    results: ["200% increase in organic traffic", "150+ qualified leads monthly", "5-star client testimonials", "Featured on Clutch.co"],
-    features: ["Responsive Design", "SEO Optimized", "Service Showcase", "Portfolio Gallery", "Team Profiles", "Contact Form Integration", "Blog System"]
-  },
-  {
-    id: 14,
+    id: 16,
     slug: "the-ai-chicks-website",
     title: "The AI Chicks Website",
     category: "AI Tools",
     tags: ["Next.js", "OpenAI API", "AI Chatbot", "Tailwind CSS", "Node.js"],
     description: "A highly customized business website featuring a conversational AI Chatbot interface.",
     longDescription: "Features an interactive client UI seamlessly connected to OpenAI APIs, implementing real-time chat support, question-answering workflows, and lead capture systems.",
-    img: "/Projects-Banner/image14.png",
+    img: "/Projects-Banner/image14.webp",
     demoUrl: "https://www.theaichicks.com/",
     githubUrl: "https://github.com/wasiqzahoor",
     featured: true,
@@ -299,14 +321,14 @@ export const projects = [
     features: ["AI-Powered Chatbot", "Real-time Conversation", "Lead Capture System", "Product Recommendations", "Conversation History", "Admin Dashboard"]
   },
   {
-    id: 15,
+    id: 17,
     slug: "ai-image-detection-app",
     title: "AI Image Detection App",
     category: "AI Tools",
     tags: ["Python", "Flask", "OpenCV", "Machine Learning", "JavaScript"],
     description: "An AI-powered computer vision app that detects facial structures and suggests matching haircut styles.",
     longDescription: "Utilizes OpenCV and pre-trained computer vision models in Python/Flask to analyze uploaded portraits, calculate facial dimensions, and automatically recommend matching hair styling profiles in real-time.",
-    img: "/Projects-Banner/image15.png",
+    img: "/Projects-Banner/image15.webp",
     demoUrl: "#",
     githubUrl: "https://github.com/wasiqzahoor/AI-Image-Detection",
     featured: true,
@@ -320,7 +342,7 @@ export const projects = [
     features: ["Real-time Face Detection", "Facial Landmark Analysis", "Face Shape Classification", "Hairstyle Recommendation", "Style-Face Compatibility", "Batch Processing"]
   },
   {
-    id: 16,
+    id: 18,
     slug: "ai-video-analysis-detection",
     title: "AI Video Analysis & Detection",
     category: "AI Tools",
@@ -341,14 +363,14 @@ export const projects = [
     features: ["Real-time Object Detection", "Multi-Object Tracking", "Movement Trajectory Mapping", "Custom Model Training", "Video Recording & Playback", "Alert System"]
   },
   {
-    id: 17,
+    id: 19,
     slug: "ai-real-time-object-detection",
     title: "AI Real-Time Object Detection",
     category: "AI Tools",
     tags: ["Python", "Machine Learning", "Computer Vision", "Real-Time Processing"],
     description: "A lightning-fast real-time object detection module built using computer vision pipelines.",
     longDescription: "Processes active camera feeds to instantaneously classify and locate objects with high accuracy, optimizing deep learning parameters for low-latency systems.",
-    img: "/Projects-Banner/image17.png",
+    img: "/Projects-Banner/image17.webp",
     demoUrl: "#",
     githubUrl: "https://github.com/wasiqzahoor/AI-Real-Time-Detection",
     featured: false,
@@ -362,14 +384,14 @@ export const projects = [
     features: ["Edge-Optimized Detection", "Lightweight Model Architecture", "Real-time Processing", "Multi-Camera Support", "Cloud Integration", "Remote Monitoring"]
   },
   {
-    id: 18,
+    id: 20,
     slug: "ai-health-analyzer",
     title: "AI Health Analyzer",
     category: "AI Tools",
     tags: ["Python", "Pandas", "Machine Learning", "Data Science", "Diagnostics"],
     description: "An AI-powered health assistant that monitors vital signs and predicts diagnostic conditions.",
     longDescription: "Constructed a machine learning classification pipeline using Pandas and Scikit-learn to parse symptoms datasets, helping users analyze medical trends and predict conditions based on inputs.",
-    img: "/Projects-Banner/image18.jpg",
+    img: "/Projects-Banner/image18.webp",
     demoUrl: "#",
     githubUrl: "https://github.com/wasiqzahoor/AI-Health-Analyzer",
     featured: false,
@@ -383,14 +405,14 @@ export const projects = [
     features: ["Symptom-Based Analysis", "Medical Trend Prediction", "Risk Assessment Reports", "Data Visualization", "Export Reports", "Privacy-First Design"]
   },
   {
-    id: 19,
+    id: 21,
     slug: "ai-play-music-with-emotions",
     title: "AI Play Music with Emotions",
     category: "AI Tools",
     tags: ["Python", "Deep Learning", "Emotion Recognition", "APIs"],
     description: "An innovative AI application that captures emotional states and synchronizes musical playlists.",
     longDescription: "Leverages deep learning face classifiers to detect human emotions in real-time, mapping psychological states directly to curated, matching web playlists.",
-    img: "/Projects-Banner/image19.jpg",
+    img: "/Projects-Banner/image19.webp",
     demoUrl: "#",
     githubUrl: "https://github.com/wasiqzahoor/AI-Play-Music-with-Emotions",
     featured: false,
@@ -404,14 +426,14 @@ export const projects = [
     features: ["Real-time Emotion Detection", "7 Emotion Categories", "Auto Playlist Generation", "Music API Integration", "Emotion History Tracking", "Custom Playlists"]
   },
   {
-    id: 20,
+    id: 22,
     slug: "ai-assistant",
     title: "AI Assistant",
     category: "AI Tools",
     tags: ["Python", "NLP", "API", "Virtual Assistant", "Conversational AI"],
     description: "A highly customized virtual assistant leveraging NLP engines for task automation.",
     longDescription: "Built with advanced natural language processing tools, this desktop/web assistant automates calendar items, executes desktop commands, and parses web queries instantly via APIs.",
-    img: "/Projects-Banner/image20.jpg",
+    img: "/Projects-Banner/image20.webp",
     demoUrl: "#",
     githubUrl: "https://github.com/wasiqzahoor/AI-Assistant-",
     featured: false,
@@ -425,14 +447,14 @@ export const projects = [
     features: ["Voice Command Recognition", "Calendar Management", "Web Search Integration", "Desktop Automation", "Weather & News Updates", "Custom Reminders"]
   },
   {
-    id: 21,
+    id: 23,
     slug: "gods-angle-scholarship-website",
     title: "Gods Angle Scholarship Website",
     category: "Full Stack",
     tags: ["Next.js", "Tailwind CSS", "MongoDB", "Stripe", "Email JS"],
     description: "A scholarship discovery platform that helps students find, explore, and apply for international scholarships.",
     longDescription: "Gods Angle Scholarship Website is a comprehensive educational platform built with Next.js, Tailwind CSS, MongoDB, Stripe, and Email JS. The platform connects students with fully funded scholarships, fellowships, internships, and study opportunities from leading universities and organizations around the world.",
-    img: "/Projects-Banner/image21.png",
+    img: "/Projects-Banner/image21.webp",
     demoUrl: "https://gods-angels.com/",
     githubUrl: "https://github.com/wasiqzahoor/Gods-Angels-Scholarships-Website",
     featured: true,

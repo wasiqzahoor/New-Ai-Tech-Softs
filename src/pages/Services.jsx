@@ -9,76 +9,21 @@ import { Helmet } from 'react-helmet-async';
 import { services } from '../data/servicesData';
 
 const iconMap = {
-  FaReact: FaReact,
-  FaMobileAlt: FaMobileAlt,
-  FaFigma: FaFigma,
-  FaSearch: FaSearch,
-  FaAws: FaAws,
-  FaRobot: FaRobot,
-  FaCode: FaCode,
-  FaDesktop: FaDesktop,
-  FaPalette: FaPalette,
-  FaVideo: FaVideo,
-  FaCogs: FaCogs,
-  FaHeadset: FaHeadset,
+  FaReact, FaMobileAlt, FaFigma, FaSearch, FaAws, FaRobot, FaCode, FaDesktop, FaPalette, FaVideo, FaCogs, FaHeadset,
 };
 
 const colorMap = {
-  cyan: { 
-    primary: 'text-cyan-400', bg: 'bg-cyan-500/10', border: 'border-cyan-500/30',
-    gradient: 'from-cyan-400 to-blue-500', glow: 'rgba(34,211,238,0.35)',
-    hex: '#22d3ee'
-  },
-  blue: { 
-    primary: 'text-blue-400', bg: 'bg-blue-500/10', border: 'border-blue-500/30',
-    gradient: 'from-blue-400 to-cyan-500', glow: 'rgba(96,165,250,0.35)',
-    hex: '#60a5fa'
-  },
-  purple: { 
-    primary: 'text-purple-400', bg: 'bg-purple-500/10', border: 'border-purple-500/30',
-    gradient: 'from-purple-400 to-pink-500', glow: 'rgba(192,132,252,0.35)',
-    hex: '#c084fc'
-  },
-  green: { 
-    primary: 'text-green-400', bg: 'bg-green-500/10', border: 'border-green-500/30',
-    gradient: 'from-green-400 to-emerald-500', glow: 'rgba(74,222,128,0.35)',
-    hex: '#4ade80'
-  },
-  orange: { 
-    primary: 'text-orange-400', bg: 'bg-orange-500/10', border: 'border-orange-500/30',
-    gradient: 'from-orange-400 to-amber-500', glow: 'rgba(251,146,60,0.35)',
-    hex: '#fb923c'
-  },
-  pink: { 
-    primary: 'text-pink-400', bg: 'bg-pink-500/10', border: 'border-pink-500/30',
-    gradient: 'from-pink-400 to-rose-500', glow: 'rgba(244,114,182,0.35)',
-    hex: '#f472b6'
-  },
-  yellow: { 
-    primary: 'text-yellow-400', bg: 'bg-yellow-500/10', border: 'border-yellow-500/30',
-    gradient: 'from-yellow-400 to-amber-500', glow: 'rgba(250,204,21,0.35)',
-    hex: '#facc15'
-  },
-  red: { 
-    primary: 'text-red-400', bg: 'bg-red-500/10', border: 'border-red-500/30',
-    gradient: 'from-red-400 to-rose-500', glow: 'rgba(248,113,113,0.35)',
-    hex: '#f87171'
-  },
-  indigo: { 
-    primary: 'text-indigo-400', bg: 'bg-indigo-500/10', border: 'border-indigo-500/30',
-    gradient: 'from-indigo-400 to-violet-500', glow: 'rgba(129,140,248,0.35)',
-    hex: '#818cf8'
-  },
-  teal: { 
-    primary: 'text-teal-400', bg: 'bg-teal-500/10', border: 'border-teal-500/30',
-    gradient: 'from-teal-400 to-cyan-500', glow: 'rgba(45,212,191,0.35)',
-    hex: '#2dd4bf'
-  },
-  emerald: { 
-    primary: 'text-emerald-400', bg: 'bg-emerald-500/10', border: 'border-emerald-500/30',
-    gradient: 'from-emerald-400 to-green-500', glow: 'rgba(52,211,153,0.35)',
-    hex: '#34d399'
-  },
+  cyan:   { primary: 'text-brand-mid', bg: 'bg-brand-mid/10', border: 'border-brand-mid/20', hex: '#0C447C' },
+  blue:   { primary: 'text-brand-mid', bg: 'bg-brand-mid/10', border: 'border-brand-mid/20', hex: '#0C447C' },
+  purple: { primary: 'text-brand-mid', bg: 'bg-brand-mid/10', border: 'border-brand-mid/20', hex: '#0C447C' },
+  pink:   { primary: 'text-brand-mid', bg: 'bg-brand-mid/10', border: 'border-brand-mid/20', hex: '#0C447C' },
+  green:  { primary: 'text-brand-mid', bg: 'bg-brand-mid/10', border: 'border-brand-mid/20', hex: '#0C447C' },
+  orange: { primary: 'text-brand-mid', bg: 'bg-brand-mid/10', border: 'border-brand-mid/20', hex: '#0C447C' },
+  yellow: { primary: 'text-brand-mid', bg: 'bg-brand-mid/10', border: 'border-brand-mid/20', hex: '#0C447C' },
+  red:    { primary: 'text-brand-mid', bg: 'bg-brand-mid/10', border: 'border-brand-mid/20', hex: '#0C447C' },
+  indigo: { primary: 'text-brand-mid', bg: 'bg-brand-mid/10', border: 'border-brand-mid/20', hex: '#0C447C' },
+  teal:   { primary: 'text-brand-mid', bg: 'bg-brand-mid/10', border: 'border-brand-mid/20', hex: '#0C447C' },
+  emerald:{ primary: 'text-brand-mid', bg: 'bg-brand-mid/10', border: 'border-brand-mid/20', hex: '#0C447C' },
 };
 
 const ServiceCard = ({ service, index }) => {
@@ -88,68 +33,37 @@ const ServiceCard = ({ service, index }) => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 60, scale: 0.9 }}
-      whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.6, delay: index * 0.12, type: "spring", stiffness: 80 }}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-40px" }}
+      transition={{ duration: 0.5, delay: index * 0.08 }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className="group relative"
     >
       <Link to={`/service/${service.slug}`} className="block h-full">
-        <div 
-          className="relative h-full min-h-[480px] bg-gradient-to-br from-[#112240] to-[#0a192f] rounded-3xl border border-gray-700/50 overflow-hidden transition-all duration-500 hover:border-transparent flex flex-col"
-          style={{ boxShadow: isHovered ? `0 20px 60px ${colors.glow}` : '0 4px 20px rgba(0,0,0,0.3)' }}
-        >
-          
-          {/* Hover Gradient Overlay */}
-          <div className={`absolute inset-0 bg-gradient-to-br ${colors.gradient} opacity-0 group-hover:opacity-[0.07] transition-opacity duration-500 pointer-events-none`}></div>
-          
-          {/* Top Color Bar */}
-          <div className={`absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r ${colors.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
-
-          {/* Floating Particles */}
-          <AnimatePresence>
-            {isHovered && [...Array(6)].map((_, i) => (
-              <motion.div
-                key={i}
-                className="absolute rounded-full pointer-events-none"
-                style={{ 
-                  width: Math.random() * 5 + 3, height: Math.random() * 5 + 3, 
-                  backgroundColor: colors.hex,
-                  left: `${15 + Math.random() * 70}%`, top: `${20 + Math.random() * 60}%`
-                }}
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: [0, 0.7, 0], scale: [0, 1, 0], y: [0, -50] }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 2.2, delay: i * 0.25, repeat: Infinity }}
-              />
-            ))}
-          </AnimatePresence>
+        <div className="relative h-full min-h-[420px] bg-white/[0.05] backdrop-blur-xl rounded-2xl border border-white/[0.08] overflow-hidden transition-all duration-400 hover:bg-[#0a0a14] hover:border-white/[0.15] flex flex-col">
 
           {/* Image Section */}
-          <div className="relative h-52 shrink-0 overflow-hidden">
-            <motion.img 
-              src={service.images[0]} 
+          <div className="relative h-44 shrink-0 overflow-hidden">
+            <motion.img
+              src={service.images[0]}
               alt={service.title}
               className="w-full h-full object-cover"
-              animate={{ scale: isHovered ? 1.15 : 1 }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
+              animate={{ scale: isHovered ? 1.08 : 1 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#112240] via-[#112240]/40 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a14] via-black/20 to-transparent" />
           </div>
 
-          {/* Icon - Overlapping Image & Content */}
-          <div className="relative flex justify-center -mt-9 z-10 shrink-0">
-            <motion.div 
-              className="w-[72px] h-[72px] rounded-2xl bg-[#0a192f] border-2 flex items-center justify-center shadow-xl"
-              style={{ borderColor: isHovered ? colors.hex : 'rgba(75,85,99,0.5)' }}
-              animate={{ rotate: isHovered ? [0, -8, 8, 0] : 0 }}
-              transition={{ duration: 0.5 }}
+          {/* Icon - Overlapping */}
+          <div className="relative flex justify-center -mt-8 z-10 shrink-0">
+            <motion.div
+              className="w-16 h-16 rounded-2xl bg-[#0a0a14] backdrop-blur-md border border-white/[0.12] flex items-center justify-center shadow-xl group-hover:border-white/[0.2] transition-all duration-300"
             >
-              <motion.div 
-                className="text-3xl"
-                animate={{ scale: isHovered ? [1, 1.3, 1] : 1 }}
+              <motion.div
+                className="text-2xl"
+                animate={{ scale: isHovered ? [1, 1.2, 1] : 1 }}
                 transition={{ duration: 0.4 }}
               >
                 <span className={colors.primary}><IconComp /></span>
@@ -157,81 +71,50 @@ const ServiceCard = ({ service, index }) => {
             </motion.div>
           </div>
 
-          {/* Content Section */}
-          <div className="px-7 pt-5 pb-7 flex flex-col flex-1">
+          {/* Content */}
+          <div className="px-5 pt-4 pb-5 flex flex-col flex-1">
             {/* Tagline */}
-            <motion.div 
-              className="flex items-center gap-2 mb-2"
-              animate={{ x: isHovered ? 5 : 0 }}
-              transition={{ duration: 0.3 }}
-            >
-              <motion.div 
-                className="h-[2px] bg-gradient-to-r rounded-full"
-                style={{ backgroundImage: `linear-gradient(to right, ${colors.hex}, transparent)` }}
-                animate={{ width: isHovered ? 32 : 24 }}
-                transition={{ duration: 0.3 }}
-              ></motion.div>
-              <span className={`text-[11px] font-bold uppercase tracking-[0.2em] ${colors.primary}`}>
+            <div className="flex items-center gap-2 mb-1.5">
+              <div className="h-[2px] w-5 bg-gradient-to-r from-brand-mid to-transparent rounded-full" />
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-mid font-heading">
                 {service.tagline}
               </span>
-            </motion.div>
+            </div>
 
             {/* Title */}
-            <h3 className="text-xl sm:text-2xl font-extrabold text-white mb-2 leading-tight transition-colors duration-300" style={isHovered ? { color: colors.hex } : {}}>
+            <h3 className="text-lg font-heading font-bold text-white mb-2 leading-tight group-hover:text-brand-cyan transition-colors duration-300">
               {service.title}
             </h3>
 
             {/* Description */}
-            <p className="text-gray-400 text-sm leading-relaxed mb-4 group-hover:text-gray-300 transition-colors">
+            <p className="text-white/45 text-[13px] leading-relaxed mb-4 font-body line-clamp-3">
               {service.shortDesc}
             </p>
 
             {/* Feature Tags */}
-            <div className="flex flex-wrap gap-2 mb-5">
+            <div className="flex flex-wrap gap-1.5 mb-4">
               {service.features.slice(0, 3).map((f, i) => (
-                <motion.span 
-                  key={i} 
-                  className="text-[10px] font-semibold px-3 py-1.5 rounded-lg border transition-all duration-300"
-                  style={isHovered 
-                    ? { borderColor: `${colors.hex}40`, backgroundColor: `${colors.hex}15`, color: colors.hex }
-                    : { borderColor: 'rgba(255,255,255,0.06)', backgroundColor: 'rgba(255,255,255,0.03)', color: '#9ca3af' }
-                  }
+                <span
+                  key={i}
+                  className="text-[10px] font-semibold px-2.5 py-1 rounded-md border border-white/[0.06] bg-white/[0.04] text-white/40 group-hover:bg-white/[0.08] group-hover:text-white/60 group-hover:border-white/[0.1] transition-all duration-300"
                 >
                   {f}
-                </motion.span>
+                </span>
               ))}
             </div>
 
-            {/* Bottom CTA */}
-            <div className="mt-auto flex items-center justify-between pt-2 border-t border-white/5">
-              <span 
-                className="text-xs font-bold flex items-center gap-2 transition-all duration-300"
-                style={{ color: isHovered ? colors.hex : 'transparent', opacity: isHovered ? 1 : 0 }}
-              >
+            {/* CTA */}
+            <div className="mt-auto flex items-center justify-between pt-3 border-t border-white/[0.06]">
+              <span className="text-xs font-bold flex items-center gap-2 transition-all duration-300 font-heading text-brand-cyan opacity-0 group-hover:opacity-100 translate-x-[-8px] group-hover:translate-x-0">
                 Explore Service
-                <motion.span animate={{ x: isHovered ? [0, 4, 0] : 0 }} transition={{ duration: 1, repeat: Infinity }}>
-                  <FaChevronRight className="text-[10px]" />
-                </motion.span>
+                <FaChevronRight className="text-[10px]" />
               </span>
-              <motion.div 
-                className="w-10 h-10 rounded-full border flex items-center justify-center transition-all duration-300"
-                style={{ 
-                  borderColor: isHovered ? colors.hex : 'rgba(75,85,99,0.5)',
-                  color: isHovered ? colors.hex : '#6b7280',
-                  boxShadow: isHovered ? `0 0 20px ${colors.glow}` : 'none',
-                  backgroundColor: isHovered ? `${colors.hex}10` : 'transparent'
-                }}
-              >
-                <FaChevronRight className="text-xs" />
-              </motion.div>
+              <div className="w-9 h-9 rounded-full border border-white/[0.08] flex items-center justify-center text-white/30 group-hover:text-brand-cyan group-hover:border-brand-cyan/30 transition-all duration-300">
+                <FaChevronRight className="text-[10px]" />
+              </div>
             </div>
           </div>
 
-          {/* Bottom Corner Glow */}
-          <div 
-            className="absolute -bottom-10 -right-10 w-32 h-32 rounded-full blur-3xl transition-opacity duration-700 pointer-events-none"
-            style={{ backgroundColor: colors.hex, opacity: isHovered ? 0.15 : 0 }}
-          ></div>
         </div>
       </Link>
     </motion.div>
@@ -276,13 +159,14 @@ const Services = () => {
         <meta property="og:url" content="https://newtechsofts.com/services" />
         <meta property="og:title" content="Our Services | Web Development, App Development, AI Solutions | New Tech Softs" />
         <meta property="og:description" content="Professional web development, mobile app development, UI/UX design, SEO, AI solutions, and cloud services from New Tech Softs - a leading software house in Islamabad." />
-        <meta property="og:image" content="https://newtechsofts.com/logo.png" />
+        <meta property="og:image" content="https://newtechsofts.com/logo.webp" />
         <meta property="og:site_name" content="New Tech Softs" />
+        <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://newtechsofts.com/services" />
         <meta name="twitter:title" content="Our Services | New Tech Softs" />
         <meta name="twitter:description" content="Professional web development, mobile app development, UI/UX design, SEO, AI solutions from New Tech Softs." />
-        <meta name="twitter:image" content="https://newtechsofts.com/logo.png" />
+        <meta name="twitter:image" content="https://newtechsofts.com/logo.webp" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -293,7 +177,10 @@ const Services = () => {
             "provider": {
               "@type": "Organization",
               "name": "New Tech Softs",
-              "address": { "@type": "PostalAddress", "addressLocality": "Islamabad", "addressCountry": "PK" }
+              "address": [
+                { "@type": "PostalAddress", "addressLocality": "Islamabad", "addressCountry": "PK" },
+                { "@type": "PostalAddress", "streetAddress": "Street 10, Building 15, Industrial Area 10, Near Al Madinah Hyper Market", "addressLocality": "Sharjah", "addressCountry": "AE" }
+              ]
             },
             "areaServed": "Worldwide",
             "serviceType": ["Web Development", "Mobile App Development", "UI/UX Design", "AI Chatbots & AI Agents", "SaaS Development", "Digital Marketing", "Cloud & DevOps", "Desktop Applications", "Graphic Designing", "Video Editing", "IT Solutions & Consulting", "Technical Support Services"]
@@ -302,17 +189,12 @@ const Services = () => {
       </Helmet>
 
       {/* --- HERO SECTION --- */}
-      <section className="relative text-white pt-28 pb-12 lg:pt-28 lg:pb-16 overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
-          <div className="absolute top-[-10%] right-[-5%] w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-3xl"></div>
-        </div>
-
+      <section className="relative text-white py-16 md:py-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
               <motion.div 
-                className="text-cyan-400 font-bold tracking-widest uppercase text-base lg:text-lg mb-4 flex flex-wrap justify-center lg:justify-start gap-2"
+                className="text-brand-mid font-bold tracking-widest uppercase text-base lg:text-lg mb-4 flex flex-wrap justify-center lg:justify-start gap-2 font-heading"
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
@@ -323,7 +205,7 @@ const Services = () => {
               </motion.div>
 
               <motion.h1 
-                className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 flex flex-wrap justify-center lg:justify-start gap-x-3 gap-y-2"
+                className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold leading-tight mb-6 flex flex-wrap justify-center lg:justify-start gap-x-3 gap-y-2"
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
@@ -333,14 +215,14 @@ const Services = () => {
                 ))}
                 <motion.span 
                   variants={wordVariants}
-                  className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500"
+                  className="text-brand-mid"
                 >
                   Ideas Into Reality
                 </motion.span>
               </motion.h1>
 
               <motion.p 
-                className="text-gray-400 text-lg lg:text-xl mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0"
+                className="text-white/60 text-lg lg:text-xl mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0 font-body"
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 1, duration: 0.8 }}
@@ -354,10 +236,10 @@ const Services = () => {
                 initial="hidden"
                 animate="visible"
               >
-                <Link to="/contact" className="w-full sm:w-auto bg-cyan-500 text-[#0a192f] px-8 py-3.5 rounded-full font-bold text-lg hover:bg-cyan-400 hover:shadow-lg hover:shadow-cyan-500/30 transition transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                <Link to="/contact" className="w-full sm:w-auto bg-gradient-to-r from-brand-mid to-purple-600 text-white px-8 py-3.5 rounded-full font-heading font-bold text-lg shadow-lg shadow-brand-mid/20 hover:shadow-brand-mid/40 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2">
                   <FaRocket /> Get a Quote
                 </Link>
-                <Link to="/portfolio" className="w-full sm:w-auto border-2 border-gray-600 text-gray-300 px-8 py-3.5 rounded-full font-bold text-lg hover:border-cyan-400 hover:text-cyan-400 transition flex items-center justify-center gap-2">
+                <Link to="/portfolio" className="w-full sm:w-auto border border-white/20 text-white bg-white/[0.06] px-8 py-3.5 rounded-full font-heading font-bold text-lg hover:bg-white/[0.12] transition-all flex items-center justify-center gap-2">
                   View Our Work
                 </Link>
               </motion.div>
@@ -371,62 +253,60 @@ const Services = () => {
             >
               <div className="relative w-full h-full">
                 <motion.div 
-                  className="absolute top-0 left-0 bg-[#112240] p-5 rounded-2xl border border-gray-700 shadow-xl flex items-center gap-4 hover:border-cyan-500/50 transition-all"
+                  className="absolute top-0 left-0 bg-white/[0.08] backdrop-blur-xl p-5 rounded-2xl border border-white/[0.12] shadow-xl flex items-center gap-4 hover:border-brand-mid/20 transition-all"
                   animate={{ y: [0, -12, 0] }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 >
-                  <div className="w-14 h-14 bg-cyan-500/10 rounded-xl flex items-center justify-center text-cyan-400 text-2xl">
+                  <div className="w-14 h-14 bg-brand-mid/10 rounded-xl flex items-center justify-center text-brand-mid text-2xl">
                     <FaReact />
                   </div>
                   <div>
-                    <p className="text-white font-bold text-sm">Web Development</p>
-                    <p className="text-gray-500 text-xs">React, Next.js, Node.js</p>
+                    <p className="text-white font-bold text-sm font-heading">Web Development</p>
+                    <p className="text-white/40 text-xs font-body">React, Next.js, Node.js</p>
                   </div>
                 </motion.div>
 
                 <motion.div 
-                  className="absolute top-8 right-0 bg-[#112240] p-5 rounded-2xl border border-gray-700 shadow-xl flex items-center gap-4 hover:border-cyan-500/50 transition-all"
+                  className="absolute top-8 right-0 bg-white/[0.08] backdrop-blur-xl p-5 rounded-2xl border border-white/[0.12] shadow-xl flex items-center gap-4 hover:border-brand-mid/20 transition-all"
                   animate={{ y: [0, 12, 0] }}
                   transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                 >
-                  <div className="w-14 h-14 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 text-2xl">
+                  <div className="w-14 h-14 bg-brand-mid/10 rounded-xl flex items-center justify-center text-brand-mid text-2xl">
                     <FaMobileAlt />
                   </div>
                   <div>
-                    <p className="text-white font-bold text-sm">Mobile Apps</p>
-                    <p className="text-gray-500 text-xs">Flutter, React Native</p>
+                    <p className="text-white font-bold text-sm font-heading">Mobile Apps</p>
+                    <p className="text-white/40 text-xs font-body">Flutter, React Native</p>
                   </div>
                 </motion.div>
 
                 <motion.div 
-                  className="absolute bottom-20 left-4 bg-[#112240] p-5 rounded-2xl border border-gray-700 shadow-xl flex items-center gap-4 hover:border-cyan-500/50 transition-all"
+                  className="absolute bottom-20 left-4 bg-white/[0.08] backdrop-blur-xl p-5 rounded-2xl border border-white/[0.12] shadow-xl flex items-center gap-4 hover:border-brand-mid/20 transition-all"
                   animate={{ y: [0, -10, 0] }}
                   transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
                 >
-                  <div className="w-14 h-14 bg-purple-500/10 rounded-xl flex items-center justify-center text-purple-400 text-2xl">
+                  <div className="w-14 h-14 bg-brand-mid/10 rounded-xl flex items-center justify-center text-brand-mid text-2xl">
                     <FaRobot />
                   </div>
                   <div>
-                    <p className="text-white font-bold text-sm">AI Solutions</p>
-                    <p className="text-gray-500 text-xs">Python, TensorFlow</p>
+                    <p className="text-white font-bold text-sm font-heading">AI Solutions</p>
+                    <p className="text-white/40 text-xs font-body">Python, TensorFlow</p>
                   </div>
                 </motion.div>
 
                 <motion.div 
-                  className="absolute bottom-8 right-8 bg-[#112240] p-5 rounded-2xl border border-gray-700 shadow-xl flex items-center gap-4 hover:border-cyan-500/50 transition-all"
+                  className="absolute bottom-8 right-8 bg-white/[0.08] backdrop-blur-xl p-5 rounded-2xl border border-white/[0.12] shadow-xl flex items-center gap-4 hover:border-brand-mid/20 transition-all"
                   animate={{ y: [0, 15, 0] }}
                   transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
                 >
-                  <div className="w-14 h-14 bg-pink-500/10 rounded-xl flex items-center justify-center text-pink-400 text-2xl">
+                  <div className="w-14 h-14 bg-brand-mid/10 rounded-xl flex items-center justify-center text-brand-mid text-2xl">
                     <FaFigma />
                   </div>
                   <div>
-                    <p className="text-white font-bold text-sm">UI/UX Design</p>
-                    <p className="text-gray-500 text-xs">Figma, Adobe XD</p>
+                    <p className="text-white font-bold text-sm font-heading">UI/UX Design</p>
+                    <p className="text-white/40 text-xs font-body">Figma, Adobe XD</p>
                   </div>
                 </motion.div>
-
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl"></div>
               </div>
             </motion.div>
           </div>
@@ -434,28 +314,28 @@ const Services = () => {
       </section>
 
       {/* --- SERVICES GRID --- */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center mb-16">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 relative">
+        <div className="text-center mb-16 relative z-10">
           <motion.h2 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-extrabold text-white mb-4"
+            className="text-4xl md:text-5xl font-heading font-bold text-white mb-4"
           >
-            What We <span className="text-cyan-400">Offer</span>
+            What We <span className="text-brand-mid">Offer</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-gray-400 text-lg max-w-2xl mx-auto"
+            className="text-white/60 text-lg max-w-2xl mx-auto font-body"
           >
             Comprehensive digital solutions tailored to your business needs
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto items-stretch relative z-10">
           {services.map((service, index) => (
             <ServiceCard key={service.id} service={service} index={index} />
           ))}
@@ -463,52 +343,50 @@ const Services = () => {
       </section>
 
       {/* --- FINAL CTA --- */}
-      <section className="py-20 px-6 relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-cyan-500/10 rounded-full blur-[80px] -z-10"></div>
+      <section className="py-16 md:py-20 px-6 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative bg-gradient-to-br from-[#112240]/80 to-[#0a192f]/80 backdrop-blur-xl border border-gray-700/50 rounded-[2rem] p-8 md:p-14 text-center shadow-2xl overflow-hidden"
+            className="relative bg-white/[0.08] backdrop-blur-xl border border-white/[0.12] shadow-xl rounded-[2rem] p-8 md:p-14 text-center overflow-hidden"
           >
-            <div className="absolute -top-10 -right-10 w-32 h-32 bg-cyan-500/20 rounded-full blur-2xl"></div>
             <motion.div 
               animate={{ y: [0, -5, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              className="w-14 h-14 bg-cyan-500/10 text-cyan-400 rounded-xl flex items-center justify-center text-2xl mx-auto mb-6 border border-cyan-500/20"
+              className="w-14 h-14 bg-brand-mid/10 text-brand-mid rounded-xl flex items-center justify-center text-2xl mx-auto mb-6 border border-brand-mid/20"
             >
               <FaRocket />
             </motion.div>
-            <h2 className="text-3xl md:text-5xl font-black text-white mb-4 tracking-tight leading-tight">
-              Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Scale Up?</span>
+            <h2 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4 tracking-tight leading-tight">
+              Ready to <span className="text-brand-mid">Scale Up?</span>
             </h2>
-            <p className="text-gray-400 text-base md:text-lg leading-relaxed mb-10 max-w-2xl mx-auto font-medium">
+            <p className="text-white/60 text-base md:text-lg leading-relaxed mb-10 max-w-2xl mx-auto font-medium font-body">
               Don't settle for average. Your business deserves a high-end digital ecosystem. 
               Whether it's a fresh idea or a complex system, we provide the expertise to make it happen.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
               <Link to="/contact">
                 <motion.button 
-                  whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(34, 211, 238, 0.3)" }}
+                  whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-cyan-500 text-[#0a192f] px-8 py-4 rounded-xl font-bold text-lg shadow-lg transition-all"
+                  className="bg-gradient-to-r from-brand-mid to-purple-600 text-white px-8 py-4 rounded-full font-heading font-bold text-lg shadow-lg shadow-brand-mid/20 hover:shadow-brand-mid/40 hover:-translate-y-0.5 transition-all"
                 >
                   Start Your Journey
                 </motion.button>
               </Link>
               <Link to="/portfolio">
                 <motion.button 
-                  whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.05)", color: "#fff" }}
-                  className="text-gray-400 px-8 py-4 rounded-xl font-bold border border-gray-700 transition-all"
+                  whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.12)" }}
+                  className="text-white/60 px-8 py-4 rounded-full font-heading font-bold border border-white/20 bg-white/[0.06] transition-all"
                 >
                   See Our Work
                 </motion.button>
               </Link>
             </div>
-            <div className="mt-8 flex items-center justify-center gap-2 text-gray-500 text-xs font-bold uppercase tracking-widest">
-              <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
+            <div className="mt-8 flex items-center justify-center gap-2 text-white/40 text-xs font-bold uppercase tracking-widest font-heading">
+              <span className="w-1.5 h-1.5 bg-brand-mid rounded-full animate-pulse"></span>
               Consultation is free of cost
             </div>
           </motion.div>

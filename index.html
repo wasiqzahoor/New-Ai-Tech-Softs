@@ -2,83 +2,279 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="canonical" href="https://newtechsofts.com/" />
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    
+    <!-- Preconnect for faster resource loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://res.cloudinary.com" />
+    
+    <!-- Preload critical fonts (render-blocking for text) -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" as="style" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+    
+    <!-- Theme & Performance -->
+    <meta name="theme-color" content="#042C53" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="canonical" href="https://newtechsofts.com/" />
+    
     <!-- Primary SEO -->
-    <title>New Tech Softs | Top Software House in Islamabad for Custom Web Apps</title>
-    <meta name="description" content="Premier Software House in Islamabad offering Web Development, App Development, and AI Solutions. Transform your business with New Tech Softs." />
-    <meta name="keywords" content="Software House, Web Development, App Development, AI Solutions, Islamabad, New Tech Softs, Tech Agency" />
+    <title>New Tech Softs | #1 Software House in Islamabad for Web, App & AI Development</title>
+    <meta name="description" content="New Tech Softs is Islamabad's leading software house offering custom web development, mobile app development, AI solutions, SEO services, digital marketing, and cloud solutions. Transform your business with Pakistan's premier IT company. Build. Grow. Automate. Scale." />
+    <meta name="keywords" content="software house Islamabad, web development company Pakistan, mobile app development, AI solutions, SEO services, digital marketing agency, cloud solutions, e-commerce development, custom software development, React development, Next.js development, MERN stack, Flutter app development, AI chatbots, business automation, New Tech Softs, NTS, IT company Islamabad, software development Pakistan, tech agency" />
     <meta name="author" content="New Tech Softs" />
-
-    <!-- Open Graph / Facebook / WhatsApp (Social Sharing) -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    
+    <!-- Open Graph / Facebook / WhatsApp -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://newtechsofts.com/" />
-    <meta property="og:title" content="New Tech Softs | Best Software House in Islamabad" />
-    <meta property="og:description" content="We build modern websites, apps, and AI solutions. Check out our portfolio and services tailored for your business growth." />
-    <meta property="og:image" content="https://newtechsofts.com/logo.png" />
-    <meta name="indexnow-verification" content="d8f652062f7e4bfeb0e12814fe9304f7" />
+    <meta property="og:title" content="New Tech Softs | #1 Software House in Islamabad | Web, App & AI Development" />
+    <meta property="og:description" content="Islamabad's premier software house. Custom web development, mobile apps, AI solutions, SEO, digital marketing, and cloud services. Transform your business with New Tech Softs." />
+    <meta property="og:image" content="https://newtechsofts.com/logo.webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="New Tech Softs - Software House in Islamabad" />
     <meta property="og:site_name" content="New Tech Softs" />
-    <!-- Twitter -->
-     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://newtechsofts.com/" />
-    <meta name="twitter:title" content="New Tech Softs | Innovating the Future" />
-    <meta name="twitter:description" content="Top-tier software solutions tailored for your business needs. Web, App & AI Development." />
-    <meta name="twitter:image" content="https://newtechsofts.com/logo.png" />
-    <meta name="theme-color" content="#ffffff" />
     <meta property="og:locale" content="en_US" />
-    <meta name="google-adsense-account" content="ca-pub-4740706812082938">
-
+    <meta property="og:locale:alternate" content="en_GB" />
+    <meta name="indexnow-verification" content="d8f652062f7e4bfeb0e12814fe9304f7" />
     
-    <!-- Google tag (gtag.js) -->
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://newtechsofts.com/" />
+    <meta name="twitter:title" content="New Tech Softs | #1 Software House in Islamabad" />
+    <meta name="twitter:description" content="Islamabad's leading software house for web development, mobile apps, AI solutions, SEO, and digital marketing. Transform your business with New Tech Softs." />
+    <meta name="twitter:image" content="https://newtechsofts.com/logo.webp" />
+    <meta name="twitter:site" content="@newtechsofts" />
+    <meta name="twitter:creator" content="@wasiqzahoor" />
+    
+    <!-- Geo Meta Tags for Local SEO -->
+    <meta name="geo.region" content="PK-IB" />
+    <meta name="geo.placename" content="Islamabad" />
+    <meta name="geo.position" content="33.6844;73.0479" />
+    <meta name="ICBM" content="33.6844, 73.0479" />
+    
+    <!-- Language & Region -->
+    <meta http-equiv="content-language" content="en" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+    
+    <!-- Google Analytics (deferred) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-88G6VJT1LN"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-88G6VJT1LN');
     </script>
+    
+    <!-- Organization Structured Data -->
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "New Tech Softs",
-  "url": "https://newtechsofts.com/",
-  "logo": "https://newtechsofts.com/logo.png",
-  "sameAs": [
-    "https://www.facebook.com/newtechsofts/",
-    "https://www.instagram.com/newtechsoft/",
-    "https://www.linkedin.com/company/newtechsofts/"
-  ],
-   "founder": {
-    "@type": "Person",
-    "name": "Chaudhary Wasiq Zahoor",
-    "image": "https://newtechsofts.com/assets/CEO-DEVEvxc-.png"
-  },
-  "image": "https://newtechsofts.com/logo.png",
-  "contactPoint": {
-  "@type": "ContactPoint",
-  "contactType": "customer service",
-  "areaServed": "PK"
-}
-  
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "url": "https://newtechsofts.com/",
-  "name": "New Tech Softs",
-  "alternateName": "NewTechSofts"
-}
-</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4740706812082938"
-     crossorigin="anonymous"></script>
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "New Tech Softs",
+      "alternateName": ["NTS", "NewTechSofts", "New Tech Softs Islamabad"],
+      "url": "https://newtechsofts.com/",
+      "logo": "https://newtechsofts.com/logo.webp",
+      "image": "https://newtechsofts.com/logo.webp",
+      "description": "New Tech Softs is Islamabad's leading software house offering custom web development, mobile app development, AI solutions, SEO services, digital marketing, and cloud solutions.",
+      "foundingDate": "2024",
+      "sameAs": [
+        "https://www.facebook.com/newtechsofts/",
+        "https://www.instagram.com/newtechsofts/",
+        "https://www.linkedin.com/company/newtechsofts/",
+        "https://www.youtube.com/@newtechsofts"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Chaudhary Wasiq Zahoor",
+        "jobTitle": "CEO & Founder",
+        "image": "https://newtechsofts.com/assets/CEO-DEVEvxc-.png",
+        "sameAs": [
+          "https://www.linkedin.com/in/chaudhary-wasiq-zahoor-bbab952b0/",
+          "https://github.com/wasiqzahoor",
+          "https://www.instagram.com/ch_wiqii"
+        ]
+      },
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "DHA Phase 5 Sector H",
+          "addressLocality": "Islamabad",
+          "addressRegion": "Islamabad Capital Territory",
+          "addressCountry": "PK"
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Street 10, Building 15, Industrial Area 10, Near Al Madinah Hyper Market",
+          "addressLocality": "Sharjah",
+          "addressCountry": "AE"
+        }
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+92-341-5287464",
+          "contactType": "customer service",
+          "areaServed": ["PK", "AE", "GB", "US"],
+          "availableLanguage": ["English", "Urdu"]
+        }
+      ],
+      "areaServed": [
+        { "@type": "Country", "name": "Pakistan" },
+        { "@type": "Country", "name": "United Arab Emirates" },
+        { "@type": "Country", "name": "United Kingdom" },
+        { "@type": "Country", "name": "United States" }
+      ],
+      "knowsAbout": [
+        "Web Development", "Mobile App Development", "AI Solutions", "SEO Services",
+        "Digital Marketing", "Cloud Solutions", "E-commerce Development", "UI/UX Design",
+        "Software Development", "React Development", "Next.js Development", "MERN Stack",
+        "Flutter Development", "AI Chatbots", "Business Automation"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Digital Solutions",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Development" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mobile App Development" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Solutions" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO Services" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Digital Marketing" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cloud Solutions" } }
+        ]
+      }
+    }
+    </script>
+    
+    <!-- WebSite Structured Data with SearchAction -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://newtechsofts.com/",
+      "name": "New Tech Softs",
+      "alternateName": "NewTechSofts",
+      "description": "Islamabad's leading software house for web development, mobile apps, AI solutions, and digital marketing.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "New Tech Softs",
+        "logo": { "@type": "ImageObject", "url": "https://newtechsofts.com/logo.webp" }
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://newtechsofts.com/blog?search={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- LocalBusiness Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "New Tech Softs",
+      "image": "https://newtechsofts.com/logo.webp",
+      "url": "https://newtechsofts.com/",
+      "telephone": "+92-341-5287464",
+      "email": "info@newtechsofts.com",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "DHA Phase 5 Sector H",
+        "addressLocality": "Islamabad",
+        "addressCountry": "PK"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 33.6844,
+        "longitude": 73.0479
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "ratingCount": "50"
+      }
+    }
+    </script>
+
+    <!-- BreadcrumbList Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://newtechsofts.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://newtechsofts.com/services" },
+        { "@type": "ListItem", "position": 3, "name": "Portfolio", "item": "https://newtechsofts.com/portfolio" },
+        { "@type": "ListItem", "position": 4, "name": "Blog", "item": "https://newtechsofts.com/blog" },
+        { "@type": "ListItem", "position": 5, "name": "Contact", "item": "https://newtechsofts.com/contact" }
+      ]
+    }
+    </script>
+    
+    <!-- Critical CSS for loading screen & preventing layout shifts -->
+    <style>
+      /* Base reset */
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      
+      /* Prevent layout shift during loading */
+      html { 
+        scroll-behavior: smooth;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      body { 
+        margin: 0; 
+        background: #0a0a1e; 
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+      
+      #root { 
+        min-height: 100vh; 
+      }
+      
+      /* Prevent CLS - Reserve space for images */
+      img { max-width: 100%; height: auto; display: block; }
+      
+      /* Prevent CLS - Set font display swap */
+      @font-face {
+        font-family: 'Inter';
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Poppins';
+        font-display: swap;
+      }
+      
+      /* Smooth transitions for preloader */
+      .preloader-transition {
+        transition: opacity 0.5s ease-in-out;
+      }
+    </style>
   </head>
 
   <body>

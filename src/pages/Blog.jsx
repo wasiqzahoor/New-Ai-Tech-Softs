@@ -1,37 +1,53 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { FaCalendarAlt, FaArrowRight, FaUserAlt,FaRocket, FaTag } from 'react-icons/fa';
+import { FaCalendarAlt, FaArrowRight, FaUserAlt, FaRocket, FaTag, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { blogData } from '../data/blogData';
 
+const POSTS_PER_PAGE = 6;
+
+const wordAnimation = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.12, duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+  }),
+};
+
 const Blog = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const totalPages = Math.ceil(blogData.length / POSTS_PER_PAGE);
+  const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
+  const currentBlogs = blogData.slice(startIndex, startIndex + POSTS_PER_PAGE);
+
+  const goToPage = (page) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className="text-white min-h-screen pt-16 pb-20">
-      
       <Helmet>
         <title>Blog & Tech Insights | New Tech Softs - Software House in Islamabad</title>
         <meta name="description" content="Read the latest tech insights, web development tips, AI trends, and software engineering guides from New Tech Softs - a leading software house in Islamabad." />
         <meta name="keywords" content="tech blog, web development tips, AI trends, software engineering, React, Next.js, Python, MERN stack, Islamabad tech company, New Tech Softs blog" />
         <meta name="author" content="New Tech Softs" />
         <meta name="robots" content="index, follow" />
-        <meta name="google-adsense-account" content="ca-pub-4740706812082938"></meta>
         <link rel="canonical" href="https://newtechsofts.com/blog" />
-
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://newtechsofts.com/blog" />
         <meta property="og:title" content="Blog & Tech Insights | New Tech Softs" />
         <meta property="og:description" content="Read the latest tech insights, web development tips, AI trends, and software engineering guides from New Tech Softs." />
-        <meta property="og:image" content="https://newtechsofts.com/logo.png" />
+        <meta property="og:image" content="https://newtechsofts.com/logo.webp" />
         <meta property="og:site_name" content="New Tech Softs" />
         <meta property="og:locale" content="en_US" />
-
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://newtechsofts.com/blog" />
         <meta name="twitter:title" content="Blog & Tech Insights | New Tech Softs" />
         <meta name="twitter:description" content="Read the latest tech insights, web development tips, AI trends, and software engineering guides from New Tech Softs." />
-        <meta name="twitter:image" content="https://newtechsofts.com/logo.png" />
-
+        <meta name="twitter:image" content="https://newtechsofts.com/logo.webp" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -42,102 +58,184 @@ const Blog = () => {
             "publisher": {
               "@type": "Organization",
               "name": "New Tech Softs",
-              "logo": { "@type": "ImageObject", "url": "https://newtechsofts.com/logo.png" }
+              "logo": { "@type": "ImageObject", "url": "https://newtechsofts.com/logo.webp" }
             }
           })}
         </script>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4740706812082938"
-     crossorigin="anonymous"></script>
       </Helmet>
-      
+
       {/* --- HERO SECTION --- */}
-      <section className="text-center py-16 px-4">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="inline-block px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-6"
-        >
-          <span className="text-cyan-400 font-bold uppercase tracking-widest text-xs">Latest News</span>
-        </motion.div>
-        <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-4xl md:text-7xl font-black mb-6 tracking-tight"
-        >
-          Insights & <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Innovation</span>
-        </motion.h1>
-        <p className="text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed">
-          Explore the world of technology through our expert-written articles on web development, mobile apps, and digital strategies.
-        </p>
+      <section className="relative text-center py-16 md:py-20 px-4 overflow-hidden">
+        <div className="relative z-10 max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="inline-block px-5 py-2 rounded-full bg-[#8B5CF6]/10 border border-[#8B5CF6]/20 mb-8"
+          >
+            <span className="text-[#8B5CF6] font-heading font-bold uppercase tracking-widest text-xs">Latest News</span>
+          </motion.div>
+
+          <motion.h1 className="text-4xl md:text-6xl font-heading font-bold mb-6 flex flex-wrap justify-center gap-x-4 gap-y-2">
+            {"Insights &".split(' ').map((word, i) => (
+              <motion.span key={i} custom={i} initial="hidden" animate="visible" variants={wordAnimation} className="text-white">
+                {word}
+              </motion.span>
+            ))}
+            <motion.span
+              custom={2}
+              initial="hidden"
+              animate="visible"
+              variants={wordAnimation}
+              className="text-transparent bg-clip-text bg-gradient-to-r from-[#8B5CF6] to-[#00D9FF]"
+            >
+              Innovation
+            </motion.span>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.6 }}
+            className="text-white/60 font-body text-lg max-w-3xl mx-auto leading-relaxed"
+          >
+            Explore the world of technology through our expert-written articles on web development, mobile apps, and digital strategies.
+          </motion.p>
+        </div>
       </section>
 
       {/* --- BLOG GRID --- */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
-          {blogData.map((blog, index) => (
-            <motion.div
-              key={blog.id}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.6 }}
-              className="bg-[#112240] rounded-[2.5rem] border border-gray-800 overflow-hidden hover:border-cyan-500/50 transition-all duration-500 group shadow-2xl"
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentPage}
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -24 }}
+            transition={{ duration: 0.4 }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-10"
+          >
+            {currentBlogs.map((blog, index) => (
+              <motion.div
+                key={blog.id}
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.08, duration: 0.5 }}
+                className="bg-white/[0.08] backdrop-blur-xl border border-white/[0.12] shadow-xl rounded-2xl overflow-hidden group hover:border-[#8B5CF6]/30 transition-all duration-500"
+              >
+                <div className="overflow-hidden relative bg-black/40">
+                  <img
+                    src={blog.img}
+                    alt={blog.title}
+                    className="w-full h-auto max-h-80 object-contain group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute bottom-5 left-5">
+                    <span className="bg-[#8B5CF6]/90 text-white px-4 py-1.5 rounded-full text-xs font-heading font-bold flex items-center gap-2 shadow-lg">
+                      <FaTag /> {blog.category}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="p-8 space-y-4">
+                  <div className="flex items-center gap-6 text-white/40 text-[10px] font-heading font-bold uppercase tracking-widest">
+                    <span className="flex items-center gap-2"><FaCalendarAlt className="text-[#8B5CF6]" /> {blog.date}</span>
+                    <span className="flex items-center gap-2"><FaUserAlt className="text-[#8B5CF6]" /> {blog.author}</span>
+                  </div>
+
+                  <h3 className="text-2xl font-heading font-bold text-white group-hover:text-[#8B5CF6] transition-colors leading-tight">
+                    {blog.title}
+                  </h3>
+
+                  <p className="text-white/60 font-body text-base leading-relaxed line-clamp-3">
+                    {blog.excerpt}
+                  </p>
+
+                  <div className="pt-4">
+                    <Link to={`/blog/${blog.slug}`}>
+                      <button className="flex items-center gap-3 text-[#00D9FF] font-heading font-bold uppercase tracking-widest text-sm group-hover:gap-5 transition-all">
+                        Read Full Article <FaArrowRight />
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </AnimatePresence>
+
+        {/* --- PAGINATION --- */}
+        {totalPages > 1 && (
+          <div className="flex items-center justify-center gap-3 mt-16">
+            {/* Prev */}
+            <button
+              onClick={() => goToPage(currentPage - 1)}
+              disabled={currentPage === 1}
+              className={`w-10 h-10 rounded-full flex items-center justify-center border transition-all duration-300 ${
+                currentPage === 1
+                  ? 'border-white/[0.06] text-white/20 cursor-not-allowed'
+                  : 'border-white/[0.12] text-white/60 hover:bg-white/[0.08] hover:text-white hover:border-white/[0.2]'
+              }`}
             >
-              <div className="h-72 overflow-hidden relative">
-                <img 
-                  src={blog.img} 
-                  alt={blog.title} 
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
-                />
-                <div className="absolute bottom-6 left-6 flex gap-2">
-                  <span className="bg-cyan-500 text-[#0a192f] px-4 py-1 rounded-full text-xs font-black shadow-lg flex items-center gap-2">
-                    <FaTag /> {blog.category}
-                  </span>
-                </div>
-              </div>
+              <FaChevronLeft className="text-xs" />
+            </button>
 
-              <div className="p-10 space-y-5">
-                <div className="flex items-center gap-8 text-gray-500 text-[10px] font-black uppercase tracking-widest">
-                  <span className="flex items-center gap-2"><FaCalendarAlt className="text-cyan-400" /> {blog.date}</span>
-                  <span className="flex items-center gap-2"><FaUserAlt className="text-cyan-400" /> {blog.author}</span>
-                </div>
+            {/* Page Numbers */}
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+              <button
+                key={page}
+                onClick={() => goToPage(page)}
+                className={`w-10 h-10 rounded-full flex items-center justify-center font-heading font-bold text-sm transition-all duration-300 ${
+                  currentPage === page
+                    ? 'bg-gradient-to-r from-[#8B5CF6] to-purple-600 text-white shadow-lg shadow-[#8B5CF6]/25'
+                    : 'border border-white/[0.10] text-white/50 hover:bg-white/[0.08] hover:text-white hover:border-white/[0.2]'
+                }`}
+              >
+                {page}
+              </button>
+            ))}
 
-                <h3 className="text-3xl font-black text-white group-hover:text-cyan-400 transition-colors leading-tight">
-                  {blog.title}
-                </h3>
+            {/* Next */}
+            <button
+              onClick={() => goToPage(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              className={`w-10 h-10 rounded-full flex items-center justify-center border transition-all duration-300 ${
+                currentPage === totalPages
+                  ? 'border-white/[0.06] text-white/20 cursor-not-allowed'
+                  : 'border-white/[0.12] text-white/60 hover:bg-white/[0.08] hover:text-white hover:border-white/[0.2]'
+              }`}
+            >
+              <FaChevronRight className="text-xs" />
+            </button>
+          </div>
+        )}
 
-                <p className="text-gray-400 text-base leading-relaxed line-clamp-3">
-                  {blog.excerpt}
-                </p>
-
-                <div className="pt-6">
-                  <Link to={`/blog/${blog.slug}`}>
-                    <button className="flex items-center gap-3 text-cyan-400 font-black uppercase tracking-widest text-sm group-hover:gap-5 transition-all">
-                      Read Full Article <FaArrowRight />
-                    </button>
-                  </Link>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        {/* Page info */}
+        <p className="text-center text-white/30 text-sm font-body mt-5">
+          Showing {startIndex + 1}–{Math.min(startIndex + POSTS_PER_PAGE, blogData.length)} of {blogData.length} articles
+        </p>
       </section>
-{/* Widget 3: Newsletter / CTA Ad */}
-<section className='pt-10 '>
-            <div className="bg-gradient-to-br from-cyan-600 to-blue-700 p-10 rounded-[2rem] shadow-xl relative overflow-hidden group">
-              <FaRocket className="absolute -bottom-4 -right-4 text-8xl text-white/10 group-hover:rotate-12 transition-transform" />
-              <h3 className="text-2xl font-black text-white mb-4 relative z-10 text-center">Have a Project in Mind?</h3>
-              <p className="text-white/80 text-sm mb-6 relative z-10 text-center">
-                Let's turn these insights into a real product for your business.
-              </p>
-              <Link to="/contact">
-                <button className="w-full bg-white text-blue-700 py-3 rounded-xl font-black uppercase text-xs tracking-widest hover:bg-gray-100 transition-all relative z-10">
-                  Get Started
-                </button>
-              </Link>
-            </div>
-            </section>
 
+      {/* CTA */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-28 md:py-36">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="bg-white/[0.08] backdrop-blur-xl border border-white/[0.12] shadow-xl rounded-2xl p-12 text-center relative overflow-hidden group"
+        >
+          <FaRocket className="text-5xl text-[#8B5CF6]/40 mx-auto mb-6 relative z-10" />
+          <h3 className="text-3xl font-heading font-bold text-white mb-4 relative z-10">Have a Project in Mind?</h3>
+          <p className="text-white/60 font-body text-base mb-8 relative z-10 max-w-lg mx-auto">
+            Let's turn these insights into a real product for your business.
+          </p>
+          <Link to="/contact" className="relative z-10">
+            <button className="bg-gradient-to-r from-[#8B5CF6] to-purple-600 text-white font-heading font-bold rounded-full px-10 py-4 shadow-lg shadow-[#8B5CF6]/20 hover:shadow-[#8B5CF6]/40 hover:-translate-y-0.5 transition-all text-sm uppercase tracking-wider">
+              Get Started
+            </button>
+          </Link>
+        </motion.div>
+      </section>
     </div>
   );
 };

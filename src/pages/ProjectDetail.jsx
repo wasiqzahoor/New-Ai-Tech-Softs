@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { FaExternalLinkAlt, FaGithub, FaArrowLeft, FaLaptopCode, FaDesktop, FaRobot, FaTools, FaCode, FaCheckCircle, FaCalendar, FaUser, FaClock, FaLayerGroup, FaRocket } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaGithub, FaArrowLeft, FaLaptopCode, FaDesktop, FaRobot, FaTools, FaCode, FaCheckCircle, FaCalendar, FaUser, FaClock, FaLayerGroup, FaRocket, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { projects } from '../data/portfolioData';
 
 const ProjectDetail = () => {
@@ -12,11 +12,11 @@ const ProjectDetail = () => {
 
   if (!project) {
     return (
-      <div className="text-white min-h-screen flex items-center justify-center px-4">
+      <div className="min-h-screen flex items-center justify-center px-4">
         <div className="text-center">
-          <h2 className="text-3xl font-bold mb-4">Project Not Found</h2>
-          <p className="text-gray-400 mb-8">The project you're looking for doesn't exist.</p>
-          <Link to="/portfolio" className="text-cyan-400 hover:underline font-bold">Back to Portfolio</Link>
+          <h2 className="font-heading text-3xl font-bold text-white mb-4">Project Not Found</h2>
+          <p className="font-body text-white/60 mb-8">The project you're looking for doesn't exist.</p>
+          <Link to="/portfolio" className="text-brand-cyan hover:underline font-heading font-bold">Back to Portfolio</Link>
         </div>
       </div>
     );
@@ -34,103 +34,208 @@ const ProjectDetail = () => {
     }
   };
 
-  // Get related projects
   const relatedProjects = projects
     .filter(p => p.category === project.category && p.id !== project.id)
     .slice(0, 3);
 
-  return (
-    <div className="text-white min-h-screen pt-32 pb-20">
-      <Helmet>
-        <title>{project.title} | New Tech Softs - Case Study</title>
-        <meta name="description" content={project.description || `${project.title} - A case study by New Tech Softs, a leading software house in Islamabad. View the technologies, features, and results.`} />
-        <meta name="keywords" content={`${project.title}, ${project.category || 'software'}, case study, New Tech Softs, software house Islamabad, web development`} />
-        <meta name="author" content="New Tech Softs" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={`https://newtechsofts.com/project/${project.slug}`} />
+  const infoItems = [
+    { icon: <FaCalendar />, label: "Year", value: project.year },
+    { icon: <FaUser />, label: "Client", value: project.client },
+    { icon: <FaClock />, label: "Duration", value: project.duration },
+    { icon: <FaLayerGroup />, label: "Role", value: project.role },
+  ];
 
+  return (
+    <div className="min-h-screen pt-32 pb-20 relative overflow-hidden">
+
+      <Helmet>
+        <title>{project.title} | New Tech Softs - Case Study & Portfolio</title>
+        <meta name="description" content={`${project.description || `${project.title} - A case study by New Tech Softs`} New Tech Softs is a leading software house in Islamabad, Pakistan delivering custom web, mobile, AI and desktop solutions worldwide.`} />
+        <meta name="keywords" content={`${project.title}, ${project.category}, ${project.tags.join(', ')}, ${project.client}, case study, portfolio, New Tech Softs, software house Islamabad, web development Pakistan, custom software, IT company Islamabad, tech agency Pakistan, freelance developer Islamabad, React developer Pakistan, Next.js development, MERN stack, Python development, AI solutions Pakistan, mobile app development Islamabad`} />
+        <meta name="author" content="New Tech Softs" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow" />
+        <link rel="canonical" href={`https://newtechsofts.com/project/${project.slug}`} />
+        <meta name="language" content="English" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="rating" content="general" />
+        <meta name="geo.region" content="PK-IST" />
+        <meta name="geo.placename" content="Islamabad" />
+        <meta name="geo.position" content="33.6844;73.0479" />
+        <meta name="ICBM" content="33.6844, 73.0479" />
+
+        {/* Open Graph / Facebook */}
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`https://newtechsofts.com/project/${project.slug}`} />
-        <meta property="og:title" content={`${project.title} | New Tech Softs`} />
-        <meta property="og:description" content={project.description || `${project.title} - Case study by New Tech Softs.`} />
-        <meta property="og:image" content={project.image || 'https://newtechsofts.com/logo.png'} />
+        <meta property="og:title" content={`${project.title} | New Tech Softs - Case Study`} />
+        <meta property="og:description" content={`${project.description || project.title}. Built by New Tech Softs - a leading software house in Islamabad, Pakistan.`} />
+        <meta property="og:image" content={project.img || 'https://newtechsofts.com/logo.webp'} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content={`${project.title} - New Tech Softs`} />
         <meta property="og:site_name" content="New Tech Softs" />
         <meta property="og:locale" content="en_US" />
+        <meta property="article:published_time" content="2026-01-01T00:00:00+05:00" />
+        <meta property="article:modified_time" content="2026-08-17T00:00:00+05:00" />
+        <meta property="article:author" content="New Tech Softs" />
+        <meta property="article:section" content={project.category} />
+        {project.tags.map((tag, i) => (
+          <meta key={i} property="article:tag" content={tag} />
+        ))}
 
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={`https://newtechsofts.com/project/${project.slug}`} />
-        <meta name="twitter:title" content={`${project.title} | New Tech Softs`} />
-        <meta name="twitter:description" content={project.description || `${project.title} - Case study by New Tech Softs.`} />
-        <meta name="twitter:image" content={project.image || 'https://newtechsofts.com/logo.png'} />
+        <meta name="twitter:title" content={`${project.title} | New Tech Softs - Case Study`} />
+        <meta name="twitter:description" content={`${project.description || project.title}. Built by New Tech Softs, Islamabad.`} />
+        <meta name="twitter:image" content={project.img || 'https://newtechsofts.com/logo.webp'} />
+        <meta name="twitter:label1" content="Written by" />
+        <meta name="twitter:data1" content="New Tech Softs" />
+        <meta name="twitter:label2" content="Category" />
+        <meta name="twitter:data2" content={project.category} />
 
+        {/* JSON-LD Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CreativeWork",
             "name": project.title,
             "description": project.description || `${project.title} - Case study by New Tech Softs.`,
-            "image": project.image || 'https://newtechsofts.com/logo.png',
-            "author": { "@type": "Organization", "name": "New Tech Softs" },
-            "url": `https://newtechsofts.com/project/${project.slug}`
+            "image": project.img || 'https://newtechsofts.com/logo.webp',
+            "url": `https://newtechsofts.com/project/${project.slug}`,
+            "author": {
+              "@type": "Organization",
+              "name": "New Tech Softs",
+              "url": "https://newtechsofts.com",
+              "logo": "https://newtechsofts.com/logo.webp",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Islamabad",
+                "addressRegion": "ICT",
+                "addressCountry": "PK"
+              },
+              "sameAs": [
+                "https://www.linkedin.com/company/newtechsofts",
+                "https://github.com/wasiqzahoor"
+              ]
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "New Tech Softs",
+              "logo": { "@type": "ImageObject", "url": "https://newtechsofts.com/logo.webp" }
+            },
+            "datePublished": "2026-01-01",
+            "dateModified": "2026-08-17",
+            "mainEntityOfPage": { "@type": "WebPage", "@id": `https://newtechsofts.com/project/${project.slug}` },
+            "about": {
+              "@type": "Thing",
+              "name": project.category,
+              "description": project.tags.join(', ')
+            },
+            "keywords": `${project.title}, ${project.category}, ${project.tags.join(', ')}, New Tech Softs, Islamabad`,
+            "inLanguage": "en-US",
+            "isPartOf": {
+              "@type": "WebSite",
+              "name": "New Tech Softs",
+              "url": "https://newtechsofts.com"
+            }
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://newtechsofts.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://newtechsofts.com/portfolio" },
+              { "@type": "ListItem", "position": 3, "name": project.title, "item": `https://newtechsofts.com/project/${project.slug}` }
+            ]
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": `What was the challenge in building ${project.title}?`,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": project.challenge
+                }
+              },
+              {
+                "@type": "Question",
+                "name": `What solution did New Tech Softs provide for ${project.title}?`,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": project.solution
+                }
+              },
+              {
+                "@type": "Question",
+                "name": `What technologies were used in ${project.title}?`,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": `Technologies used: ${project.tags.join(', ')}. ${project.longDescription || project.description}`
+                }
+              }
+            ]
           })}
         </script>
       </Helmet>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-        {/* --- BACK BUTTON --- */}
-        <div className="mb-8">
+        {/* BACK BUTTON */}
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          className="mb-10"
+        >
           <button
             onClick={() => navigate(-1)}
-            className="inline-flex items-center gap-2 text-gray-400 hover:text-cyan-400 transition-colors font-bold uppercase text-xs tracking-widest"
+            className="inline-flex items-center gap-2 text-white/40 hover:text-brand-cyan transition-colors font-heading font-bold uppercase text-xs tracking-widest"
           >
             <FaArrowLeft /> Back to Portfolio
           </button>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
-          {/* --- LEFT SIDE: MAIN CONTENT --- */}
+          {/* LEFT: MAIN CONTENT */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="lg:col-span-2 space-y-8"
+            className="lg:col-span-2 space-y-10"
           >
             {/* Header */}
-            <div className="space-y-4">
+            <div className="space-y-5">
               <div className="flex flex-wrap items-center gap-3">
-                <span className="bg-cyan-500/10 text-cyan-400 px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest border border-cyan-500/20 flex items-center gap-2">
+                <span className="bg-brand-mid/20 text-brand-cyan px-4 py-1.5 rounded-full text-xs font-heading font-black uppercase tracking-widest border border-brand-mid/30 flex items-center gap-2">
                   {getCategoryIcon(project.category)}
                   {project.category}
                 </span>
                 {project.featured && (
-                  <span className="bg-yellow-500/10 text-yellow-400 px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest border border-yellow-500/20">
+                  <span className="bg-brand-mid/20 text-brand-cyan px-4 py-1.5 rounded-full text-xs font-heading font-black uppercase tracking-widest border border-brand-mid/30">
                     ⭐ Featured
                   </span>
                 )}
               </div>
 
-              <h1 className="text-4xl md:text-5xl font-black leading-tight">
+              <h1 className="font-heading text-4xl md:text-5xl font-black text-white leading-tight">
                 {project.title}
               </h1>
-
-              <div className="flex flex-wrap items-center gap-6 text-gray-500 text-sm font-bold uppercase tracking-tighter">
-                <span className="flex items-center gap-2"><FaCalendar className="text-cyan-400" /> {project.year}</span>
-                <span className="flex items-center gap-2"><FaUser className="text-cyan-400" /> {project.client}</span>
-                <span className="flex items-center gap-2"><FaClock className="text-cyan-400" /> {project.duration}</span>
-                <span className="flex items-center gap-2"><FaLayerGroup className="text-cyan-400" /> {project.role}</span>
-              </div>
             </div>
 
             {/* Featured Image */}
-            <div className="rounded-[2rem] overflow-hidden shadow-2xl border border-gray-800">
+            <div className="rounded-2xl overflow-hidden border border-white/[0.12] shadow-xl">
               <img
                 src={project.img}
                 alt={project.title}
                 className="w-full h-auto object-cover"
-                onError={(e) => {
-                  e.target.src = 'https://via.placeholder.com/1200x600?text=Project+Image';
-                }}
+                onError={(e) => { e.target.src = 'https://via.placeholder.com/1200x600?text=Project+Image'; }}
               />
             </div>
 
@@ -141,7 +246,7 @@ const ProjectDetail = () => {
                   href={project.demoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-[#0a192f] px-5 sm:px-8 py-3 sm:py-4 rounded-xl font-black text-xs sm:text-sm transition-all shadow-lg shadow-cyan-500/20"
+                  className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-brand-mid to-purple-600 text-white font-heading font-bold px-8 py-4 rounded-full shadow-lg shadow-brand-mid/20 hover:shadow-brand-mid/40 hover:-translate-y-0.5 transition-all text-sm"
                 >
                   <FaExternalLinkAlt /> Visit Live Site
                 </a>
@@ -151,53 +256,53 @@ const ProjectDetail = () => {
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg-[#112240] hover:bg-gray-800 text-white px-5 sm:px-8 py-3 sm:py-4 rounded-xl font-black text-xs sm:text-sm transition-all border border-gray-700 hover:border-cyan-500/30"
+                  className="inline-flex items-center justify-center gap-2 bg-white/[0.08] text-white font-heading font-bold px-8 py-4 rounded-full border border-white/[0.12] hover:bg-white/[0.14] transition-all text-sm"
                 >
                   <FaGithub /> View Source Code
                 </a>
               )}
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-transparent hover:bg-gray-800 text-gray-400 hover:text-white px-5 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-xs sm:text-sm transition-all border border-gray-700"
+                className="inline-flex items-center justify-center gap-2 bg-white/[0.08] text-white/60 font-heading font-bold px-8 py-4 rounded-full border border-white/[0.12] hover:bg-white/[0.14] hover:text-white transition-all text-sm"
               >
                 Start Similar Project
               </Link>
             </div>
 
             {/* Project Overview */}
-            <div className="bg-[#112240] rounded-[2rem] p-8 border border-gray-800">
-              <h2 className="text-2xl font-black text-white mb-6 flex items-center gap-3">
-                <span className="w-10 h-10 bg-cyan-500/10 text-cyan-400 rounded-xl flex items-center justify-center">
+            <div className="bg-white/[0.08] backdrop-blur-xl rounded-2xl p-8 border border-white/[0.12] shadow-xl">
+              <h2 className="font-heading text-2xl font-black text-white mb-6 flex items-center gap-3">
+                <span className="w-10 h-10 bg-brand-mid/20 text-brand-cyan rounded-xl flex items-center justify-center">
                   <FaLaptopCode />
                 </span>
                 Project Overview
               </h2>
-              <p className="text-gray-300 leading-relaxed text-lg">
+              <p className="font-body text-white/60 leading-relaxed text-lg">
                 {project.longDescription || project.description}
               </p>
             </div>
 
             {/* Challenge & Solution */}
-            <div className="bg-[#112240] rounded-[2rem] p-8 border border-gray-800">
-              <h2 className="text-2xl font-black text-white mb-8">Challenge & Solution</h2>
+            <div className="bg-white/[0.08] backdrop-blur-xl rounded-2xl p-8 border border-white/[0.12] shadow-xl">
+              <h2 className="font-heading text-2xl font-black text-white mb-8">Challenge & Solution</h2>
 
               <div className="space-y-8">
                 <div>
-                  <h3 className="text-lg font-bold text-red-400 mb-4 flex items-center gap-3">
-                    <span className="w-3 h-3 bg-red-500 rounded-full"></span>
+                  <h3 className="font-heading text-lg font-bold text-red-400 mb-4 flex items-center gap-3">
+                    <span className="w-3 h-3 bg-red-400 rounded-full"></span>
                     The Challenge
                   </h3>
-                  <p className="text-gray-300 leading-relaxed pl-6">
+                  <p className="font-body text-white/60 leading-relaxed pl-6">
                     {project.challenge}
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-bold text-green-400 mb-4 flex items-center gap-3">
-                    <span className="w-3 h-3 bg-green-500 rounded-full"></span>
+                  <h3 className="font-heading text-lg font-bold text-green-400 mb-4 flex items-center gap-3">
+                    <span className="w-3 h-3 bg-green-400 rounded-full"></span>
                     Our Solution
                   </h3>
-                  <p className="text-gray-300 leading-relaxed pl-6">
+                  <p className="font-body text-white/60 leading-relaxed pl-6">
                     {project.solution}
                   </p>
                 </div>
@@ -205,34 +310,48 @@ const ProjectDetail = () => {
             </div>
 
             {/* Key Features */}
-            <div className="bg-[#112240] rounded-[2rem] p-8 border border-gray-800">
-              <h2 className="text-2xl font-black text-white mb-6">Key Features</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="bg-white/[0.08] backdrop-blur-xl rounded-2xl p-8 border border-white/[0.12] shadow-xl">
+              <h2 className="font-heading text-2xl font-black text-white mb-6">Key Features</h2>
+              <div className="flex flex-wrap gap-3">
                 {project.features.map((feature, i) => (
-                  <div key={i} className="flex items-center gap-3 p-4 bg-[#0a192f] rounded-xl border border-gray-700/50">
-                    <FaCheckCircle className="text-cyan-400 flex-shrink-0" />
-                    <span className="text-gray-300 text-sm font-medium">{feature}</span>
-                  </div>
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.05 }}
+                    className="flex items-center gap-2 px-4 py-2.5 bg-white/[0.08] backdrop-blur-md rounded-full border border-white/[0.12] hover:border-brand-mid/30 transition-all"
+                  >
+                    <FaCheckCircle className="text-brand-cyan text-sm flex-shrink-0" />
+                    <span className="font-body text-white/60 text-sm font-medium">{feature}</span>
+                  </motion.div>
                 ))}
               </div>
             </div>
 
-            {/* Results & Impact */}
-            <div className="bg-[#112240] rounded-[2rem] p-8 border border-gray-800">
-              <h2 className="text-2xl font-black text-white mb-6">Results & Impact</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {/* Results */}
+            <div className="bg-white/[0.08] backdrop-blur-xl rounded-2xl p-8 border border-white/[0.12] shadow-xl">
+              <h2 className="font-heading text-2xl font-black text-white mb-6">Results & Impact</h2>
+              <div className="flex flex-wrap gap-3">
                 {project.results.map((result, i) => (
-                  <div key={i} className="flex items-center gap-3 p-4 bg-green-500/10 rounded-xl border border-green-500/20">
-                    <FaCheckCircle className="text-green-400 flex-shrink-0" />
-                    <span className="text-gray-300 text-sm font-medium">{result}</span>
-                  </div>
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.05 }}
+                    className="flex items-center gap-2 px-4 py-2.5 bg-green-500/10 backdrop-blur-md rounded-full border border-green-500/20"
+                  >
+                    <FaCheckCircle className="text-green-400 text-sm flex-shrink-0" />
+                    <span className="font-body text-white/60 text-sm font-medium">{result}</span>
+                  </motion.div>
                 ))}
               </div>
             </div>
 
             {/* Technology Stack */}
-            <div className="bg-[#112240] rounded-[2rem] p-8 border border-gray-800">
-              <h2 className="text-2xl font-black text-white mb-6">Technology Stack</h2>
+            <div className="bg-white/[0.08] backdrop-blur-xl rounded-2xl p-8 border border-white/[0.12] shadow-xl">
+              <h2 className="font-heading text-2xl font-black text-white mb-6">Technology Stack</h2>
               <div className="flex flex-wrap gap-3">
                 {project.tags.map((tag, i) => (
                   <motion.span
@@ -240,7 +359,7 @@ const ProjectDetail = () => {
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.1 + (i * 0.05) }}
-                    className="px-5 py-2.5 bg-[#0a192f] text-cyan-400 rounded-xl text-sm font-bold border border-gray-700/50 hover:border-cyan-500/50 transition-colors"
+                    className="px-5 py-2.5 bg-white/[0.08] text-brand-cyan rounded-full text-sm font-heading font-bold border border-white/[0.12] hover:border-brand-mid/30 transition-colors"
                   >
                     {tag}
                   </motion.span>
@@ -249,25 +368,25 @@ const ProjectDetail = () => {
             </div>
 
             {/* Social Share */}
-            <div className="pt-8 border-t border-gray-800">
+            <div className="pt-8 border-t border-white/[0.12]">
               <div className="flex items-center gap-4">
-                <span className="text-sm font-bold uppercase text-gray-500">Share this project:</span>
+                <span className="font-heading text-sm font-bold uppercase text-white/40">Share this project:</span>
                 <div className="flex gap-4">
                   <a
                     href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-500 hover:text-[#0077b5] text-xl transition-all hover:scale-125"
+                    className="text-white/40 hover:text-[#0A66C2] text-xl transition-all hover:scale-125"
                   >
-                    <FaExternalLinkAlt />
+                    <FaLinkedin />
                   </a>
                   <a
                     href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(project.title)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-500 hover:text-[#1da1f2] text-xl transition-all hover:scale-125"
+                    className="text-white/40 hover:text-[#1DA1F2] text-xl transition-all hover:scale-125"
                   >
-                    <FaExternalLinkAlt />
+                    <FaTwitter />
                   </a>
                 </div>
               </div>
@@ -275,65 +394,73 @@ const ProjectDetail = () => {
 
           </motion.div>
 
-          {/* --- RIGHT SIDE: SIDEBAR --- */}
+          {/* RIGHT: SIDEBAR */}
           <aside className="space-y-6">
             {/* CTA Card */}
-            <div className="bg-gradient-to-br from-cyan-600 to-blue-700 p-8 rounded-[2rem] shadow-xl relative overflow-hidden group">
-              <FaRocket className="absolute -bottom-4 -right-4 text-8xl text-white/10 group-hover:rotate-12 transition-transform" />
-              <h3 className="text-2xl font-black text-white mb-4 relative z-10">Have a Similar Project?</h3>
-              <p className="text-white/80 text-sm mb-6 relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="bg-gradient-to-br from-brand-mid/20 to-purple-600/10 backdrop-blur-xl p-8 rounded-2xl border border-white/[0.12] shadow-xl relative overflow-hidden group"
+            >
+              <FaRocket className="absolute -bottom-4 -right-4 text-8xl text-brand-mid/10 group-hover:rotate-12 transition-transform" />
+              <h3 className="font-heading text-2xl font-black text-white mb-4 relative z-10">Have a Similar Project?</h3>
+              <p className="font-body text-white/60 text-sm mb-6 relative z-10">
                 Let's discuss how we can build something amazing for you with the same technology stack.
               </p>
               <Link to="/contact">
-                <button className="w-full bg-white text-blue-700 py-4 rounded-xl font-black uppercase text-xs tracking-widest hover:bg-gray-100 transition-all relative z-10">
+                <button className="w-full bg-gradient-to-r from-brand-mid to-purple-600 text-white font-heading font-bold py-4 rounded-full uppercase text-xs tracking-widest hover:shadow-brand-mid/20 hover:shadow-lg transition-all relative z-10">
                   Get Started
                 </button>
               </Link>
-            </div>
+            </motion.div>
 
-            {/* Project Info Card */}
-            <div className="bg-[#112240] p-8 rounded-[2rem] border border-gray-800">
-              <h3 className="text-white font-black uppercase text-sm tracking-widest mb-6">Project Details</h3>
+            {/* Project Info */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="bg-white/[0.08] backdrop-blur-xl p-8 rounded-2xl border border-white/[0.12] shadow-xl"
+            >
+              <h3 className="font-heading text-white font-black uppercase text-sm tracking-widest mb-6">Project Details</h3>
               <div className="space-y-4">
-                <div className="flex justify-between items-center py-2 border-b border-gray-800">
-                  <span className="text-gray-500 text-sm">Category</span>
-                  <span className="text-white font-bold text-sm">{project.category}</span>
-                </div>
-                <div className="flex justify-between items-center py-2 border-b border-gray-800">
-                  <span className="text-gray-500 text-sm">Year</span>
-                  <span className="text-white font-bold text-sm">{project.year}</span>
-                </div>
-                <div className="flex justify-between items-center py-2 border-b border-gray-800">
-                  <span className="text-gray-500 text-sm">Duration</span>
-                  <span className="text-white font-bold text-sm">{project.duration}</span>
-                </div>
-                <div className="flex justify-between items-center py-2 border-b border-gray-800">
-                  <span className="text-gray-500 text-sm">Client</span>
-                  <span className="text-white font-bold text-sm text-right">{project.client}</span>
-                </div>
-                <div className="flex justify-between items-center py-2 border-b border-gray-800">
-                  <span className="text-gray-500 text-sm">Technologies</span>
-                  <span className="text-white font-bold text-sm">{project.tags.length} Used</span>
+                {infoItems.map((item, i) => (
+                  <div key={i} className="flex justify-between items-start gap-4 py-2 border-b border-white/[0.08]">
+                    <span className="font-body text-white/40 text-sm flex items-center gap-2 flex-shrink-0">
+                      <span className="text-brand-cyan">{item.icon}</span>
+                      {item.label}
+                    </span>
+                    <span className="font-heading text-white font-bold text-sm text-right break-words">{item.value}</span>
+                  </div>
+                ))}
+                <div className="flex justify-between items-center py-2 border-b border-white/[0.08]">
+                  <span className="font-body text-white/40 text-sm flex-shrink-0">Technologies</span>
+                  <span className="font-heading text-white font-bold text-sm text-right">{project.tags.length} Used</span>
                 </div>
                 <div className="flex justify-between items-center py-2">
-                  <span className="text-gray-500 text-sm">Status</span>
-                  <span className="px-3 py-1 bg-green-500/20 text-green-400 rounded-lg text-xs font-bold border border-green-500/30">Completed</span>
+                  <span className="font-body text-white/40 text-sm flex-shrink-0">Status</span>
+                  <span className="px-3 py-1 bg-green-500/10 text-green-400 rounded-full text-xs font-heading font-bold border border-green-500/20">Completed</span>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Quick Links */}
-            <div className="bg-[#112240] p-8 rounded-[2rem] border border-gray-800">
-              <h3 className="text-white font-black uppercase text-sm tracking-widest mb-6">Quick Links</h3>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              className="bg-white/[0.08] backdrop-blur-xl p-8 rounded-2xl border border-white/[0.12] shadow-xl"
+            >
+              <h3 className="font-heading text-white font-black uppercase text-sm tracking-widest mb-6">Quick Links</h3>
               <div className="space-y-3">
                 {project.demoUrl && project.demoUrl !== '#' && project.demoUrl !== '/' && (
                   <a
                     href={project.demoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 text-gray-300 hover:text-cyan-400 transition-colors py-2"
+                    className="flex items-center gap-3 text-white/60 hover:text-brand-cyan transition-colors py-2 font-body"
                   >
-                    <FaExternalLinkAlt className="text-cyan-400" /> Visit Live Site
+                    <FaExternalLinkAlt className="text-brand-cyan" /> Visit Live Site
                   </a>
                 )}
                 {project.githubUrl && (
@@ -341,53 +468,51 @@ const ProjectDetail = () => {
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 text-gray-300 hover:text-cyan-400 transition-colors py-2"
+                    className="flex items-center gap-3 text-white/60 hover:text-brand-cyan transition-colors py-2 font-body"
                   >
-                    <FaGithub className="text-cyan-400" /> View Source Code
+                    <FaGithub className="text-brand-cyan" /> View Source Code
                   </a>
                 )}
                 <Link
                   to="/contact"
-                  className="flex items-center gap-3 text-gray-300 hover:text-cyan-400 transition-colors py-2"
+                  className="flex items-center gap-3 text-white/60 hover:text-brand-cyan transition-colors py-2 font-body"
                 >
-                  <FaRocket className="text-cyan-400" /> Start Similar Project
+                  <FaRocket className="text-brand-cyan" /> Start Similar Project
                 </Link>
               </div>
-            </div>
+            </motion.div>
           </aside>
 
         </div>
       </div>
 
-      {/* --- RELATED PROJECTS --- */}
+      {/* RELATED PROJECTS */}
       {relatedProjects.length > 0 && (
-        <section className="py-20 mt-12 bg-[#112240] border-t border-gray-800">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-black text-white mb-10 text-center">
-              More <span className="text-cyan-400">{project.category}</span> Projects
+        <section className="py-16 md:py-20 mt-12 relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 className="font-heading text-3xl font-black text-white mb-10 text-center">
+              More <span className="text-brand-cyan">{project.category}</span> Projects
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {relatedProjects.map((relProject) => (
                 <Link
                   key={relProject.id}
                   to={`/project/${relProject.slug}`}
-                  className="group bg-[#0a192f] rounded-[2rem] overflow-hidden border border-gray-800 hover:border-cyan-500/50 transition-all duration-300"
+                  className="group bg-white/[0.08] backdrop-blur-xl rounded-2xl overflow-hidden border border-white/[0.12] shadow-xl hover:border-brand-mid/30 transition-all duration-300"
                 >
                   <div className="h-48 overflow-hidden">
                     <img
                       src={relProject.img}
                       alt={relProject.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      onError={(e) => {
-                        e.target.src = 'https://via.placeholder.com/400x200?text=Project';
-                      }}
+                      onError={(e) => { e.target.src = 'https://via.placeholder.com/400x200?text=Project'; }}
                     />
                   </div>
                   <div className="p-6">
-                    <h3 className="font-bold text-white group-hover:text-cyan-400 transition-colors mb-2">
+                    <h3 className="font-heading font-bold text-white group-hover:text-brand-cyan transition-colors mb-2">
                       {relProject.title}
                     </h3>
-                    <p className="text-gray-400 text-sm line-clamp-2">
+                    <p className="font-body text-white/60 text-sm line-clamp-2">
                       {relProject.description}
                     </p>
                   </div>
@@ -398,13 +523,8 @@ const ProjectDetail = () => {
         </section>
       )}
 
-      {/* --- CTA SECTION --- */}
-      <section className="py-24 relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-          <div className="absolute -top-24 -left-24 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
-        </div>
-
+      {/* CTA */}
+      <section className="py-16 md:py-20 relative overflow-hidden">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -412,21 +532,18 @@ const ProjectDetail = () => {
             viewport={{ once: true }}
             className="text-center"
           >
-            <h2 className="text-3xl md:text-5xl font-black text-white mb-6">
-              Want a Similar{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
-                Project?
-              </span>
+            <h2 className="font-heading text-3xl md:text-5xl font-black text-white mb-6">
+              Want a Similar <span className="text-brand-cyan">Project?</span>
             </h2>
-            <p className="text-gray-300 text-lg mb-10 max-w-2xl mx-auto">
+            <p className="font-body text-white/60 text-lg mb-10 max-w-2xl mx-auto">
               Let's discuss how we can build something amazing for you with the same technology stack.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
                 <motion.button
-                  whileHover={{ scale: 1.05, boxShadow: "0px 0px 30px rgba(34, 211, 238, 0.4)" }}
+                  whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-cyan-500 text-[#0a192f] px-10 py-4 rounded-2xl font-black text-lg shadow-lg"
+                  className="bg-gradient-to-r from-brand-mid to-purple-600 text-white font-heading font-bold px-10 py-4 rounded-full shadow-lg shadow-brand-mid/20 hover:shadow-brand-mid/40 transition-all"
                 >
                   Get Free Consultation
                 </motion.button>
@@ -435,7 +552,7 @@ const ProjectDetail = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-transparent border-2 border-gray-600 text-gray-300 px-10 py-4 rounded-2xl font-bold text-lg hover:border-cyan-400 hover:text-cyan-400 transition-all"
+                  className="bg-white/[0.08] border border-white/[0.12] text-white font-heading font-bold px-10 py-4 rounded-full hover:bg-white/[0.14] transition-all"
                 >
                   View All Projects
                 </motion.button>
