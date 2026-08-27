@@ -280,7 +280,7 @@ We built the website with SEO and performance as core priorities:
 
 ## The Results: A Premium Digital Experience
 
-The redesigned website at everceutical.vercel.app delivers:
+The redesigned website at everceutical.com delivers:
 
 - A premium, modern look that matches EverCeutical's position as a Korean exosome biotechnology leader
 - Professional product presentation that engages researchers, healthcare professionals, and potential partners
@@ -308,7 +308,7 @@ This project is being developed by New Ai Tech Softs. The complete website redes
 
 New Ai Tech Softs specializes in creating premium, professional websites for businesses across industries. Whether you need a complete website redesign or a brand-new digital presence, our team delivers solutions that drive results.
 
-🔗 Website: everceutical.vercel.app
+🔗 Website: everceutical.com
 
 Ready to transform your website? Contact New Ai Tech Softs today.`,
     date: "August 8, 2026",

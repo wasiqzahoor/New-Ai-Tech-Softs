@@ -174,7 +174,7 @@ const companyKnowledge = {
   ],
 
   featuredProjects: [
-    { title: "EverCeutical Website", client: "EverCeutical", type: "Premium Website", description: "Korean exosome biotechnology company website redesign", url: "https://everceutical.vercel.app/" },
+    { title: "EverCeutical Website", client: "EverCeutical", type: "Premium Website", description: "Korean exosome biotechnology company website redesign", url: "https://everceutical.com/" },
     { title: "NovaSky Distributors", client: "NovaSky Distributors", type: "E-Commerce Platform", description: "Multi-category distribution platform with WhatsApp ordering", url: "https://novaskydistributors.com/" },
     { title: "Biglou's Optimizer", client: "Biglou's Optimizations", type: "Full Stack Web App", description: "PC optimization software platform with Stripe payments", url: "https://biglousoptimizations.com/" },
     { title: "The AI Chicks Website", client: "The AI Chicks", type: "AI-Powered Website", description: "Business website with AI chatbot integration", url: "https://www.theaichicks.com/" },

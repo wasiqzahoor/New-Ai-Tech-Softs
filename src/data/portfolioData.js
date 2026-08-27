@@ -13,7 +13,7 @@ export const projects = [
     description: "Premium website redesign for EverCeutical, a Korea-based leader in exosome research and manufacturing for regenerative medicine.",
     longDescription: "Complete website redesign for EverCeutical, a Korean exosome biotechnology company specializing in high-purity, clinically engineered exosome solutions for regenerative medicine and aesthetic dermatology. Built with a premium, modern design that reflects their position as industry leaders. The website features product showcases, research & technology sections, inspection reports, and seamless user experience.",
     img: "/Projects-Banner/image22.png",
-    demoUrl: "https://everceutical.vercel.app/",
+    demoUrl: "https://everceutical.com/",
     githubUrl: "",
     featured: true,
     year: 2026,
