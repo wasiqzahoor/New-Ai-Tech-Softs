@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import {
   FaCalendarAlt, FaUserAlt, FaArrowLeft, FaSearch,
-  FaLinkedin, FaTwitter, FaFacebook, FaRocket
+  FaLinkedin, FaTwitter, FaFacebook, FaRocket, FaWhatsapp
 } from 'react-icons/fa';
 import { blogData } from '../data/blogData';
 
@@ -88,12 +88,16 @@ const parseContent = (content) => {
 const BlogDetail = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [showResults, setShowResults] = useState(false);
-  const shareUrl = encodeURIComponent(typeof window !== 'undefined' ? window.location.href : '');
-  const linkedinShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`;
-  const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`;
-  const twitterShareUrl = `https://twitter.com/intent/tweet?url=${shareUrl}`;
   const { slug } = useParams();
   const blog = blogData.find((b) => b.slug === slug);
+
+  const currentUrl = typeof window !== 'undefined' ? window.location.href : `https://newaitechsofts.com/blog/${slug || ''}`;
+  const shareUrl = encodeURIComponent(currentUrl);
+  const shareTitle = encodeURIComponent(blog?.title || 'Blog Post');
+  const linkedinShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`;
+  const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`;
+  const twitterShareUrl = `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareTitle}`;
+  const whatsappShareUrl = `https://wa.me/?text=${shareTitle}%20${shareUrl}`;
 
   const searchResults = useMemo(() => {
     if (!searchQuery.trim()) return [];
@@ -132,41 +136,41 @@ const BlogDetail = () => {
   return (
     <div className="text-white min-h-screen pt-20 md:pt-24 pb-20 overflow-hidden">
       <Helmet>
-        <title>{blog.title} | New Tech Softs Blog</title>
-        <meta name="description" content={blog.excerpt || blog.title + ' - Read this article by New Tech Softs, a leading software house in Islamabad.'} />
-        <meta name="keywords" content={`${blog.category || 'tech'}, web development, software house Islamabad, New Tech Softs`} />
-        <meta name="author" content={blog.author || 'New Tech Softs'} />
+        <title>{blog.title} | New Ai Tech Softs Blog</title>
+        <meta name="description" content={blog.excerpt || blog.title + ' - Read this article by New Ai Tech Softs, a leading software house in Islamabad.'} />
+        <meta name="keywords" content={`${blog.category || 'tech'}, web development, software house Islamabad, New Ai Tech Softs`} />
+        <meta name="author" content={blog.author || 'New Ai Tech Softs'} />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={`https://newtechsofts.com/blog/${blog.slug}`} />
+        <link rel="canonical" href={`https://newaitechsofts.com/blog/${blog.slug}`} />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://newtechsofts.com/blog/${blog.slug}`} />
-        <meta property="og:title" content={`${blog.title} | New Tech Softs`} />
+        <meta property="og:url" content={`https://newaitechsofts.com/blog/${blog.slug}`} />
+        <meta property="og:title" content={`${blog.title} | New Ai Tech Softs`} />
         <meta property="og:description" content={blog.excerpt || blog.title} />
-        <meta property="og:image" content={blog.img || 'https://newtechsofts.com/logo.webp'} />
-        <meta property="og:site_name" content="New Tech Softs" />
+        <meta property="og:image" content={blog.img || 'https://newaitechsofts.com/logo.webp'} />
+        <meta property="og:site_name" content="New Ai Tech Softs" />
         <meta property="og:locale" content="en_US" />
         <meta property="article:published_time" content={blog.date} />
-        <meta property="article:author" content={blog.author || 'New Tech Softs'} />
+        <meta property="article:author" content={blog.author || 'New Ai Tech Softs'} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content={`https://newtechsofts.com/blog/${blog.slug}`} />
-        <meta name="twitter:title" content={`${blog.title} | New Tech Softs`} />
+        <meta name="twitter:url" content={`https://newaitechsofts.com/blog/${blog.slug}`} />
+        <meta name="twitter:title" content={`${blog.title} | New Ai Tech Softs`} />
         <meta name="twitter:description" content={blog.excerpt || blog.title} />
-        <meta name="twitter:image" content={blog.img || 'https://newtechsofts.com/logo.webp'} />
+        <meta name="twitter:image" content={blog.img || 'https://newaitechsofts.com/logo.webp'} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             "headline": blog.title,
             "description": blog.excerpt || blog.title,
-            "image": blog.img || 'https://newtechsofts.com/logo.webp',
-            "author": { "@type": "Person", "name": blog.author || 'New Tech Softs' },
+            "image": blog.img || 'https://newaitechsofts.com/logo.webp',
+            "author": { "@type": "Person", "name": blog.author || 'New Ai Tech Softs' },
             "publisher": {
               "@type": "Organization",
-              "name": "New Tech Softs",
-              "logo": { "@type": "ImageObject", "url": "https://newtechsofts.com/logo.webp" }
+              "name": "New Ai Tech Softs",
+              "logo": { "@type": "ImageObject", "url": "https://newaitechsofts.com/logo.webp" }
             },
             "datePublished": blog.date,
-            "url": `https://newtechsofts.com/blog/${blog.slug}`
+            "url": `https://newaitechsofts.com/blog/${blog.slug}`
           })}
         </script>
       </Helmet>
@@ -223,6 +227,7 @@ const BlogDetail = () => {
                 <SocialShareIcon icon={<FaLinkedin />} link={linkedinShareUrl} colorClass="hover:text-[#0077b5]" />
                 <SocialShareIcon icon={<FaFacebook />} link={facebookShareUrl} colorClass="hover:text-[#1877f2]" />
                 <SocialShareIcon icon={<FaTwitter />} link={twitterShareUrl} colorClass="hover:text-[#1da1f2]" />
+                <SocialShareIcon icon={<FaWhatsapp />} link={whatsappShareUrl} colorClass="hover:text-[#25d366]" />
               </div>
             </div>
           </motion.div>

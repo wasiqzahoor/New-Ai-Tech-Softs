@@ -38,31 +38,31 @@ const Portfolio = () => {
     <div className="min-h-screen relative overflow-hidden">
 
       <Helmet>
-        <title>Portfolio & Case Studies | New Tech Softs - Software House in Islamabad</title>
-        <meta name="description" content="Explore 21+ successful projects by New Tech Softs - a leading software house in Islamabad. View our portfolio of web apps, AI tools, desktop applications, and full-stack solutions delivered to clients worldwide." />
-        <meta name="keywords" content="portfolio, case studies, web development, AI tools, software house Islamabad, MERN stack, React, Next.js, Python, machine learning, custom software, New Tech Softs, project showcase" />
-        <meta name="author" content="New Tech Softs" />
+        <title>Portfolio & Case Studies | New Ai Tech Softs - Software House in Islamabad</title>
+        <meta name="description" content="Explore 21+ successful projects by New Ai Tech Softs - a leading software house in Islamabad. View our portfolio of web apps, AI tools, desktop applications, and full-stack solutions delivered to clients worldwide." />
+        <meta name="keywords" content="portfolio, case studies, web development, AI tools, software house Islamabad, MERN stack, React, Next.js, Python, machine learning, custom software, New Ai Tech Softs, project showcase" />
+        <meta name="author" content="New Ai Tech Softs" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://newtechsofts.com/portfolio" />
+        <link rel="canonical" href="https://newaitechsofts.com/portfolio" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://newtechsofts.com/portfolio" />
-        <meta property="og:title" content="Portfolio & Case Studies | New Tech Softs" />
-        <meta property="og:description" content="Explore 21+ successful projects by New Tech Softs. View our portfolio of web apps, AI tools, desktop applications, and full-stack solutions." />
-        <meta property="og:image" content="https://newtechsofts.com/logo.webp" />
-        <meta property="og:site_name" content="New Tech Softs" />
+        <meta property="og:url" content="https://newaitechsofts.com/portfolio" />
+        <meta property="og:title" content="Portfolio & Case Studies | New Ai Tech Softs" />
+        <meta property="og:description" content="Explore 21+ successful projects by New Ai Tech Softs. View our portfolio of web apps, AI tools, desktop applications, and full-stack solutions." />
+        <meta property="og:image" content="https://newaitechsofts.com/logo.webp" />
+        <meta property="og:site_name" content="New Ai Tech Softs" />
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://newtechsofts.com/portfolio" />
-        <meta name="twitter:title" content="Portfolio & Case Studies | New Tech Softs" />
-        <meta name="twitter:description" content="Explore 21+ successful projects by New Tech Softs. View our portfolio of web apps, AI tools, desktop applications, and full-stack solutions." />
-        <meta name="twitter:image" content="https://newtechsofts.com/logo.webp" />
+        <meta name="twitter:url" content="https://newaitechsofts.com/portfolio" />
+        <meta name="twitter:title" content="Portfolio & Case Studies | New Ai Tech Softs" />
+        <meta name="twitter:description" content="Explore 21+ successful projects by New Ai Tech Softs. View our portfolio of web apps, AI tools, desktop applications, and full-stack solutions." />
+        <meta name="twitter:image" content="https://newaitechsofts.com/logo.webp" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            "name": "Portfolio & Case Studies | New Tech Softs",
-            "description": "Explore 21+ successful projects by New Tech Softs - a leading software house in Islamabad specializing in web apps, AI tools, and custom software solutions.",
-            "url": "https://newtechsofts.com/portfolio",
+            "name": "Portfolio & Case Studies | New Ai Tech Softs",
+            "description": "Explore 21+ successful projects by New Ai Tech Softs - a leading software house in Islamabad specializing in web apps, AI tools, and custom software solutions.",
+            "url": "https://newaitechsofts.com/portfolio",
             "mainEntity": {
               "@type": "ItemList",
               "numberOfItems": projects.length,
@@ -81,8 +81,8 @@ const Portfolio = () => {
             },
             "publisher": {
               "@type": "Organization",
-              "name": "New Tech Softs",
-              "logo": { "@type": "ImageObject", "url": "https://newtechsofts.com/logo.webp" }
+              "name": "New Ai Tech Softs",
+              "logo": { "@type": "ImageObject", "url": "https://newaitechsofts.com/logo.webp" }
             }
           })}
         </script>
@@ -271,7 +271,7 @@ const Portfolio = () => {
               <span className="text-brand-cyan">Digital Project?</span>
             </h2>
             <p className="font-body text-white/60 text-lg md:text-xl mb-12 max-w-3xl mx-auto leading-relaxed">
-              New Tech Softs specializes in MERN stack development, custom mobile applications, and comprehensive digital solutions. Let's transform your vision into reality.
+              New Ai Tech Softs specializes in MERN stack development, custom mobile applications, and comprehensive digital solutions. Let's transform your vision into reality.
             </p>
             <Link to="/contact">
               <motion.button

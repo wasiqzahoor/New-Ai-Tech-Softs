@@ -30,35 +30,35 @@ const Blog = () => {
   return (
     <div className="text-white min-h-screen pt-16 pb-20">
       <Helmet>
-        <title>Blog & Tech Insights | New Tech Softs - Software House in Islamabad</title>
-        <meta name="description" content="Read the latest tech insights, web development tips, AI trends, and software engineering guides from New Tech Softs - a leading software house in Islamabad." />
-        <meta name="keywords" content="tech blog, web development tips, AI trends, software engineering, React, Next.js, Python, MERN stack, Islamabad tech company, New Tech Softs blog" />
-        <meta name="author" content="New Tech Softs" />
+        <title>Blog & Tech Insights | New Ai Tech Softs - Software House in Islamabad</title>
+        <meta name="description" content="Read the latest tech insights, web development tips, AI trends, and software engineering guides from New Ai Tech Softs - a leading software house in Islamabad." />
+        <meta name="keywords" content="tech blog, web development tips, AI trends, software engineering, React, Next.js, Python, MERN stack, Islamabad tech company, New Ai Tech Softs blog" />
+        <meta name="author" content="New Ai Tech Softs" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://newtechsofts.com/blog" />
+        <link rel="canonical" href="https://newaitechsofts.com/blog" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://newtechsofts.com/blog" />
-        <meta property="og:title" content="Blog & Tech Insights | New Tech Softs" />
-        <meta property="og:description" content="Read the latest tech insights, web development tips, AI trends, and software engineering guides from New Tech Softs." />
-        <meta property="og:image" content="https://newtechsofts.com/logo.webp" />
-        <meta property="og:site_name" content="New Tech Softs" />
+        <meta property="og:url" content="https://newaitechsofts.com/blog" />
+        <meta property="og:title" content="Blog & Tech Insights | New Ai Tech Softs" />
+        <meta property="og:description" content="Read the latest tech insights, web development tips, AI trends, and software engineering guides from New Ai Tech Softs." />
+        <meta property="og:image" content="https://newaitechsofts.com/logo.webp" />
+        <meta property="og:site_name" content="New Ai Tech Softs" />
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://newtechsofts.com/blog" />
-        <meta name="twitter:title" content="Blog & Tech Insights | New Tech Softs" />
-        <meta name="twitter:description" content="Read the latest tech insights, web development tips, AI trends, and software engineering guides from New Tech Softs." />
-        <meta name="twitter:image" content="https://newtechsofts.com/logo.webp" />
+        <meta name="twitter:url" content="https://newaitechsofts.com/blog" />
+        <meta name="twitter:title" content="Blog & Tech Insights | New Ai Tech Softs" />
+        <meta name="twitter:description" content="Read the latest tech insights, web development tips, AI trends, and software engineering guides from New Ai Tech Softs." />
+        <meta name="twitter:image" content="https://newaitechsofts.com/logo.webp" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Blog",
-            "name": "Blog & Tech Insights | New Tech Softs",
-            "description": "Latest tech insights, web development tips, and AI trends from New Tech Softs.",
-            "url": "https://newtechsofts.com/blog",
+            "name": "Blog & Tech Insights | New Ai Tech Softs",
+            "description": "Latest tech insights, web development tips, and AI trends from New Ai Tech Softs.",
+            "url": "https://newaitechsofts.com/blog",
             "publisher": {
               "@type": "Organization",
-              "name": "New Tech Softs",
-              "logo": { "@type": "ImageObject", "url": "https://newtechsofts.com/logo.webp" }
+              "name": "New Ai Tech Softs",
+              "logo": { "@type": "ImageObject", "url": "https://newaitechsofts.com/logo.webp" }
             }
           })}
         </script>

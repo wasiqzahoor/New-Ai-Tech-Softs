@@ -40,37 +40,37 @@ const PrivacyPolicy = () => {
   return (
     <div className="text-white min-h-screen pt-20 md:pt-24 pb-20 overflow-hidden">
       <Helmet>
-        <title>Privacy Policy | New Tech Softs</title>
-        <meta name="description" content="Read the Privacy Policy of New Tech Softs. Learn how we collect, use, and protect your personal data when you use our software development services." />
-        <meta name="keywords" content="privacy policy, data protection, New Tech Softs, software house Islamabad, GDPR" />
-        <meta name="author" content="New Tech Softs" />
+        <title>Privacy Policy | New Ai Tech Softs</title>
+        <meta name="description" content="Read the Privacy Policy of New Ai Tech Softs. Learn how we collect, use, and protect your personal data when you use our software development services." />
+        <meta name="keywords" content="privacy policy, data protection, New Ai Tech Softs, software house Islamabad, GDPR" />
+        <meta name="author" content="New Ai Tech Softs" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://newtechsofts.com/privacy" />
+        <link rel="canonical" href="https://newaitechsofts.com/privacy" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://newtechsofts.com/privacy" />
-        <meta property="og:title" content="Privacy Policy | New Tech Softs" />
-        <meta property="og:description" content="Read the Privacy Policy of New Tech Softs. Learn how we collect, use, and protect your personal data." />
-        <meta property="og:image" content="https://newtechsofts.com/logo.webp" />
-        <meta property="og:site_name" content="New Tech Softs" />
+        <meta property="og:url" content="https://newaitechsofts.com/privacy" />
+        <meta property="og:title" content="Privacy Policy | New Ai Tech Softs" />
+        <meta property="og:description" content="Read the Privacy Policy of New Ai Tech Softs. Learn how we collect, use, and protect your personal data." />
+        <meta property="og:image" content="https://newaitechsofts.com/logo.webp" />
+        <meta property="og:site_name" content="New Ai Tech Softs" />
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://newtechsofts.com/privacy" />
-        <meta name="twitter:title" content="Privacy Policy | New Tech Softs" />
-        <meta name="twitter:description" content="Read the Privacy Policy of New Tech Softs. Learn how we collect, use, and protect your personal data." />
-        <meta name="twitter:image" content="https://newtechsofts.com/logo.webp" />
+        <meta name="twitter:url" content="https://newaitechsofts.com/privacy" />
+        <meta name="twitter:title" content="Privacy Policy | New Ai Tech Softs" />
+        <meta name="twitter:description" content="Read the Privacy Policy of New Ai Tech Softs. Learn how we collect, use, and protect your personal data." />
+        <meta name="twitter:image" content="https://newaitechsofts.com/logo.webp" />
 
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "Privacy Policy | New Tech Softs",
-            "description": "Read the Privacy Policy of New Tech Softs. Learn how we collect, use, and protect your personal data when you use our software development services.",
-            "url": "https://newtechsofts.com/privacy",
+            "name": "Privacy Policy | New Ai Tech Softs",
+            "description": "Read the Privacy Policy of New Ai Tech Softs. Learn how we collect, use, and protect your personal data when you use our software development services.",
+            "url": "https://newaitechsofts.com/privacy",
             "publisher": {
               "@type": "Organization",
-              "name": "New Tech Softs",
-              "url": "https://newtechsofts.com/",
-              "logo": "https://newtechsofts.com/logo.webp"
+              "name": "New Ai Tech Softs",
+              "url": "https://newaitechsofts.com/",
+              "logo": "https://newaitechsofts.com/logo.webp"
             },
             "dateModified": "2026-01-01"
           })}
@@ -100,7 +100,7 @@ const PrivacyPolicy = () => {
             transition={{ delay: 0.5, duration: 0.6 }}
             className="text-white/60 font-body text-lg leading-relaxed max-w-2xl mx-auto"
           >
-            At New Tech Softs, your privacy is our priority. This policy outlines how we handle data, protect your information, and ensure transparency in our digital solutions.
+            At New Ai Tech Softs, your privacy is our priority. This policy outlines how we handle data, protect your information, and ensure transparency in our digital solutions.
           </motion.p>
 
           <motion.div
@@ -143,13 +143,13 @@ const PrivacyPolicy = () => {
         <PolicySection
           icon={<FaLock />}
           title="5. Security Standards"
-          content="New Tech Softs implements industry-standard encryption (SSL/TLS) and secure server protocols to protect your information from unauthorized access, hacking, or disclosure. We continuously monitor our systems to prevent potential vulnerabilities."
+          content="New Ai Tech Softs implements industry-standard encryption (SSL/TLS) and secure server protocols to protect your information from unauthorized access, hacking, or disclosure. We continuously monitor our systems to prevent potential vulnerabilities."
         />
 
         <PolicySection
           icon={<FaShieldAlt />}
           title="6. Your Rights & Compliance"
-          content="We adhere to global privacy standards (GDPR/CCPA). Users have the right to request a copy of their data, request deletion, or opt-out of marketing communications. For any privacy concerns, contact our legal team at info@newtechsofts.com."
+          content="We adhere to global privacy standards (GDPR/CCPA). Users have the right to request a copy of their data, request deletion, or opt-out of marketing communications. For any privacy concerns, contact our legal team at info@newaitechsofts.com."
         />
       </section>
 
@@ -164,7 +164,7 @@ const PrivacyPolicy = () => {
           <h2 className="text-3xl font-heading font-bold text-white mb-4 relative z-10">Have questions about your data?</h2>
           <p className="text-white/60 font-body mb-8 relative z-10">Reach out to our Data Protection Officer for any clarifications.</p>
           <a
-            href="mailto:info@newtechsofts.com"
+            href="mailto:info@newaitechsofts.com"
             className="relative z-10 inline-block bg-gradient-to-r from-[#8B5CF6] to-purple-600 text-white font-heading font-bold rounded-full px-10 py-3.5 shadow-lg shadow-[#8B5CF6]/20 hover:shadow-[#8B5CF6]/40 hover:-translate-y-0.5 transition-all text-sm uppercase tracking-wider"
           >
             Contact Support

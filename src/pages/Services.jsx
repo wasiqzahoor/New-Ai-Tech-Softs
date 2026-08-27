@@ -149,34 +149,34 @@ const Services = () => {
       
       {/* --- SEO META TAGS --- */}
       <Helmet>
-        <title>Our Services | Web Development, App Development, AI Solutions | New Tech Softs</title>
-        <meta name="description" content="New Tech Softs offers professional web development, mobile app development, UI/UX design, SEO, AI solutions, and cloud services. Top software house in Islamabad delivering custom digital solutions worldwide." />
-        <meta name="keywords" content="web development, app development, mobile app, UI/UX design, SEO, digital marketing, AI chatbots, AI agents, SaaS development, cloud services, devops, desktop application, graphic designing, video editing, IT consulting, technical support, software house Islamabad, New Tech Softs" />
-        <meta name="author" content="New Tech Softs" />
+        <title>Our Services | Web Development, App Development, AI Solutions | New Ai Tech Softs</title>
+        <meta name="description" content="New Ai Tech Softs offers professional web development, mobile app development, UI/UX design, SEO, AI solutions, and cloud services. Top software house in Islamabad delivering custom digital solutions worldwide." />
+        <meta name="keywords" content="web development, app development, mobile app, UI/UX design, SEO, digital marketing, AI chatbots, AI agents, SaaS development, cloud services, devops, desktop application, graphic designing, video editing, IT consulting, technical support, software house Islamabad, New Ai Tech Softs" />
+        <meta name="author" content="New Ai Tech Softs" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://newtechsofts.com/services" />
+        <link rel="canonical" href="https://newaitechsofts.com/services" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://newtechsofts.com/services" />
-        <meta property="og:title" content="Our Services | Web Development, App Development, AI Solutions | New Tech Softs" />
-        <meta property="og:description" content="Professional web development, mobile app development, UI/UX design, SEO, AI solutions, and cloud services from New Tech Softs - a leading software house in Islamabad." />
-        <meta property="og:image" content="https://newtechsofts.com/logo.webp" />
-        <meta property="og:site_name" content="New Tech Softs" />
+        <meta property="og:url" content="https://newaitechsofts.com/services" />
+        <meta property="og:title" content="Our Services | Web Development, App Development, AI Solutions | New Ai Tech Softs" />
+        <meta property="og:description" content="Professional web development, mobile app development, UI/UX design, SEO, AI solutions, and cloud services from New Ai Tech Softs - a leading software house in Islamabad." />
+        <meta property="og:image" content="https://newaitechsofts.com/logo.webp" />
+        <meta property="og:site_name" content="New Ai Tech Softs" />
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://newtechsofts.com/services" />
-        <meta name="twitter:title" content="Our Services | New Tech Softs" />
-        <meta name="twitter:description" content="Professional web development, mobile app development, UI/UX design, SEO, AI solutions from New Tech Softs." />
-        <meta name="twitter:image" content="https://newtechsofts.com/logo.webp" />
+        <meta name="twitter:url" content="https://newaitechsofts.com/services" />
+        <meta name="twitter:title" content="Our Services | New Ai Tech Softs" />
+        <meta name="twitter:description" content="Professional web development, mobile app development, UI/UX design, SEO, AI solutions from New Ai Tech Softs." />
+        <meta name="twitter:image" content="https://newaitechsofts.com/logo.webp" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            "name": "Software Development Services | New Tech Softs",
-            "description": "Professional web development, mobile app development, UI/UX design, SEO, AI solutions, and cloud services from New Tech Softs.",
-            "url": "https://newtechsofts.com/services",
+            "name": "Software Development Services | New Ai Tech Softs",
+            "description": "Professional web development, mobile app development, UI/UX design, SEO, AI solutions, and cloud services from New Ai Tech Softs.",
+            "url": "https://newaitechsofts.com/services",
             "provider": {
               "@type": "Organization",
-              "name": "New Tech Softs",
+              "name": "New Ai Tech Softs",
               "address": [
                 { "@type": "PostalAddress", "addressLocality": "Islamabad", "addressCountry": "PK" },
                 { "@type": "PostalAddress", "streetAddress": "Street 10, Building 15, Industrial Area 10, Near Al Madinah Hyper Market", "addressLocality": "Sharjah", "addressCountry": "AE" }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { FaCheckCircle, FaCode } from 'react-icons/fa';
@@ -20,39 +21,39 @@ const About = () => {
   return (
     <div className="text-white min-h-screen pt-24 pb-12 overflow-hidden">
       <Helmet>
-        <title>About New Tech Softs | Our Mission, Vision & Team</title>
-        <meta name="description" content="Learn more about New Tech Softs, a leading software house in Islamabad. Discover our mission, our professional team, and how we deliver innovative software solutions." />
-        <meta name="keywords" content="about New Tech Softs, software house Islamabad, our team, mission, vision, IT company Pakistan, web development company" />
-        <meta name="author" content="New Tech Softs" />
+        <title>About New Ai Tech Softs | Our Mission, Vision & Team</title>
+        <meta name="description" content="Learn more about New Ai Tech Softs, a leading software house in Islamabad. Discover our mission, our professional team, and how we deliver innovative software solutions." />
+        <meta name="keywords" content="about New Ai Tech Softs, software house Islamabad, our team, mission, vision, IT company Pakistan, web development company" />
+        <meta name="author" content="New Ai Tech Softs" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://newtechsofts.com/about" />
+        <link rel="canonical" href="https://newaitechsofts.com/about" />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://newtechsofts.com/about" />
-        <meta property="og:title" content="About New Tech Softs | Our Mission, Vision & Team" />
-        <meta property="og:description" content="Learn more about New Tech Softs, a leading software house in Islamabad. Discover our mission, our professional team, and how we deliver innovative software solutions." />
-        <meta property="og:image" content="https://newtechsofts.com/logo.webp" />
-        <meta property="og:site_name" content="New Tech Softs" />
+        <meta property="og:url" content="https://newaitechsofts.com/about" />
+        <meta property="og:title" content="About New Ai Tech Softs | Our Mission, Vision & Team" />
+        <meta property="og:description" content="Learn more about New Ai Tech Softs, a leading software house in Islamabad. Discover our mission, our professional team, and how we deliver innovative software solutions." />
+        <meta property="og:image" content="https://newaitechsofts.com/logo.webp" />
+        <meta property="og:site_name" content="New Ai Tech Softs" />
         <meta property="og:locale" content="en_US" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://newtechsofts.com/about" />
-        <meta name="twitter:title" content="About New Tech Softs | Our Mission, Vision & Team" />
-        <meta name="twitter:description" content="Learn more about New Tech Softs, a leading software house in Islamabad. Discover our mission, our professional team, and how we deliver innovative software solutions." />
-        <meta name="twitter:image" content="https://newtechsofts.com/logo.webp" />
+        <meta name="twitter:url" content="https://newaitechsofts.com/about" />
+        <meta name="twitter:title" content="About New Ai Tech Softs | Our Mission, Vision & Team" />
+        <meta name="twitter:description" content="Learn more about New Ai Tech Softs, a leading software house in Islamabad. Discover our mission, our professional team, and how we deliver innovative software solutions." />
+        <meta name="twitter:image" content="https://newaitechsofts.com/logo.webp" />
 
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "AboutPage",
-            "name": "About New Tech Softs",
-            "description": "Learn more about New Tech Softs, a leading software house in Islamabad. Discover our mission, our professional team, and how we deliver innovative software solutions.",
-            "url": "https://newtechsofts.com/about",
+            "name": "About New Ai Tech Softs",
+            "description": "Learn more about New Ai Tech Softs, a leading software house in Islamabad. Discover our mission, our professional team, and how we deliver innovative software solutions.",
+            "url": "https://newaitechsofts.com/about",
             "mainEntity": {
               "@type": "Organization",
-              "name": "New Tech Softs",
-              "url": "https://newtechsofts.com/",
-              "logo": "https://newtechsofts.com/logo.webp",
+              "name": "New Ai Tech Softs",
+              "url": "https://newaitechsofts.com/",
+              "logo": "https://newaitechsofts.com/logo.webp",
               "foundingDate": "2024",
               "founder": {
                 "@type": "Person",
@@ -73,9 +74,9 @@ const About = () => {
                 }
               ],
               "sameAs": [
-                "https://www.linkedin.com/company/newtechsofts",
-                "https://www.facebook.com/newtechsofts/",
-                "https://www.instagram.com/newtechsofts/"
+                "https://www.linkedin.com/company/newaitechsofts",
+                "https://www.facebook.com/newaitechsofts/",
+                "https://www.instagram.com/newaitechsofts/"
               ]
             }
           })}
@@ -99,7 +100,7 @@ const About = () => {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-heading font-black text-white leading-[1.1]">
-              New Tech Softs: <span className="text-brand-mid">Pioneering Digital Innovation</span>
+              New Ai Tech Softs: <span className="text-brand-mid">Pioneering Digital Innovation</span>
             </h1>
 
             <div className="space-y-6 text-white/60 text-lg leading-relaxed font-body">
@@ -151,15 +152,15 @@ const About = () => {
                 <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
 
                 <p className="text-white/60 italic text-lg leading-relaxed font-body">
-                  "We transform complexity into simplicity. Our mission at New Tech Softs is to accelerate your digital growth with secure, efficient, and future-proof technology."
+                  "We transform complexity into simplicity. Our mission at New Ai Tech Softs is to accelerate your digital growth with secure, efficient, and future-proof technology."
                 </p>
 
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full flex items-center justify-center font-bold">
-                    <img src={logo} alt="New Tech Softs Logo" />
+                    <img src={logo} alt="New Ai Tech Softs Logo" />
                   </div>
                   <div>
-                    <p className="text-white font-bold font-heading">New Tech Softs</p>
+                    <p className="text-white font-bold font-heading">New Ai Tech Softs</p>
                     <p className="text-xs text-white/40 font-body">Your Innovation Partner</p>
                   </div>
                 </div>
@@ -167,6 +168,28 @@ const About = () => {
             </div>
           </motion.div>
         </div>
+      </section>
+
+      {/* --- NAME TRANSITION NOTICE --- */}
+      <section className="py-10 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="bg-white/[0.06] backdrop-blur-xl border border-white/[0.1] rounded-2xl p-8 text-center"
+        >
+          <p className="text-brand-cyan font-heading font-bold uppercase tracking-widest text-xs mb-3">Company Update</p>
+          <h2 className="text-xl md:text-2xl font-heading font-bold text-white mb-3">
+            Previously Known as New Tech Soft
+          </h2>
+          <p className="text-white/50 font-body text-sm leading-relaxed max-w-2xl mx-auto">
+            Our company now officially operates as <span className="text-white font-semibold">New AI Tech Softs (SMC-Private) Limited</span>. If you knew us as New Tech Soft, please note that we are the same business under our new registered name.{' '}
+            <Link to="/blog/new-tech-soft-to-new-ai-tech-softs" className="text-brand-cyan hover:underline font-semibold">
+              Read the full story →
+            </Link>
+          </p>
+        </motion.div>
       </section>
 
       {/* --- SECTION 2: VISION, MISSION & GOALS --- */}

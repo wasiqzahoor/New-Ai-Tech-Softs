@@ -3,24 +3,26 @@
 
 const companyKnowledge = {
   company: {
-    name: "New Tech Softs",
+    name: "New Ai Tech Softs",
+    legalName: "NEW AI TECH SOFTS (SMC-PRIVATE) LIMITED",
+    previousName: "New Tech Soft",
     tagline: "Build. Grow. Automate. Scale.",
     type: "Software House",
-    website: "https://newtechsofts.com",
+    website: "https://newaitechsofts.com",
     founded: 2024,
     stats: {
       experience: "5+ Years",
       projects: "100+ Projects Delivered",
       clients: "50+ Happy Clients"
     },
-    description: "New Tech Softs is a leading software house in Islamabad, Pakistan that provides web development, mobile app development, AI automation, cloud solutions, digital marketing, and custom software development services for modern businesses worldwide.",
+    description: "New Ai Tech Softs is a leading software house in Islamabad, Pakistan that provides web development, mobile app development, AI automation, cloud solutions, digital marketing, and custom software development services for modern businesses worldwide.",
     vision: "To be the globally trusted partner for digital transformation — setting new benchmarks in innovation and technology.",
     mission: "Empower businesses with cutting-edge solutions that drive sustainable growth and operational efficiency.",
     promise: ["100% confidentiality", "Technical response within 24 hours", "Enterprise-grade encryption for project data"]
   },
 
   contact: {
-    email: "info@newtechsofts.com",
+    email: "info@newaitechsofts.com",
     whatsapp: "+923415287464",
     whatsappLink: "https://wa.me/923415287464",
     phone: "+923415287464",
@@ -29,9 +31,9 @@ const companyKnowledge = {
       uae: "Street 10, Building 15, Industrial Area 10, Near Al Madinah Hyper Market, Sharjah, UAE"
     },
     social: {
-      linkedin: "https://www.linkedin.com/company/newtechsofts",
-      facebook: "https://www.facebook.com/newtechsofts/",
-      instagram: "https://www.instagram.com/newtechsofts/"
+      linkedin: "https://www.linkedin.com/company/newaitechsofts",
+      facebook: "https://www.facebook.com/newaitechsofts/",
+      instagram: "https://www.instagram.com/newaitechsofts/"
     },
     serviceArea: "UK, USA, UAE, and Pakistan"
   },
@@ -44,7 +46,7 @@ const companyKnowledge = {
     expertise: ["Full Stack Development", "AI Engineering", "React.js", "Next.js", "Node.js", "Python", "Flutter"],
     linkedin: "https://www.linkedin.com/in/chaudhary-wasiq-zahoor-bbab952b0/",
     github: "https://github.com/wasiqzahoor",
-    quote: "Technology should solve real problems. At New Tech Softs, we don't just write code — we craft digital experiences that make a difference."
+    quote: "Technology should solve real problems. At New Ai Tech Softs, we don't just write code — we craft digital experiences that make a difference."
   },
 
   team: [
@@ -180,7 +182,7 @@ const companyKnowledge = {
   ],
 
   testimonials: [
-    { name: "Sarah Jenkins", role: "CEO, FinTech Solutions", review: "New Tech Softs transformed our outdated system into a high-speed, modern platform. Their AI integration saved us 40% in operational costs." },
+    { name: "Sarah Jenkins", role: "CEO, FinTech Solutions", review: "New Ai Tech Softs transformed our outdated system into a high-speed, modern platform. Their AI integration saved us 40% in operational costs." },
     { name: "David Ahmed", role: "Founder, E-Com Masters", review: "The best software house in Islamabad hands down. They understood our vision perfectly and delivered the mobile app before the deadline." },
     { name: "Elena Rostova", role: "CTO, Global Logistics", review: "Professional, skilled, and communicative. Their web development team created a stunning UI that increased our user engagement by 200%." },
     { name: "Michael Chen", role: "Director, TechFlow", review: "Impressive technical expertise. They solved a complex backend issue that other agencies couldn't handle." }

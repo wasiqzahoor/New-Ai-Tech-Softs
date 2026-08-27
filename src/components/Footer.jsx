@@ -41,19 +41,19 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2.5 mb-6">
-              <img src={logo} alt="New Tech Softs" className="h-9 w-auto" />
+              <img src={logo} alt="New Ai Tech Softs" className="h-9 w-auto" />
               <span className="text-lg font-heading font-bold text-white">
-                NEW TECH <span className="text-brand-cyan">SOFTS</span>
+                NEW AI TECH <span className="text-brand-cyan">SOFTS</span>
               </span>
             </div>
             <p className="text-sm font-heading font-bold text-brand-cyan mb-3">Build. Grow. Automate. Scale.</p>
             <p className="text-sm leading-relaxed text-white/50 mb-8">
-              NewTech Softs provides web development, SEO, digital marketing, AI automation, cloud, creative and e-commerce solutions for modern businesses.
+              New Ai Tech Softs provides web development, SEO, digital marketing, AI automation, cloud, creative and e-commerce solutions for modern businesses.
             </p>
             <div className="flex gap-3">
-              <SocialIcon icon={<FaLinkedinIn />} link="https://www.linkedin.com/company/newtechsofts" />
-              <SocialIcon icon={<FaFacebookF />} link="https://www.facebook.com/newtechsofts/" />
-              <SocialIcon icon={<FaInstagram />} link="https://www.instagram.com/newtechsofts/" />
+              <SocialIcon icon={<FaLinkedinIn />} link="https://www.linkedin.com/company/newaitechsofts" />
+              <SocialIcon icon={<FaFacebookF />} link="https://www.facebook.com/newaitechsofts/" />
+              <SocialIcon icon={<FaInstagram />} link="https://www.instagram.com/newaitechsofts/" />
             </div>
           </div>
 
@@ -106,7 +106,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <FaEnvelope className="text-brand-cyan flex-shrink-0" />
-                <a href="mailto:info@newtechsofts.com" className="text-sm text-white/50 hover:text-brand-cyan transition">info@newtechsofts.com</a>
+                <a href="mailto:info@newaitechsofts.com" className="text-sm text-white/50 hover:text-brand-cyan transition">info@newaitechsofts.com</a>
               </li>
               <li className="flex items-center gap-3">
                 <FaWhatsapp className="text-brand-cyan flex-shrink-0" />
@@ -145,7 +145,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-white/[0.08] pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-white/30">&copy; {new Date().getFullYear()} New Tech Softs. All Rights Reserved.</p>
+          <p className="text-sm text-white/30">&copy; {new Date().getFullYear()} New Ai Tech Softs. All Rights Reserved.</p>
           <div className="flex gap-6">
             <Link to="/privacy" className="text-sm text-white/30 hover:text-brand-cyan transition">Privacy Policy</Link>
             <Link to="/terms" className="text-sm text-white/30 hover:text-brand-cyan transition">Terms of Service</Link>

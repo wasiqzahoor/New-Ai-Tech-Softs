@@ -20,22 +20,22 @@ function chatApiPlugin() {
           for await (const chunk of req) body += chunk
           const { messages } = JSON.parse(body)
 
-          const systemPrompt = `You are a friendly, professional AI assistant for New Tech Softs — a leading software house in Islamabad, Pakistan. Your name is NTS Assistant. You help visitors learn about the company, its services, products, and how to get in touch.
+          const systemPrompt = `You are a friendly, professional AI assistant for New Ai Tech Softs — a leading software house in Islamabad, Pakistan. Your name is NTS Assistant. You help visitors learn about the company, its services, products, and how to get in touch.
 
 RULES:
-- ONLY answer questions about New Tech Softs, its services, products, projects, team, pricing, process, and contact info.
-- If asked about something unrelated, politely say you can only help with New Tech Softs related queries.
+- ONLY answer questions about New Ai Tech Softs, its services, products, projects, team, pricing, process, and contact info.
+- If asked about something unrelated, politely say you can only help with New Ai Tech Softs related queries.
 - Keep answers concise (2-4 sentences max unless asked for detail).
 - Be warm, professional, and helpful.
 - Always encourage visitors to reach out via WhatsApp or the contact page.
 - Never make up information. Only use the data provided below.
 - Support Roman Urdu if the user messages in Roman Urdu.
 
-COMPANY: New Tech Softs — Software House in Islamabad, Pakistan. Tagline: "Build. Grow. Automate. Scale." Founded 2024. 5+ years experience, 100+ projects, 50+ clients.
-CONTACT: Email: info@newtechsofts.com, WhatsApp: +923415287464, Pakistan Office: DHA Phase 5 Islamabad, UAE Office: Sharjah.
+COMPANY: New Ai Tech Softs — Software House in Islamabad, Pakistan. Tagline: "Build. Grow. Automate. Scale." Founded 2024. 5+ years experience, 100+ projects, 50+ clients.
+CONTACT: Email: info@newaitechsofts.com, WhatsApp: +923415287464, Pakistan Office: DHA Phase 5 Islamabad, UAE Office: Sharjah.
 FOUNDER: Chaudhary Wasiq Zahoor — CEO & Founder, Full Stack Developer & AI Engineer.
 SERVICES (12): Web Development, Mobile App Development, UI/UX Design, AI Chatbots & Agents, SaaS Development, Digital Marketing, Cloud & DevOps, Desktop App Development, Graphic Designing, Video Editing, IT Solutions & Consulting, Technical Support Services.
-PRODUCTS (7): BG.Remover (AI bg removal), QRify (QR codes), PDF Swift (PDF toolkit), Image Morph (image converter), Image Enhancer (AI upscaling), File Forge (file converter), CodeSnap (code screenshots). All free at newtechsofts.com subdomains.
+PRODUCTS (7): BG.Remover (AI bg removal), QRify (QR codes), PDF Swift (PDF toolkit), Image Morph (image converter), Image Enhancer (AI upscaling), File Forge (file converter), CodeSnap (code screenshots). All free at newaitechsofts.com subdomains.
 PROCESS: 1.Discovery 2.Strategy & Design 3.Development 4.QA 5.Deployment.`
 
           const apiMessages = [
@@ -86,7 +86,7 @@ export default defineConfig({
     react(),
     chatApiPlugin(),
     Sitemap({
-      hostname: 'https://newtechsofts.com',
+      hostname: 'https://newaitechsofts.com',
       dynamicRoutes: [
         // Static Pages
         '/about',
@@ -123,7 +123,7 @@ export default defineConfig({
         '/project/react-job-portal',
         '/project/codesnap',
         '/project/nts-management-system',
-        '/project/newtechsofts-official-website',
+        '/project/newaitechsofts-official-website',
         '/project/the-ai-chicks-website',
         '/project/ai-image-detection-app',
         '/project/ai-video-analysis-detection',
@@ -146,6 +146,7 @@ export default defineConfig({
         '/blog/beyond-aesthetics-strategic-web-design',
         '/blog/ai-first-web-development-revolutionizing-business',
         '/blog/cross-platform-apps-best-choice-startups-2026',
+        '/blog/new-tech-soft-to-new-ai-tech-softs',
         '/blog/optimizing-web-performance-developers-guide-2026',
         '/blog/custom-software-solutions-business-growth',
         '/blog/securing-digital-presence-cybersecurity-best-practices',

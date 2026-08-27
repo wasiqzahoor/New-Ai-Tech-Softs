@@ -91,51 +91,51 @@ const ProductPage = () => {
   return (
     <>
       <Helmet>
-        <title>Premium Software Solutions & Products | New Tech Softs</title>
-        <meta name="description" content="Discover our cutting-edge software products at New Tech Softs. We offer custom development, cloud solutions, and productivity tools designed to scale your business. Visit us for reliable software excellence in Islamabad." />
-        <meta name="keywords" content="software products, BG remover, QR code generator, PDF tool, image converter, file converter, code screenshot, New Tech Softs, Islamabad software house" />
-        <meta name="author" content="New Tech Softs" />
+        <title>Premium Software Solutions & Products | New Ai Tech Softs</title>
+        <meta name="description" content="Discover our cutting-edge software products at New Ai Tech Softs. We offer custom development, cloud solutions, and productivity tools designed to scale your business. Visit us for reliable software excellence in Islamabad." />
+        <meta name="keywords" content="software products, BG remover, QR code generator, PDF tool, image converter, file converter, code screenshot, New Ai Tech Softs, Islamabad software house" />
+        <meta name="author" content="New Ai Tech Softs" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://newtechsofts.com/products" />
+        <link rel="canonical" href="https://newaitechsofts.com/products" />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://newtechsofts.com/products" />
-        <meta property="og:title" content="Premium Software Solutions & Products | New Tech Softs" />
-        <meta property="og:description" content="Custom-built, scalable software solutions by New Tech Softs. Elevate your business with our professional tools." />
-        <meta property="og:image" content="https://newtechsofts.com/logo.webp" />
-        <meta property="og:site_name" content="New Tech Softs" />
+        <meta property="og:url" content="https://newaitechsofts.com/products" />
+        <meta property="og:title" content="Premium Software Solutions & Products | New Ai Tech Softs" />
+        <meta property="og:description" content="Custom-built, scalable software solutions by New Ai Tech Softs. Elevate your business with our professional tools." />
+        <meta property="og:image" content="https://newaitechsofts.com/logo.webp" />
+        <meta property="og:site_name" content="New Ai Tech Softs" />
         <meta property="og:locale" content="en_US" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://newtechsofts.com/products" />
-        <meta name="twitter:title" content="Premium Software Solutions & Products | New Tech Softs" />
-        <meta name="twitter:description" content="Custom-built, scalable software solutions by New Tech Softs. Elevate your business with our professional tools." />
-        <meta name="twitter:image" content="https://newtechsofts.com/logo.webp" />
+        <meta name="twitter:url" content="https://newaitechsofts.com/products" />
+        <meta name="twitter:title" content="Premium Software Solutions & Products | New Ai Tech Softs" />
+        <meta name="twitter:description" content="Custom-built, scalable software solutions by New Ai Tech Softs. Elevate your business with our professional tools." />
+        <meta name="twitter:image" content="https://newaitechsofts.com/logo.webp" />
 
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            "name": "Software Products | New Tech Softs",
-            "description": "Discover our cutting-edge software products at New Tech Softs. Custom development, cloud solutions, and productivity tools.",
-            "url": "https://newtechsofts.com/products",
+            "name": "Software Products | New Ai Tech Softs",
+            "description": "Discover our cutting-edge software products at New Ai Tech Softs. Custom development, cloud solutions, and productivity tools.",
+            "url": "https://newaitechsofts.com/products",
             "publisher": {
               "@type": "Organization",
-              "name": "New Tech Softs",
-              "url": "https://newtechsofts.com/",
-              "logo": "https://newtechsofts.com/logo.webp"
+              "name": "New Ai Tech Softs",
+              "url": "https://newaitechsofts.com/",
+              "logo": "https://newaitechsofts.com/logo.webp"
             },
             "mainEntity": {
               "@type": "ItemList",
-              "name": "New Tech Softs Products",
+              "name": "New Ai Tech Softs Products",
               "itemListElement": [
-                { "@type": "SoftwareApplication", "name": "BG.Remover", "url": "https://bgremover.newtechsofts.com", "applicationCategory": "MultimediaApplication" },
-                { "@type": "SoftwareApplication", "name": "QRify QR Code Generator", "url": "https://qrify.newtechsofts.com", "applicationCategory": "UtilitiesApplication" },
-                { "@type": "SoftwareApplication", "name": "PDF Swift", "url": "https://pdfswift.newtechsofts.com", "applicationCategory": "UtilitiesApplication" },
-                { "@type": "SoftwareApplication", "name": "Image Morph", "url": "https://imagemorph.newtechsofts.com", "applicationCategory": "MultimediaApplication" },
-                { "@type": "SoftwareApplication", "name": "Image Enhancer", "url": "https://pixelforge.newtechsofts.com", "applicationCategory": "MultimediaApplication" },
-                { "@type": "SoftwareApplication", "name": "File Forge", "url": "https://fileforge.newtechsofts.com", "applicationCategory": "UtilitiesApplication" },
-                { "@type": "SoftwareApplication", "name": "CodeSnap", "url": "https://codesnap.newtechsofts.com", "applicationCategory": "DeveloperApplication" }
+                { "@type": "SoftwareApplication", "name": "BG.Remover", "url": "https://bgremover.newaitechsofts.com", "applicationCategory": "MultimediaApplication" },
+                { "@type": "SoftwareApplication", "name": "QRify QR Code Generator", "url": "https://qrify.newaitechsofts.com", "applicationCategory": "UtilitiesApplication" },
+                { "@type": "SoftwareApplication", "name": "PDF Swift", "url": "https://pdfswift.newaitechsofts.com", "applicationCategory": "UtilitiesApplication" },
+                { "@type": "SoftwareApplication", "name": "Image Morph", "url": "https://imagemorph.newaitechsofts.com", "applicationCategory": "MultimediaApplication" },
+                { "@type": "SoftwareApplication", "name": "Image Enhancer", "url": "https://pixelforge.newaitechsofts.com", "applicationCategory": "MultimediaApplication" },
+                { "@type": "SoftwareApplication", "name": "File Forge", "url": "https://fileforge.newaitechsofts.com", "applicationCategory": "UtilitiesApplication" },
+                { "@type": "SoftwareApplication", "name": "CodeSnap", "url": "https://codesnap.newaitechsofts.com", "applicationCategory": "DeveloperApplication" }
               ]
             }
           })}
@@ -359,7 +359,7 @@ const ProductPage = () => {
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
               >
-                {"About NewTechSofts".split(' ').map((word, i) => (
+                {"About NewAiTechSofts".split(' ').map((word, i) => (
                   <motion.span
                     key={i}
                     initial={{ opacity: 0, y: 15 }}

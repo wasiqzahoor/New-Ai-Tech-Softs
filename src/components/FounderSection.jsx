@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaRocket, FaCode, FaCheckCircle, FaLinkedinIn, FaGithub, FaEnvelope } from 'react-icons/fa';
 import logo from '../assets/logo.svg';
-import CeoOfNewTechSofts from '../assets/team/CeoOfNewTechSofts.webp';
+import CeoOfNewAiTechSofts from '../assets/team/CeoOfNewAiTechSofts.webp';
 
 const stats = [
   { num: '5+', label: 'Years Experience' },
@@ -19,7 +19,7 @@ const goals = [
 const socials = [
   { icon: <FaLinkedinIn />, href: 'https://www.linkedin.com/in/chaudhary-wasiq-zahoor-bbab952b0/', label: 'LinkedIn' },
   { icon: <FaGithub />, href: 'https://github.com/wasiqzahoor', label: 'GitHub' },
-  { icon: <FaEnvelope />, href: 'mailto:info@newtechsofts.com', label: 'Email' },
+  { icon: <FaEnvelope />, href: 'mailto:info@newaitechsofts.com', label: 'Email' },
 ];
 
 const FounderSection = () => {
@@ -47,7 +47,7 @@ const FounderSection = () => {
           >
             The Mind Behind{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-blue-400">
-              New Tech Softs
+              New Ai Tech Softs
             </span>
           </motion.h2>
         </div>
@@ -67,8 +67,8 @@ const FounderSection = () => {
             <div className="relative w-full max-w-sm lg:max-w-none">
               <div className="relative rounded-[2rem] overflow-hidden aspect-[3/4] bg-white/[0.04] border border-white/[0.08]">
                 <img
-                  src={CeoOfNewTechSofts}
-                  alt="Chaudhary Wasiq Zahoor — CEO & Founder of New Tech Softs"
+                  src={CeoOfNewAiTechSofts}
+                  alt="Chaudhary Wasiq Zahoor — CEO & Founder of New Ai Tech Softs"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
@@ -82,11 +82,11 @@ const FounderSection = () => {
                   className="absolute bottom-5 left-5 right-5 bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-2xl p-4 flex items-center gap-4"
                 >
                   <div className="w-12 h-12 rounded-xl overflow-hidden shrink-0">
-                    <img src={logo} alt="New Tech Softs" className="w-full h-full object-contain" />
+                    <img src={logo} alt="New Ai Tech Softs" className="w-full h-full object-contain" />
                   </div>
                   <div>
                     <p className="text-white font-heading font-bold text-sm leading-tight">CEO & Founder</p>
-                    <p className="text-white/40 text-xs font-body">New Tech Softs</p>
+                    <p className="text-white/40 text-xs font-body">New Ai Tech Softs</p>
                   </div>
                 </motion.div>
               </div>
@@ -124,13 +124,13 @@ const FounderSection = () => {
                 Chaudhary Wasiq Zahoor
               </h3>
               <p className="text-brand-cyan font-heading font-semibold text-sm mt-2 tracking-wide">
-                CEO & Founder, New Tech Softs
+                CEO & Founder, New Ai Tech Softs
               </p>
             </div>
 
             {/* Bio */}
             <p className="text-white/55 text-base md:text-lg leading-relaxed font-body max-w-xl">
-              A passionate software engineer and entrepreneur from Islamabad, I founded New Tech Softs
+              A passionate software engineer and entrepreneur from Islamabad, I founded New Ai Tech Softs
               with one mission — to transform bold ideas into powerful digital products that drive real
               business growth.
             </p>
@@ -138,7 +138,7 @@ const FounderSection = () => {
             {/* Quote */}
             <div className="relative pl-6 border-l-2 border-brand-cyan/30">
               <p className="text-white/70 text-lg md:text-xl font-body italic leading-relaxed">
-                "Technology should solve real problems. At New Tech Softs, we don't just write code —
+                "Technology should solve real problems. At New Ai Tech Softs, we don't just write code —
                 we craft digital experiences that make a difference."
               </p>
             </div>

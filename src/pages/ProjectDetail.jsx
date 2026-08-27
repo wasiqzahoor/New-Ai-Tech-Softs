@@ -49,13 +49,13 @@ const ProjectDetail = () => {
     <div className="min-h-screen pt-32 pb-20 relative overflow-hidden">
 
       <Helmet>
-        <title>{project.title} | New Tech Softs - Case Study & Portfolio</title>
-        <meta name="description" content={`${project.description || `${project.title} - A case study by New Tech Softs`} New Tech Softs is a leading software house in Islamabad, Pakistan delivering custom web, mobile, AI and desktop solutions worldwide.`} />
-        <meta name="keywords" content={`${project.title}, ${project.category}, ${project.tags.join(', ')}, ${project.client}, case study, portfolio, New Tech Softs, software house Islamabad, web development Pakistan, custom software, IT company Islamabad, tech agency Pakistan, freelance developer Islamabad, React developer Pakistan, Next.js development, MERN stack, Python development, AI solutions Pakistan, mobile app development Islamabad`} />
-        <meta name="author" content="New Tech Softs" />
+        <title>{project.title} | New Ai Tech Softs - Case Study & Portfolio</title>
+        <meta name="description" content={`${project.description || `${project.title} - A case study by New Ai Tech Softs`} New Ai Tech Softs is a leading software house in Islamabad, Pakistan delivering custom web, mobile, AI and desktop solutions worldwide.`} />
+        <meta name="keywords" content={`${project.title}, ${project.category}, ${project.tags.join(', ')}, ${project.client}, case study, portfolio, New Ai Tech Softs, software house Islamabad, web development Pakistan, custom software, IT company Islamabad, tech agency Pakistan, freelance developer Islamabad, React developer Pakistan, Next.js development, MERN stack, Python development, AI solutions Pakistan, mobile app development Islamabad`} />
+        <meta name="author" content="New Ai Tech Softs" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         <meta name="googlebot" content="index, follow" />
-        <link rel="canonical" href={`https://newtechsofts.com/project/${project.slug}`} />
+        <link rel="canonical" href={`https://newaitechsofts.com/project/${project.slug}`} />
         <meta name="language" content="English" />
         <meta name="revisit-after" content="7 days" />
         <meta name="rating" content="general" />
@@ -66,18 +66,18 @@ const ProjectDetail = () => {
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://newtechsofts.com/project/${project.slug}`} />
-        <meta property="og:title" content={`${project.title} | New Tech Softs - Case Study`} />
-        <meta property="og:description" content={`${project.description || project.title}. Built by New Tech Softs - a leading software house in Islamabad, Pakistan.`} />
-        <meta property="og:image" content={project.img || 'https://newtechsofts.com/logo.webp'} />
+        <meta property="og:url" content={`https://newaitechsofts.com/project/${project.slug}`} />
+        <meta property="og:title" content={`${project.title} | New Ai Tech Softs - Case Study`} />
+        <meta property="og:description" content={`${project.description || project.title}. Built by New Ai Tech Softs - a leading software house in Islamabad, Pakistan.`} />
+        <meta property="og:image" content={project.img || 'https://newaitechsofts.com/logo.webp'} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content={`${project.title} - New Tech Softs`} />
-        <meta property="og:site_name" content="New Tech Softs" />
+        <meta property="og:image:alt" content={`${project.title} - New Ai Tech Softs`} />
+        <meta property="og:site_name" content="New Ai Tech Softs" />
         <meta property="og:locale" content="en_US" />
         <meta property="article:published_time" content="2026-01-01T00:00:00+05:00" />
         <meta property="article:modified_time" content="2026-08-17T00:00:00+05:00" />
-        <meta property="article:author" content="New Tech Softs" />
+        <meta property="article:author" content="New Ai Tech Softs" />
         <meta property="article:section" content={project.category} />
         {project.tags.map((tag, i) => (
           <meta key={i} property="article:tag" content={tag} />
@@ -85,12 +85,12 @@ const ProjectDetail = () => {
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content={`https://newtechsofts.com/project/${project.slug}`} />
-        <meta name="twitter:title" content={`${project.title} | New Tech Softs - Case Study`} />
-        <meta name="twitter:description" content={`${project.description || project.title}. Built by New Tech Softs, Islamabad.`} />
-        <meta name="twitter:image" content={project.img || 'https://newtechsofts.com/logo.webp'} />
+        <meta name="twitter:url" content={`https://newaitechsofts.com/project/${project.slug}`} />
+        <meta name="twitter:title" content={`${project.title} | New Ai Tech Softs - Case Study`} />
+        <meta name="twitter:description" content={`${project.description || project.title}. Built by New Ai Tech Softs, Islamabad.`} />
+        <meta name="twitter:image" content={project.img || 'https://newaitechsofts.com/logo.webp'} />
         <meta name="twitter:label1" content="Written by" />
-        <meta name="twitter:data1" content="New Tech Softs" />
+        <meta name="twitter:data1" content="New Ai Tech Softs" />
         <meta name="twitter:label2" content="Category" />
         <meta name="twitter:data2" content={project.category} />
 
@@ -100,14 +100,14 @@ const ProjectDetail = () => {
             "@context": "https://schema.org",
             "@type": "CreativeWork",
             "name": project.title,
-            "description": project.description || `${project.title} - Case study by New Tech Softs.`,
-            "image": project.img || 'https://newtechsofts.com/logo.webp',
-            "url": `https://newtechsofts.com/project/${project.slug}`,
+            "description": project.description || `${project.title} - Case study by New Ai Tech Softs.`,
+            "image": project.img || 'https://newaitechsofts.com/logo.webp',
+            "url": `https://newaitechsofts.com/project/${project.slug}`,
             "author": {
               "@type": "Organization",
-              "name": "New Tech Softs",
-              "url": "https://newtechsofts.com",
-              "logo": "https://newtechsofts.com/logo.webp",
+              "name": "New Ai Tech Softs",
+              "url": "https://newaitechsofts.com",
+              "logo": "https://newaitechsofts.com/logo.webp",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Islamabad",
@@ -115,29 +115,29 @@ const ProjectDetail = () => {
                 "addressCountry": "PK"
               },
               "sameAs": [
-                "https://www.linkedin.com/company/newtechsofts",
+                "https://www.linkedin.com/company/newaitechsofts",
                 "https://github.com/wasiqzahoor"
               ]
             },
             "publisher": {
               "@type": "Organization",
-              "name": "New Tech Softs",
-              "logo": { "@type": "ImageObject", "url": "https://newtechsofts.com/logo.webp" }
+              "name": "New Ai Tech Softs",
+              "logo": { "@type": "ImageObject", "url": "https://newaitechsofts.com/logo.webp" }
             },
             "datePublished": "2026-01-01",
             "dateModified": "2026-08-17",
-            "mainEntityOfPage": { "@type": "WebPage", "@id": `https://newtechsofts.com/project/${project.slug}` },
+            "mainEntityOfPage": { "@type": "WebPage", "@id": `https://newaitechsofts.com/project/${project.slug}` },
             "about": {
               "@type": "Thing",
               "name": project.category,
               "description": project.tags.join(', ')
             },
-            "keywords": `${project.title}, ${project.category}, ${project.tags.join(', ')}, New Tech Softs, Islamabad`,
+            "keywords": `${project.title}, ${project.category}, ${project.tags.join(', ')}, New Ai Tech Softs, Islamabad`,
             "inLanguage": "en-US",
             "isPartOf": {
               "@type": "WebSite",
-              "name": "New Tech Softs",
-              "url": "https://newtechsofts.com"
+              "name": "New Ai Tech Softs",
+              "url": "https://newaitechsofts.com"
             }
           })}
         </script>
@@ -146,9 +146,9 @@ const ProjectDetail = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://newtechsofts.com/" },
-              { "@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://newtechsofts.com/portfolio" },
-              { "@type": "ListItem", "position": 3, "name": project.title, "item": `https://newtechsofts.com/project/${project.slug}` }
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://newaitechsofts.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://newaitechsofts.com/portfolio" },
+              { "@type": "ListItem", "position": 3, "name": project.title, "item": `https://newaitechsofts.com/project/${project.slug}` }
             ]
           })}
         </script>
@@ -167,7 +167,7 @@ const ProjectDetail = () => {
               },
               {
                 "@type": "Question",
-                "name": `What solution did New Tech Softs provide for ${project.title}?`,
+                "name": `What solution did New Ai Tech Softs provide for ${project.title}?`,
                 "acceptedAnswer": {
                   "@type": "Answer",
                   "text": project.solution

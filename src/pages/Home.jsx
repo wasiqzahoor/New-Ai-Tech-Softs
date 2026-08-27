@@ -68,39 +68,39 @@ const Home = () => {
   return (
     <div className="overflow-hidden min-h-screen">
       <Helmet>
-        <title>New Tech Softs | Web Development, SEO, Digital Marketing & AI Automation</title>
-        <meta name="description" content="NewTech Softs provides complete digital solutions for modern businesses - web development, SEO services, digital marketing, AI automation, e-commerce, cloud solutions, and creative services. Build. Grow. Automate. Scale." />
-        <meta name="keywords" content="web development, SEO services, digital marketing, AI automation, e-commerce development, cloud solutions, web development company, SEO agency, digital marketing agency, New Tech Softs" />
-        <meta name="author" content="New Tech Softs" />
+        <title>New Ai Tech Softs | Web Development, SEO, Digital Marketing & AI Automation</title>
+        <meta name="description" content="New Ai Tech Softs provides complete digital solutions for modern businesses - web development, SEO services, digital marketing, AI automation, e-commerce, cloud solutions, and creative services. Build. Grow. Automate. Scale." />
+        <meta name="keywords" content="web development, SEO services, digital marketing, AI automation, e-commerce development, cloud solutions, web development company, SEO agency, digital marketing agency, New Ai Tech Softs" />
+        <meta name="author" content="New Ai Tech Softs" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://newtechsofts.com/" />
+        <link rel="canonical" href="https://newaitechsofts.com/" />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://newtechsofts.com/" />
-        <meta property="og:title" content="New Tech Softs | Complete Digital Solutions for Modern Businesses" />
+        <meta property="og:url" content="https://newaitechsofts.com/" />
+        <meta property="og:title" content="New Ai Tech Softs | Complete Digital Solutions for Modern Businesses" />
         <meta property="og:description" content="Complete digital solutions for modern businesses - web development, SEO, digital marketing, AI automation, e-commerce, cloud, and creative services." />
-        <meta property="og:image" content="https://newtechsofts.com/logo.webp" />
-        <meta property="og:site_name" content="New Tech Softs" />
+        <meta property="og:image" content="https://newaitechsofts.com/logo.webp" />
+        <meta property="og:site_name" content="New Ai Tech Softs" />
         <meta property="og:locale" content="en_US" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://newtechsofts.com/" />
-        <meta name="twitter:title" content="New Tech Softs | Complete Digital Solutions for Modern Businesses" />
+        <meta name="twitter:url" content="https://newaitechsofts.com/" />
+        <meta name="twitter:title" content="New Ai Tech Softs | Complete Digital Solutions for Modern Businesses" />
         <meta name="twitter:description" content="Complete digital solutions for modern businesses - web development, SEO, digital marketing, AI automation, e-commerce, cloud, and creative services." />
-        <meta name="twitter:image" content="https://newtechsofts.com/logo.webp" />
+        <meta name="twitter:image" content="https://newaitechsofts.com/logo.webp" />
 
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebSite",
-            "name": "New Tech Softs",
-            "url": "https://newtechsofts.com/",
+            "name": "New Ai Tech Softs",
+            "url": "https://newaitechsofts.com/",
             "description": "Complete digital solutions for modern businesses including web development, SEO, digital marketing, AI automation, e-commerce, and cloud solutions.",
             "publisher": {
               "@type": "Organization",
-              "name": "New Tech Softs",
-              "url": "https://newtechsofts.com/",
-              "logo": { "@type": "ImageObject", "url": "https://newtechsofts.com/logo.webp" },
+              "name": "New Ai Tech Softs",
+              "url": "https://newaitechsofts.com/",
+              "logo": { "@type": "ImageObject", "url": "https://newaitechsofts.com/logo.webp" },
               "description": "Complete digital growth and technology partner for modern businesses."
             }
           })}
@@ -109,10 +109,10 @@ const Home = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "New Tech Softs",
-            "url": "https://newtechsofts.com/",
-            "logo": "https://newtechsofts.com/logo.webp",
-            "image": "https://newtechsofts.com/logo.webp",
+            "name": "New Ai Tech Softs",
+            "url": "https://newaitechsofts.com/",
+            "logo": "https://newaitechsofts.com/logo.webp",
+            "image": "https://newaitechsofts.com/logo.webp",
             "description": "Complete digital solutions for modern businesses - web development, SEO, digital marketing, AI automation, e-commerce, cloud solutions.",
             "address": [
               {
@@ -133,9 +133,9 @@ const Home = () => {
               "jobTitle": "CEO & Founder"
             },
             "sameAs": [
-              "https://www.linkedin.com/company/newtechsofts",
-              "https://www.facebook.com/newtechsofts/",
-              "https://www.instagram.com/newtechsofts/"
+              "https://www.linkedin.com/company/newaitechsofts",
+              "https://www.facebook.com/newaitechsofts/",
+              "https://www.instagram.com/newaitechsofts/"
             ]
           })}
         </script>
@@ -186,7 +186,7 @@ const Home = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
               >
-                NewTech Softs helps businesses build a powerful digital presence, attract more customers, automate repetitive processes, and scale with modern technology. From web development and SEO to digital marketing, AI automation, e-commerce, cloud solutions, and creative services, we provide the technology and digital expertise your business needs to grow.
+                New Ai Tech Softs helps businesses build a powerful digital presence, attract more customers, automate repetitive processes, and scale with modern technology. From web development and SEO to digital marketing, AI automation, e-commerce, cloud solutions, and creative services, we provide the technology and digital expertise your business needs to grow.
               </motion.p>
 
               <motion.div 
@@ -241,7 +241,7 @@ const Home = () => {
                   <div className="w-3 h-3 rounded-full bg-green-400"></div>
                 </div>
                 <div className="space-y-3 font-mono text-sm group-hover:scale-105 transition duration-300">
-                  <p className="text-brand-mid">const <span className="text-brand-cyan font-bold">NewTech</span> = {"{"}</p>
+                  <p className="text-brand-mid">const <span className="text-brand-cyan font-bold">NewAiTech</span> = {"{"}</p>
                   <p className="pl-4 text-white/60">mission: <span className="text-green-400">'Innovate'</span>,</p>
                   <p className="pl-4 text-white/60">services: [<span className="text-green-400">'Web'</span>, <span className="text-green-400">'SEO'</span>, <span className="text-green-400">'AI'</span>, <span className="text-green-400">'Marketing'</span>],</p>
                   <p className="pl-4 text-white/60">status: <span className="text-blue-400">true</span></p>
@@ -349,7 +349,7 @@ const Home = () => {
               transition={{ delay: 0.3 }}
               className="text-white/60 mt-4 max-w-3xl mx-auto text-lg font-body leading-relaxed"
             >
-              A website alone is not enough to build a successful digital business. Your brand needs visibility, traffic, engaging content, effective marketing, automation, strong customer experiences, and technology that supports long-term growth. NewTech Softs brings these capabilities together under one team so businesses can build, grow, automate, and scale without managing multiple disconnected service providers.
+              A website alone is not enough to build a successful digital business. Your brand needs visibility, traffic, engaging content, effective marketing, automation, strong customer experiences, and technology that supports long-term growth. New Ai Tech Softs brings these capabilities together under one team so businesses can build, grow, automate, and scale without managing multiple disconnected service providers.
             </motion.p>
           </div>
 
@@ -505,7 +505,7 @@ const Home = () => {
               transition={{ delay: 0.3, duration: 0.8 }}
               className="text-white/60 mt-6 max-w-3xl mx-auto text-lg leading-relaxed font-body"
             >
-              From your first website to advanced AI automation and digital marketing, NewTech Softs provides end-to-end digital services designed around your business goals.
+              From your first website to advanced AI automation and digital marketing, New Ai Tech Softs provides end-to-end digital services designed around your business goals.
             </motion.p>
           </div>
 
@@ -611,7 +611,7 @@ const Home = () => {
                   exit={{ opacity: 0, scale: 0.96 }}
                   transition={{ duration: 0.7 }}
                   className="absolute inset-0 w-full h-full object-contain p-3"
-                  alt="Custom Web App Development by New Tech Softs in Islamabad"
+                  alt="Custom Web App Development by New Ai Tech Softs in Islamabad"
                 />
               </AnimatePresence>
               {/* Subtle overlay gradient */}
@@ -704,7 +704,7 @@ const Home = () => {
                 <button onClick={() => setIsModalOpen(false)} className="absolute top-5 right-6 w-9 h-9 rounded-full bg-white/[0.06] border border-white/[0.08] text-white/40 hover:text-white hover:bg-white/[0.1] flex items-center justify-center transition-all">&times;</button>
                 <h2 className="text-3xl font-heading font-bold text-white mb-6">BigLou's Optimizer: In-Depth</h2>
                 <div className="text-white/55 space-y-4 max-h-[60vh] overflow-y-auto pr-4 font-body leading-relaxed">
-                  <p>BigLou's Optimizer is a complete system overhaul utility developed by New Tech Softs. Our solution addresses core Windows bottlenecks that impact competitive gaming.</p>
+                  <p>BigLou's Optimizer is a complete system overhaul utility developed by New Ai Tech Softs. Our solution addresses core Windows bottlenecks that impact competitive gaming.</p>
                   <p className="text-white font-semibold">Technical Highlights:</p>
                   <ul className="list-disc pl-5 space-y-1.5">
                     <li>Deep kernel-level tweaks for reduced input lag.</li>
@@ -878,7 +878,7 @@ const Home = () => {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="text-white/60 text-lg md:text-xl mb-12 max-w-3xl mx-auto leading-relaxed font-body"
           >
-            Whether you need a new website, stronger search visibility, better digital marketing, an AI-powered automation system, an e-commerce store or a complete digital growth strategy, NewTech Softs is ready to help.
+            Whether you need a new website, stronger search visibility, better digital marketing, an AI-powered automation system, an e-commerce store or a complete digital growth strategy, New Ai Tech Softs is ready to help.
           </motion.p>
 
           <motion.div 

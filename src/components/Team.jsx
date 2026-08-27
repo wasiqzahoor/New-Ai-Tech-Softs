@@ -20,7 +20,7 @@ const teamMembers = [
     id: 1,
     name: 'Chaudhary Wasiq Zahoor',
     role: 'Founder & CEO',
-    desc: 'A visionary leader steering New Tech Softs towards technological excellence.',
+    desc: 'A visionary leader steering New Ai Tech Softs towards technological excellence.',
     img: CEO,
     icon: FaUserTie,
     accent: '#00D9FF',

@@ -29,9 +29,9 @@ const Navbar = () => {
 
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2.5 group">
-              <img src={logo} alt="New Tech Softs" className="h-9 w-auto transition-transform duration-300 group-hover:scale-105" />
+              <img src={logo} alt="New Ai Tech Softs" className="h-9 w-auto transition-transform duration-300 group-hover:scale-105" />
               <span className="text-lg font-heading font-bold text-white tracking-wide hidden sm:block">
-                NEW TECH <span className="text-brand-cyan">SOFTS</span>
+                NEW AI TECH <span className="text-brand-cyan">SOFTS</span>
               </span>
             </Link>
 
@@ -90,8 +90,8 @@ const Navbar = () => {
             </button>
           </Link>
           <div className="flex items-center justify-center gap-2">
-            <img src={logo} alt="New Tech Softs" className="h-5 w-auto" />
-            <span className="text-white/30 text-[10px] uppercase tracking-[0.2em] font-semibold">New Tech Softs</span>
+            <img src={logo} alt="New Ai Tech Softs" className="h-5 w-auto" />
+            <span className="text-white/30 text-[10px] uppercase tracking-[0.2em] font-semibold">New Ai Tech Softs</span>
           </div>
         </div>
       </div>

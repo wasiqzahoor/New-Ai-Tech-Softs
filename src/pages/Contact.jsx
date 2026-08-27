@@ -28,12 +28,12 @@ const Contact = () => {
       user_phone: formData.phone,
       project_type: formData.projectType,
       message: formData.message,
-      to_email: 'info@newtechsofts.com'
+      to_email: 'info@newaitechsofts.com'
     };
 
     emailjs.send(serviceID, templateID, templateParams, publicKey)
       .then(() => {
-        alert("Success! Your inquiry has been sent to info@newtechsofts.com");
+        alert("Success! Your inquiry has been sent to info@newaitechsofts.com");
         setFormData({ name: '', email: '', phone: '', projectType: '', message: '' });
         setIsSending(false);
       }, () => {
@@ -43,7 +43,7 @@ const Contact = () => {
   };
 
   const contactCards = [
-    { icon: <FaEnvelope />, label: "Email our team", value: "info@newtechsofts.com" },
+    { icon: <FaEnvelope />, label: "Email our team", value: "info@newaitechsofts.com" },
     { icon: <FaWhatsapp />, label: "Connect with us", value: "+923415287464" },
     { icon: <FaMapMarkerAlt />, label: "Pakistan Office", value: "DHA Phase 5, Islamabad" },
     { icon: <FaMapMarkerAlt />, label: "UAE Office", value: "Street 10, Building 15, Industrial Area 10, Near Al Madinah Hyper Market, Sharjah, UAE" },
@@ -59,39 +59,39 @@ const Contact = () => {
     <div className="min-h-screen pt-32 pb-12 overflow-hidden relative">
 
       <Helmet>
-        <title>Contact Us | New Tech Softs - Software House in Islamabad</title>
-        <meta name="description" content="Get in touch with New Tech Softs, a leading software house in Islamabad. Contact us for web development, mobile app development, AI solutions, and custom software projects." />
-        <meta name="keywords" content="contact, software house Islamabad, web development, mobile app development, AI solutions, custom software, New Tech Softs contact" />
-        <meta name="author" content="New Tech Softs" />
+        <title>Contact Us | New Ai Tech Softs - Software House in Islamabad</title>
+        <meta name="description" content="Get in touch with New Ai Tech Softs, a leading software house in Islamabad. Contact us for web development, mobile app development, AI solutions, and custom software projects." />
+        <meta name="keywords" content="contact, software house Islamabad, web development, mobile app development, AI solutions, custom software, New Ai Tech Softs contact" />
+        <meta name="author" content="New Ai Tech Softs" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://newtechsofts.com/contact" />
+        <link rel="canonical" href="https://newaitechsofts.com/contact" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://newtechsofts.com/contact" />
-        <meta property="og:title" content="Contact Us | New Tech Softs" />
-        <meta property="og:description" content="Get in touch with New Tech Softs for web development, mobile apps, AI solutions, and custom software projects." />
-        <meta property="og:image" content="https://newtechsofts.com/logo.webp" />
-        <meta property="og:site_name" content="New Tech Softs" />
+        <meta property="og:url" content="https://newaitechsofts.com/contact" />
+        <meta property="og:title" content="Contact Us | New Ai Tech Softs" />
+        <meta property="og:description" content="Get in touch with New Ai Tech Softs for web development, mobile apps, AI solutions, and custom software projects." />
+        <meta property="og:image" content="https://newaitechsofts.com/logo.webp" />
+        <meta property="og:site_name" content="New Ai Tech Softs" />
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://newtechsofts.com/contact" />
-        <meta name="twitter:title" content="Contact Us | New Tech Softs" />
-        <meta name="twitter:description" content="Get in touch with New Tech Softs for web development, mobile apps, AI solutions, and custom software projects." />
-        <meta name="twitter:image" content="https://newtechsofts.com/logo.webp" />
+        <meta name="twitter:url" content="https://newaitechsofts.com/contact" />
+        <meta name="twitter:title" content="Contact Us | New Ai Tech Softs" />
+        <meta name="twitter:description" content="Get in touch with New Ai Tech Softs for web development, mobile apps, AI solutions, and custom software projects." />
+        <meta name="twitter:image" content="https://newaitechsofts.com/logo.webp" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ContactPage",
-            "name": "Contact Us | New Tech Softs",
-            "description": "Get in touch with New Tech Softs for web development, mobile apps, AI solutions, and custom software projects.",
-            "url": "https://newtechsofts.com/contact",
+            "name": "Contact Us | New Ai Tech Softs",
+            "description": "Get in touch with New Ai Tech Softs for web development, mobile apps, AI solutions, and custom software projects.",
+            "url": "https://newaitechsofts.com/contact",
             "mainEntity": {
               "@type": "Organization",
-              "name": "New Tech Softs",
+              "name": "New Ai Tech Softs",
               "address": [
                 { "@type": "PostalAddress", "addressLocality": "Islamabad", "addressCountry": "PK" },
                 { "@type": "PostalAddress", "streetAddress": "Street 10, Building 15, Industrial Area 10, Near Al Madinah Hyper Market", "addressLocality": "Sharjah", "addressCountry": "AE" }
               ],
-              "email": "info@newtechsofts.com"
+              "email": "info@newaitechsofts.com"
             }
           })}
         </script>
@@ -163,9 +163,9 @@ const Contact = () => {
             <h3 className="font-heading text-xl font-bold text-brand-cyan uppercase tracking-widest">Global Connect</h3>
             <div className="flex gap-6">
               {[
-                { icon: <FaLinkedin />, link: "https://www.linkedin.com/company/newtechsofts" },
-                { icon: <FaFacebook />, link: "https://www.facebook.com/newtechsofts/" },
-                { icon: <FaInstagram />, link: "https://www.instagram.com/newtechsofts/" },
+                { icon: <FaLinkedin />, link: "https://www.linkedin.com/company/newaitechsofts" },
+                { icon: <FaFacebook />, link: "https://www.facebook.com/newaitechsofts/" },
+                { icon: <FaInstagram />, link: "https://www.instagram.com/newaitechsofts/" },
               ].map((social, i) => (
                 <a
                   key={i}

@@ -28,13 +28,13 @@ const ProductDetail = () => {
     <div className="min-h-screen pt-32 pb-20 relative overflow-hidden">
 
       <Helmet>
-        <title>{product.name} - Free Online Tool | New Tech Softs</title>
-        <meta name="description" content={`${product.details} Try ${product.name} for free at New Tech Softs - a leading software house in Islamabad, Pakistan. No sign-up required.`} />
-        <meta name="keywords" content={`${product.name}, ${product.tags.join(', ')}, free online tool, New Tech Softs, software house Islamabad, IT company Pakistan, web tools, browser tools, free software`} />
-        <meta name="author" content="New Tech Softs" />
+        <title>{product.name} - Free Online Tool | New Ai Tech Softs</title>
+        <meta name="description" content={`${product.details} Try ${product.name} for free at New Ai Tech Softs - a leading software house in Islamabad, Pakistan. No sign-up required.`} />
+        <meta name="keywords" content={`${product.name}, ${product.tags.join(', ')}, free online tool, New Ai Tech Softs, software house Islamabad, IT company Pakistan, web tools, browser tools, free software`} />
+        <meta name="author" content="New Ai Tech Softs" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
         <meta name="googlebot" content="index, follow" />
-        <link rel="canonical" href={`https://newtechsofts.com/product/${product.slug}`} />
+        <link rel="canonical" href={`https://newaitechsofts.com/product/${product.slug}`} />
         <meta name="language" content="English" />
         <meta name="revisit-after" content="7 days" />
         <meta name="geo.region" content="PK-IST" />
@@ -44,21 +44,21 @@ const ProductDetail = () => {
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://newtechsofts.com/product/${product.slug}`} />
-        <meta property="og:title" content={`${product.name} - Free Online Tool | New Tech Softs`} />
-        <meta property="og:description" content={`${product.details} Try it free at newtechsofts.com`} />
+        <meta property="og:url" content={`https://newaitechsofts.com/product/${product.slug}`} />
+        <meta property="og:title" content={`${product.name} - Free Online Tool | New Ai Tech Softs`} />
+        <meta property="og:description" content={`${product.details} Try it free at newaitechsofts.com`} />
         <meta property="og:image" content={product.image} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content={`${product.name} - New Tech Softs`} />
-        <meta property="og:site_name" content="New Tech Softs" />
+        <meta property="og:image:alt" content={`${product.name} - New Ai Tech Softs`} />
+        <meta property="og:site_name" content="New Ai Tech Softs" />
         <meta property="og:locale" content="en_US" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content={`https://newtechsofts.com/product/${product.slug}`} />
-        <meta name="twitter:title" content={`${product.name} - Free Online Tool | New Tech Softs`} />
-        <meta name="twitter:description" content={`${product.details} Try it free at newtechsofts.com`} />
+        <meta name="twitter:url" content={`https://newaitechsofts.com/product/${product.slug}`} />
+        <meta name="twitter:title" content={`${product.name} - Free Online Tool | New Ai Tech Softs`} />
+        <meta name="twitter:description" content={`${product.details} Try it free at newaitechsofts.com`} />
         <meta name="twitter:image" content={product.image} />
 
         {/* JSON-LD: SoftwareApplication */}
@@ -79,8 +79,8 @@ const ProductDetail = () => {
             },
             "author": {
               "@type": "Organization",
-              "name": "New Tech Softs",
-              "url": "https://newtechsofts.com",
+              "name": "New Ai Tech Softs",
+              "url": "https://newaitechsofts.com",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Islamabad",
@@ -105,9 +105,9 @@ const ProductDetail = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://newtechsofts.com/" },
-              { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://newtechsofts.com/products" },
-              { "@type": "ListItem", "position": 3, "name": product.name, "item": `https://newtechsofts.com/product/${product.slug}` }
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://newaitechsofts.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://newaitechsofts.com/products" },
+              { "@type": "ListItem", "position": 3, "name": product.name, "item": `https://newaitechsofts.com/product/${product.slug}` }
             ]
           })}
         </script>
@@ -119,12 +119,12 @@ const ProductDetail = () => {
             "@type": "WebPage",
             "name": `${product.name} - Free Online Tool`,
             "description": product.details,
-            "url": `https://newtechsofts.com/product/${product.slug}`,
+            "url": `https://newaitechsofts.com/product/${product.slug}`,
             "inLanguage": "en-US",
             "isPartOf": {
               "@type": "WebSite",
-              "name": "New Tech Softs",
-              "url": "https://newtechsofts.com"
+              "name": "New Ai Tech Softs",
+              "url": "https://newaitechsofts.com"
             },
             "about": {
               "@type": "Thing",
@@ -174,7 +174,7 @@ const ProductDetail = () => {
             <div className="rounded-2xl overflow-hidden border border-white/[0.12] shadow-xl bg-white/[0.08] p-8 flex items-center justify-center">
               <img
                 src={product.image}
-                alt={`${product.name} - New Tech Softs`}
+                alt={`${product.name} - New Ai Tech Softs`}
                 className="max-h-64 w-auto object-contain"
                 onError={(e) => { e.target.src = 'https://via.placeholder.com/400x200?text=Product'; }}
               />
@@ -240,7 +240,7 @@ const ProductDetail = () => {
                     <FaLinkedin />
                   </a>
                   <a
-                    href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(product.url)}&text=${encodeURIComponent(`Check out ${product.name} by New Tech Softs`)}`}
+                    href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(product.url)}&text=${encodeURIComponent(`Check out ${product.name} by New Ai Tech Softs`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-white/40 hover:text-[#1DA1F2] text-xl transition-all hover:scale-125"
@@ -334,7 +334,7 @@ const ProductDetail = () => {
           <section className="py-16 md:py-20 mt-12 relative">
             <div className="max-w-7xl mx-auto relative z-10">
               <h2 className="font-heading text-3xl font-black text-white mb-10 text-center">
-                Other <span className="text-brand-cyan">Products</span> by New Tech Softs
+                Other <span className="text-brand-cyan">Products</span> by New Ai Tech Softs
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {relatedProducts.map((relProduct) => (

@@ -67,13 +67,13 @@ const ServiceDetail = () => {
     <div className="text-white min-h-screen pt-20">
       {/* SEO */}
       <Helmet>
-        <title>{service.title} Services | New Tech Softs - Software House in Islamabad</title>
-        <meta name="description" content={`${service.description} New Tech Softs is a top-rated software house in Islamabad, Pakistan providing professional ${service.title.toLowerCase()} services to clients worldwide. Get a free quote today.`} />
-        <meta name="keywords" content={`${service.title}, ${service.title.toLowerCase()} services, ${service.tools.join(', ')}, ${service.tagline}, New Tech Softs, software house Islamabad, IT company Pakistan, web development Islamabad, custom software Pakistan, tech agency Islamabad, outsource development Pakistan, best software house Pakistan, ${service.features.slice(0, 3).join(', ')}`} />
-        <meta name="author" content="New Tech Softs" />
+        <title>{service.title} Services | New Ai Tech Softs - Software House in Islamabad</title>
+        <meta name="description" content={`${service.description} New Ai Tech Softs is a top-rated software house in Islamabad, Pakistan providing professional ${service.title.toLowerCase()} services to clients worldwide. Get a free quote today.`} />
+        <meta name="keywords" content={`${service.title}, ${service.title.toLowerCase()} services, ${service.tools.join(', ')}, ${service.tagline}, New Ai Tech Softs, software house Islamabad, IT company Pakistan, web development Islamabad, custom software Pakistan, tech agency Islamabad, outsource development Pakistan, best software house Pakistan, ${service.features.slice(0, 3).join(', ')}`} />
+        <meta name="author" content="New Ai Tech Softs" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         <meta name="googlebot" content="index, follow" />
-        <link rel="canonical" href={`https://newtechsofts.com/service/${service.slug}`} />
+        <link rel="canonical" href={`https://newaitechsofts.com/service/${service.slug}`} />
         <meta name="language" content="English" />
         <meta name="revisit-after" content="7 days" />
         <meta name="rating" content="general" />
@@ -84,24 +84,24 @@ const ServiceDetail = () => {
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://newtechsofts.com/service/${service.slug}`} />
-        <meta property="og:title" content={`${service.title} Services | New Tech Softs - Islamabad`} />
-        <meta property="og:description" content={`Professional ${service.title.toLowerCase()} services by New Tech Softs, Islamabad. ${service.tagline}. Get a free consultation today.`} />
+        <meta property="og:url" content={`https://newaitechsofts.com/service/${service.slug}`} />
+        <meta property="og:title" content={`${service.title} Services | New Ai Tech Softs - Islamabad`} />
+        <meta property="og:description" content={`Professional ${service.title.toLowerCase()} services by New Ai Tech Softs, Islamabad. ${service.tagline}. Get a free consultation today.`} />
         <meta property="og:image" content={service.images[0]} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content={`${service.title} - New Tech Softs Islamabad`} />
-        <meta property="og:site_name" content="New Tech Softs" />
+        <meta property="og:image:alt" content={`${service.title} - New Ai Tech Softs Islamabad`} />
+        <meta property="og:site_name" content="New Ai Tech Softs" />
         <meta property="og:locale" content="en_US" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content={`https://newtechsofts.com/service/${service.slug}`} />
-        <meta name="twitter:title" content={`${service.title} Services | New Tech Softs`} />
-        <meta name="twitter:description" content={`Professional ${service.title.toLowerCase()} services by New Tech Softs, Islamabad. ${service.tagline}.`} />
+        <meta name="twitter:url" content={`https://newaitechsofts.com/service/${service.slug}`} />
+        <meta name="twitter:title" content={`${service.title} Services | New Ai Tech Softs`} />
+        <meta name="twitter:description" content={`Professional ${service.title.toLowerCase()} services by New Ai Tech Softs, Islamabad. ${service.tagline}.`} />
         <meta name="twitter:image" content={service.images[0]} />
         <meta name="twitter:label1" content="Service Provider" />
-        <meta name="twitter:data1" content="New Tech Softs" />
+        <meta name="twitter:data1" content="New Ai Tech Softs" />
         <meta name="twitter:label2" content="Location" />
         <meta name="twitter:data2" content="Islamabad, Pakistan" />
 
@@ -110,15 +110,15 @@ const ServiceDetail = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            "name": `${service.title} - New Tech Softs`,
+            "name": `${service.title} - New Ai Tech Softs`,
             "description": service.description,
-            "url": `https://newtechsofts.com/service/${service.slug}`,
+            "url": `https://newaitechsofts.com/service/${service.slug}`,
             "image": service.images[0],
             "provider": {
               "@type": "Organization",
-              "name": "New Tech Softs",
-              "url": "https://newtechsofts.com",
-              "logo": "https://newtechsofts.com/logo.webp",
+              "name": "New Ai Tech Softs",
+              "url": "https://newaitechsofts.com",
+              "logo": "https://newaitechsofts.com/logo.webp",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "DHA Phase 5, Islamabad",
@@ -133,9 +133,9 @@ const ServiceDetail = () => {
                 "longitude": "73.0479"
               },
               "telephone": "+92-324-9299291",
-              "email": "ceo@newtechsofts.com",
+              "email": "ceo@newaitechsofts.com",
               "sameAs": [
-                "https://www.linkedin.com/company/newtechsofts",
+                "https://www.linkedin.com/company/newaitechsofts",
                 "https://github.com/wasiqzahoor",
                 "https://www.instagram.com/new_tech_softs"
               ]
@@ -166,9 +166,9 @@ const ServiceDetail = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://newtechsofts.com/" },
-              { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://newtechsofts.com/services" },
-              { "@type": "ListItem", "position": 3, "name": service.title, "item": `https://newtechsofts.com/service/${service.slug}` }
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://newaitechsofts.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://newaitechsofts.com/services" },
+              { "@type": "ListItem", "position": 3, "name": service.title, "item": `https://newaitechsofts.com/service/${service.slug}` }
             ]
           })}
         </script>
@@ -194,9 +194,9 @@ const ServiceDetail = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
-            "name": "New Tech Softs",
-            "url": "https://newtechsofts.com",
-            "logo": "https://newtechsofts.com/logo.webp",
+            "name": "New Ai Tech Softs",
+            "url": "https://newaitechsofts.com",
+            "logo": "https://newaitechsofts.com/logo.webp",
             "description": "Leading software house in Islamabad providing web development, mobile apps, AI solutions, and custom software development services.",
             "address": {
               "@type": "PostalAddress",
@@ -212,7 +212,7 @@ const ServiceDetail = () => {
               "longitude": "73.0479"
             },
             "telephone": "+92-324-9299291",
-            "email": "ceo@newtechsofts.com",
+            "email": "ceo@newaitechsofts.com",
             "openingHoursSpecification": [
               {
                 "@type": "OpeningHoursSpecification",

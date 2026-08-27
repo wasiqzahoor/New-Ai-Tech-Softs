@@ -16,7 +16,7 @@ const stats = [
 ];
 
 const keywords = [
-  'New Tech Softs', 'Web Development', 'AI Solutions', 'Mobile Apps',
+  'New Ai Tech Softs', 'Web Development', 'AI Solutions', 'Mobile Apps',
   'Search Engine Optimization', 'AI Agents', 'Graphic Designing',
   'Logo & Branding', 'Custom Web Solutions', 'WordPress Sites',
   'Desktop Applications', 'Chrome Extensions',
@@ -74,7 +74,7 @@ const CTASection = () => {
         >
           <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/[0.06] border border-white/[0.1] text-brand-cyan text-[11px] font-semibold tracking-[2.5px] uppercase font-body shadow-sm">
             <span className="w-1.5 h-1.5 rounded-full bg-brand-cyan animate-pulse" />
-            New Tech Softs — NTS · Islamabad's #1 IT Company
+            New Ai Tech Softs — NTS · Islamabad's #1 IT Company
           </span>
         </motion.div>
 
@@ -120,7 +120,7 @@ const CTASection = () => {
           className="text-white/60 text-[15px] leading-[1.9] max-w-3xl mx-auto mb-10 font-body"
         >
           At{' '}
-          <strong className="text-white font-medium">New Tech Softs (NTS)</strong>,
+          <strong className="text-white font-medium">New Ai Tech Softs (NTS)</strong>,
           we don't just write code — we craft digital experiences that drive real growth.
           From{' '}
           <strong className="text-white font-medium">custom web & mobile applications</strong>{' '}

@@ -201,7 +201,7 @@ const LoadingScreen = ({ onComplete, maxTimeout = 4000 }) => {
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                 />
                 <div className="relative w-20 h-20 rounded-xl flex items-center justify-center">
-                  <img src={logo} alt="New Tech Softs" className="w-full h-full object-contain" />
+                  <img src={logo} alt="New Ai Tech Softs" className="w-full h-full object-contain" />
                 </div>
               </motion.div>
 
@@ -213,7 +213,7 @@ const LoadingScreen = ({ onComplete, maxTimeout = 4000 }) => {
                 className="text-center"
               >
                 <h1 className="text-2xl font-heading font-bold text-white tracking-widest">
-                  NEW TECH <span className="text-brand-cyan">SOFTS</span>
+                  NEW AI TECH <span className="text-brand-cyan">SOFTS</span>
                 </h1>
               </motion.div>
 

@@ -4,29 +4,29 @@ import { FaPaperPlane, FaTimes, FaComments, FaCalendarAlt, FaHandshake, FaArrowR
 import logo from '../assets/logo.svg';
 
 const QUICK_ACTIONS = [
-  { id: 'services', label: 'Our Services', icon: FaComments, message: 'What services does New Tech Softs offer?' },
-  { id: 'products', label: 'Our Products', icon: FaComments, message: 'What products does New Tech Softs have?' },
+  { id: 'services', label: 'Our Services', icon: FaComments, message: 'What services does New Ai Tech Softs offer?' },
+  { id: 'products', label: 'Our Products', icon: FaComments, message: 'What products does New Ai Tech Softs have?' },
   { id: 'pricing', label: 'Pricing', icon: FaHandshake, message: 'What are your pricing details?' },
   { id: 'meeting', label: 'Book Meeting', icon: FaCalendarAlt, message: 'I want to book a meeting' }
 ];
 
 const MEETING_FLOW = {
   initial: "I'd love to help you schedule a meeting! Please provide:\n\n1. **Your Name**\n2. **Email Address**\n3. **Preferred Date & Time**\n4. **Brief description of your project**\n\nI'll have our team reach out to confirm.",
-  redirect: "Perfect! For a quick response, you can also:\n\n- 📱 **WhatsApp**: +923415287464\n- 📧 **Email**: info@newtechsofts.com\n- 🌐 **Contact Page**: newtechsofts.com/contact\n\nOur team typically responds within 24 hours!"
+  redirect: "Perfect! For a quick response, you can also:\n\n- 📱 **WhatsApp**: +923415287464\n- 📧 **Email**: info@newaitechsofts.com\n- 🌐 **Contact Page**: newaitechsofts.com/contact\n\nOur team typically responds within 24 hours!"
 };
 
 const SYSTEM_KEYWORDS = ['services', 'products', 'pricing', 'meeting', 'book', 'team', 'contact', 'about', 'projects', 'portfolio'];
 
 const GREETINGS = [
   "Hi there! 👋 I'm NTS Assistant. How can I help you today?",
-  "Welcome to New Tech Softs! What can I assist you with?",
+  "Welcome to New Ai Tech Softs! What can I assist you with?",
   "Hey! Ready to build something amazing? Ask me about our services!"
 ];
 
 const FALLBACK_REPLIES = [
   "I'm not sure I understand. Could you rephrase that? I can help with services, products, pricing, or scheduling a meeting.",
-  "Hmm, I'm not certain about that. For specific queries, I'd recommend contacting our team at info@newtechsofts.com.",
-  "I'm best at helping with New Tech Softs related questions. Try asking about our services, products, or how to get in touch!"
+  "Hmm, I'm not certain about that. For specific queries, I'd recommend contacting our team at info@newaitechsofts.com.",
+  "I'm best at helping with New Ai Tech Softs related questions. Try asking about our services, products, or how to get in touch!"
 ];
 
 export default function Chatbot() {
@@ -109,7 +109,7 @@ export default function Chatbot() {
     } catch (error) {
       console.error('Chat error:', error);
       setIsTyping(false);
-      addMessage("Sorry, I'm having trouble connecting right now. Please try again or contact us at info@newtechsofts.com", 'bot');
+      addMessage("Sorry, I'm having trouble connecting right now. Please try again or contact us at info@newaitechsofts.com", 'bot');
     }
 
     setIsTyping(false);
@@ -129,9 +129,8 @@ export default function Chatbot() {
       {/* Floating Chat Button */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-5 right-3 z-50 h-14 bg-gradient-to-br from-brand-cyan to-brand-blue rounded-full shadow-lg shadow-brand-cyan/25 flex items-center justify-center hover:shadow-brand-cyan/40 transition-shadow px-5 gap-2"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
+        className="fixed bottom-5 right-5 z-50 w-14 h-14 bg-gradient-to-br from-brand-cyan to-brand-blue rounded-full shadow-lg shadow-brand-cyan/25 flex items-center justify-center hover:shadow-brand-cyan/40 hover:scale-110 transition-all duration-300"
+        whileTap={{ scale: 0.9 }}
         aria-label={isOpen ? 'Close chat' : 'Open chat'}
       >
         <AnimatePresence mode="wait">
@@ -140,11 +139,8 @@ export default function Chatbot() {
               <FaTimes className="w-5 h-5 text-white" />
             </motion.div>
           ) : (
-            <motion.div key="chat" initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.8, opacity: 0 }} transition={{ duration: 0.2 }} className="flex items-center gap-2">
-              <div className="w-9 h-9 rounded-full bg-white flex items-center justify-center overflow-hidden flex-shrink-0">
-                <img src={logo} alt="NTS" className="w-full h-full object-cover" />
-              </div>
-              <span className="text-white text-sm font-semibold">AI Chatbot</span>
+            <motion.div key="chat" initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.8, opacity: 0 }} transition={{ duration: 0.2 }}>
+              <FaComments className="w-6 h-6 text-white" />
             </motion.div>
           )}
         </AnimatePresence>
@@ -168,7 +164,7 @@ export default function Chatbot() {
                   <img src={logo} alt="NTS" className="w-full h-full object-cover" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-white font-semibold text-sm">NewTechSofts Assistant</h3>
+                  <h3 className="text-white font-semibold text-sm">NewAiTechSofts Assistant</h3>
                   <div className="flex items-center gap-1.5">
                     <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                     <span className="text-emerald-400 text-xs">Online</span>
