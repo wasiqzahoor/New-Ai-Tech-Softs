@@ -97,7 +97,20 @@ PROCESS: 1.Discovery 2.Strategy & Design 3.Development 4.QA 5.Deployment.`
 
 // https://vite.dev/config/
 export default defineConfig({
-   plugins: [
+   build: {
+    // Split big vendor libs into separate cached chunks so repeat
+    // visits download much less (long-term browser caching)
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (!id.includes('node_modules')) return;
+          if (id.includes('framer-motion')) return 'motion';
+          if (id.includes('react')) return 'vendor';
+        },
+      },
+    },
+  },
+  plugins: [
     react(),
     chatApiPlugin(),
     Sitemap({

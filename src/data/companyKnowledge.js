@@ -4,7 +4,7 @@
 const companyKnowledge = {
   company: {
     name: "New Ai Tech Softs",
-    legalName: "NEW AI TECH SOFTS (SMC-PRIVATE) LIMITED",
+    legalName: "NEW AI TECH SOFTS (PVT) LTD",
     previousName: "New Tech Soft",
     tagline: "Build. Grow. Automate. Scale.",
     type: "Software House",

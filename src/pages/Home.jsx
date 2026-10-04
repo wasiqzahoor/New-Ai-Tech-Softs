@@ -11,6 +11,10 @@ import FounderSection from '../components/FounderSection';
 import Brands from '../components/Brands';
 import UgcAds from '../components/UgcAds';
 import Recognized from '../components/Recognized';
+<<<<<<< HEAD
+=======
+import AuditPopup from '../components/AuditPopup';
+>>>>>>> 47bc71e (add new features1)
 import { ugcVideos } from '../data/ugcVideos';
 import FAQs from '../components/FAQs';
 
@@ -50,6 +54,16 @@ const colorMap = {
 
 const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  // Perf: hero background video only on desktop — saves ~5.5MB on mobile
+  const [showHeroVideo, setShowHeroVideo] = useState(
+    () => typeof window !== 'undefined' && window.matchMedia('(min-width: 768px)').matches
+  );
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 768px)');
+    const onChange = (e) => setShowHeroVideo(e.matches);
+    mq.addEventListener('change', onChange);
+    return () => mq.removeEventListener('change', onChange);
+  }, []);
   const projectImages = [
     'https://res.cloudinary.com/dwhj8qfca/image/upload/f_webp/v1776867745/SS1_gyr3jr.png',
     'https://res.cloudinary.com/dwhj8qfca/image/upload/q_auto/f_auto/f_webp/v1776867745/SS2_rqihi6.png',
@@ -205,7 +219,12 @@ const Home = () => {
 
       {/* HERO SECTION */}
       <section className="relative text-white pt-24 pb-28 md:pt-20 md:pb-36 overflow-hidden">
+<<<<<<< HEAD
         {/* Video background */}
+=======
+        {/* Video background (desktop only) */}
+        {showHeroVideo && (
+>>>>>>> 47bc71e (add new features1)
         <video
           className="absolute inset-0 w-full h-full object-cover opacity-40"
           src="/bg.mp4"
@@ -215,6 +234,10 @@ const Home = () => {
           playsInline
           preload="metadata"
         />
+<<<<<<< HEAD
+=======
+        )}
+>>>>>>> 47bc71e (add new features1)
         {/* Readability overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a1e]/70 via-[#0a0a1e]/60 to-[#0a0a1e] pointer-events-none" />
         {/* Decorative floating spheres */}
@@ -1037,6 +1060,7 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
+      <AuditPopup />
     </div>
   );
 };

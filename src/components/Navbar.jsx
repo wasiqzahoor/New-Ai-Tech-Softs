@@ -31,7 +31,8 @@ const Navbar = () => {
             <Link to="/" className="flex items-center gap-2.5 group">
               <img src={logo} alt="New Ai Tech Softs" className="h-9 w-auto rounded-[5%] transition-transform duration-300 group-hover:scale-105" />
               <span className="text-lg font-heading font-bold text-white tracking-wide hidden sm:block">
-                NEW AI TECH <span className="text-brand-cyan">SOFTS</span>
+                NEW AI TECH <span className="text-brand-cyan">SOFTS</span>{' '}
+                <span className="text-[10px] text-white/50 font-semibold tracking-widest">(PVT) LTD</span>
               </span>
             </Link>
 

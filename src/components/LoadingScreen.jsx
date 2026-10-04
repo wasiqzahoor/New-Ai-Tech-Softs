@@ -213,7 +213,8 @@ const LoadingScreen = ({ onComplete, maxTimeout = 4000 }) => {
                 className="text-center"
               >
                 <h1 className="text-2xl font-heading font-bold text-white tracking-widest">
-                  NEW AI TECH <span className="text-brand-cyan">SOFTS</span>
+                  NEW AI TECH <span className="text-brand-cyan">SOFTS</span>{' '}
+                  <span className="text-xs text-white/50 font-semibold">(PVT) LTD</span>
                 </h1>
               </motion.div>
 

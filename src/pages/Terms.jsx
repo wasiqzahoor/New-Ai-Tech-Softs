@@ -100,7 +100,7 @@ const Terms = () => {
             transition={{ delay: 0.5, duration: 0.6 }}
             className="text-white/60 font-body text-lg leading-relaxed max-w-2xl mx-auto"
           >
-            Welcome to New Ai Tech Softs. These terms outline the rules and regulations for the use of our services, ensuring a professional and transparent partnership.
+            Welcome to New Ai Tech Softs (Pvt) Ltd. These terms outline the rules and regulations for the use of our services, ensuring a professional and transparent partnership.
           </motion.p>
 
           <motion.div

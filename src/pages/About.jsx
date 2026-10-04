@@ -100,7 +100,7 @@ const About = () => {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-heading font-black text-white leading-[1.1]">
-              New Ai Tech Softs: <span className="text-brand-mid">Pioneering Digital Innovation</span>
+              New Ai Tech Softs (Pvt) Ltd: <span className="text-brand-mid">Pioneering Digital Innovation</span>
             </h1>
 
             <div className="space-y-6 text-white/60 text-lg leading-relaxed font-body">

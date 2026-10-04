@@ -43,7 +43,8 @@ const Footer = () => {
             <div className="flex items-center gap-2.5 mb-6">
               <img src={logo} alt="New Ai Tech Softs" className="h-9 w-auto rounded-[5%]" />
               <span className="text-lg font-heading font-bold text-white">
-                NEW AI TECH <span className="text-brand-cyan">SOFTS</span>
+                NEW AI TECH <span className="text-brand-cyan">SOFTS</span>{' '}
+                <span className="text-[10px] text-white/50 font-semibold tracking-widest">(PVT) LTD</span>
               </span>
             </div>
             <p className="text-sm font-heading font-bold text-brand-cyan mb-3">Build. Grow. Automate. Scale.</p>
@@ -82,6 +83,11 @@ const Footer = () => {
               <FooterLink to="/portfolio" text="Our Work" />
               <FooterLink to="/blog" text="Blog" />
               <FooterLink to="/contact" text="Contact" />
+              <li>
+                <a href="https://certificates.newaitechsofts.com/" target="_blank" rel="noopener noreferrer" className="text-sm text-white/40 hover:text-brand-cyan transition duration-300 flex items-center gap-2 hover:translate-x-1">
+                  <span className="text-brand-cyan/30 text-xs">›</span> Certification
+                </a>
+              </li>
             </ul>
 
             <h3 className="text-white font-heading font-bold text-sm uppercase tracking-widest mb-6 mt-8">Solutions</h3>
@@ -146,7 +152,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-white/[0.08] pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-white/30">&copy; {new Date().getFullYear()} New Ai Tech Softs. All Rights Reserved.</p>
+          <p className="text-sm text-white/30">&copy; {new Date().getFullYear()} New Ai Tech Softs (Pvt) Ltd. All Rights Reserved.</p>
           <div className="flex gap-6">
             <Link to="/privacy" className="text-sm text-white/30 hover:text-brand-cyan transition">Privacy Policy</Link>
             <Link to="/terms" className="text-sm text-white/30 hover:text-brand-cyan transition">Terms of Service</Link>

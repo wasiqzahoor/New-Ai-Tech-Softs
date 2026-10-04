@@ -100,7 +100,7 @@ const PrivacyPolicy = () => {
             transition={{ delay: 0.5, duration: 0.6 }}
             className="text-white/60 font-body text-lg leading-relaxed max-w-2xl mx-auto"
           >
-            At New Ai Tech Softs, your privacy is our priority. This policy outlines how we handle data, protect your information, and ensure transparency in our digital solutions.
+            At New Ai Tech Softs (Pvt) Ltd, your privacy is our priority. This policy outlines how we handle data, protect your information, and ensure transparency in our digital solutions.
           </motion.p>
 
           <motion.div
