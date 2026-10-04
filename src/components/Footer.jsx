@@ -41,8 +41,8 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2.5 mb-6">
-              <img src={logo} alt="New Ai Tech Softs" className="h-9 w-auto rounded-[5%]" />
-              <span className="text-lg font-heading font-bold text-white">
+              <img src={logo} alt="New Ai Tech Softs" className="h-9 w-auto rounded-[5%] flex-shrink-0" />
+              <span className="text-base font-heading font-bold text-white whitespace-nowrap">
                 NEW AI TECH <span className="text-brand-cyan">SOFTS</span>{' '}
                 <span className="text-[10px] text-white/50 font-semibold tracking-widest">(PVT) LTD</span>
               </span>

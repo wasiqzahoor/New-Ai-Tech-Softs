@@ -11,10 +11,7 @@ import FounderSection from '../components/FounderSection';
 import Brands from '../components/Brands';
 import UgcAds from '../components/UgcAds';
 import Recognized from '../components/Recognized';
-<<<<<<< HEAD
-=======
 import AuditPopup from '../components/AuditPopup';
->>>>>>> 47bc71e (add new features1)
 import { ugcVideos } from '../data/ugcVideos';
 import FAQs from '../components/FAQs';
 
@@ -219,12 +216,8 @@ const Home = () => {
 
       {/* HERO SECTION */}
       <section className="relative text-white pt-24 pb-28 md:pt-20 md:pb-36 overflow-hidden">
-<<<<<<< HEAD
-        {/* Video background */}
-=======
         {/* Video background (desktop only) */}
         {showHeroVideo && (
->>>>>>> 47bc71e (add new features1)
         <video
           className="absolute inset-0 w-full h-full object-cover opacity-40"
           src="/bg.mp4"
@@ -234,10 +227,7 @@ const Home = () => {
           playsInline
           preload="metadata"
         />
-<<<<<<< HEAD
-=======
         )}
->>>>>>> 47bc71e (add new features1)
         {/* Readability overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a1e]/70 via-[#0a0a1e]/60 to-[#0a0a1e] pointer-events-none" />
         {/* Decorative floating spheres */}

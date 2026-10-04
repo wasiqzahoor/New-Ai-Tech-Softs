@@ -23,14 +23,14 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500`}>
-      <div className={`transition-all duration-500 ${scrolled ? 'mx-4 sm:mx-6 lg:mx-8 xl:mx-12 mt-3 max-w-7xl ml-auto mr-auto rounded-2xl glass-medium !border-0 shadow-xl shadow-black/20' : 'rounded-none bg-transparent'}`}>
+      <div className={`transition-all duration-500 ${scrolled ? 'mx-4 sm:mx-6 lg:mx-8 xl:mx-12 mt-3 max-w-7xl ml-auto mr-auto rounded-2xl glass-navbar shadow-xl shadow-black/20' : 'rounded-none bg-transparent'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 sm:h-18">
 
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2.5 group">
               <img src={logo} alt="New Ai Tech Softs" className="h-9 w-auto rounded-[5%] transition-transform duration-300 group-hover:scale-105" />
-              <span className="text-lg font-heading font-bold text-white tracking-wide hidden sm:block">
+              <span className="text-lg font-heading font-bold text-white tracking-wide hidden sm:block whitespace-nowrap">
                 NEW AI TECH <span className="text-brand-cyan">SOFTS</span>{' '}
                 <span className="text-[10px] text-white/50 font-semibold tracking-widest">(PVT) LTD</span>
               </span>

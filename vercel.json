@@ -11,8 +11,6 @@
   ],
   "headers": [
     {
-<<<<<<< HEAD
-=======
       "source": "/assets/(.*)",
       "headers": [
         {
@@ -42,7 +40,6 @@
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800" }]
     },
     {
->>>>>>> 47bc71e (add new features1)
       "source": "/(.*)",
       "headers": [
         {
