@@ -8,6 +8,10 @@ import Reviews from '../components/Reviews';
 import HowWeWork from '../components/HowWeWork';
 import { blogData } from '../data/blogData';
 import FounderSection from '../components/FounderSection';
+import Brands from '../components/Brands';
+import UgcAds from '../components/UgcAds';
+import Recognized from '../components/Recognized';
+import { ugcVideos } from '../data/ugcVideos';
 import FAQs from '../components/FAQs';
 
 const containerVariants = {
@@ -69,7 +73,7 @@ const Home = () => {
     <div className="overflow-hidden min-h-screen">
       <Helmet>
         <title>New Ai Tech Softs | Web Development, SEO, Digital Marketing & AI Automation</title>
-        <meta name="description" content="New Ai Tech Softs provides complete digital solutions for modern businesses - web development, SEO services, digital marketing, AI automation, e-commerce, cloud solutions, and creative services. Build. Grow. Automate. Scale." />
+        <meta name="description" content="New Ai Tech Softs provides complete digital solutions for modern businesses - web development, SEO services, digital marketing, AI automation, e-commerce, cloud solutions, and creative services. Now expanding across the USA & UK. Build. Grow. Automate. Scale." />
         <meta name="keywords" content="web development, SEO services, digital marketing, AI automation, e-commerce development, cloud solutions, web development company, SEO agency, digital marketing agency, New Ai Tech Softs" />
         <meta name="author" content="New Ai Tech Softs" />
         <meta name="robots" content="index, follow" />
@@ -139,10 +143,80 @@ const Home = () => {
             ]
           })}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "UGC Video Ads by New Ai Tech Softs",
+            "description": "Authentic UGC-style video ads, product videos and reels created by New Ai Tech Softs for TikTok, Reels, Shorts and Meta ads.",
+            "itemListElement": ugcVideos.map((v, i) => ({
+              "@type": "ListItem",
+              "position": i + 1,
+              "item": {
+                "@type": "VideoObject",
+                "name": v.caption,
+                "description": v.sub,
+                "contentUrl": `https://newaitechsofts.com${v.src}`,
+                "thumbnailUrl": "https://newaitechsofts.com/logo.webp",
+                "uploadDate": "2026-10-03",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "New Ai Tech Softs",
+                  "logo": { "@type": "ImageObject", "url": "https://newaitechsofts.com/logo.webp" }
+                }
+              }
+            }))
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What services do you offer?",
+                "acceptedAnswer": { "@type": "Answer", "text": "We specialize in full-stack web development, mobile app development (Flutter/React Native), and digital solutions for modern businesses." }
+              },
+              {
+                "@type": "Question",
+                "name": "How does the design process work?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Our process includes research, UI/UX design, iterative development, and thorough testing to ensure the best results." }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does a project usually take?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Timelines vary based on complexity, but we utilize agile methods to ensure timely and efficient delivery." }
+              },
+              {
+                "@type": "Question",
+                "name": "What do I need to provide before starting a project?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Typically, we need information about your business goals, branding assets, and any specific content like text or images." }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you offer revisions?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes, we work closely with you to ensure the final product aligns perfectly with your vision and requirements." }
+              }
+            ]
+          })}
+        </script>
       </Helmet>
 
       {/* HERO SECTION */}
       <section className="relative text-white pt-24 pb-28 md:pt-20 md:pb-36 overflow-hidden">
+        {/* Video background */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover opacity-40"
+          src="/bg.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+        />
+        {/* Readability overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a1e]/70 via-[#0a0a1e]/60 to-[#0a0a1e] pointer-events-none" />
         {/* Decorative floating spheres */}
         <div className="absolute top-1/2 left-1/3 w-4 h-4 bg-brand-cyan rounded-full opacity-60 animate-bounce" style={{ animationDuration: '3s' }}></div>
         <div className="absolute top-1/3 right-1/4 w-3 h-3 bg-brand-mid rounded-full opacity-50 animate-bounce" style={{ animationDuration: '4s', animationDelay: '1s' }}></div>
@@ -152,6 +226,25 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
+              <motion.div
+                initial={{ opacity: 0, y: -12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2.5 bg-brand-cyan/10 border border-brand-cyan/30 rounded-full pl-3 pr-5 py-2 mb-6 hover:bg-brand-cyan/20 hover:border-brand-cyan/50 transition-all duration-300 group/badge"
+                >
+                  <span className="relative flex w-2.5 h-2.5">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-cyan opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-cyan"></span>
+                  </span>
+                  <span className="text-brand-cyan font-heading font-bold text-xs sm:text-sm tracking-wide">
+                    🇺🇸🇬🇧 Now Serving &amp; Expanding Across the USA &amp; UK
+                  </span>
+                  <span className="text-brand-cyan transform group-hover/badge:translate-x-1 transition-transform duration-300">&rarr;</span>
+                </Link>
+              </motion.div>
               <motion.div 
                 className="text-brand-cyan font-bold tracking-widest uppercase text-base lg:text-lg mb-4 flex flex-wrap justify-center lg:justify-start gap-2"
                 variants={containerVariants}
@@ -260,11 +353,45 @@ const Home = () => {
               </div>
             </motion.div>
           </div>
+
+          {/* Service quick-link cards */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.9, duration: 0.6 }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mt-14 relative z-10"
+          >
+            {[
+              { title: 'E-Commerce', desc: 'Stores, CRO audits & growth.', to: '/services' },
+              { title: 'Website Development', desc: 'Business sites & web apps.', to: '/service/web-development' },
+              { title: 'UI/UX & Design', desc: 'Branding & interfaces.', to: '/service/ui-ux-design' },
+              { title: 'Advertising & Video Ads', desc: 'UGC ads, reels & promos.', to: '/service/ugc-video-ads' },
+              { title: 'Digital & Social Marketing', desc: 'Ads, SEO & social growth.', to: '/service/digital-marketing' },
+            ].map((card) => (
+              <Link
+                key={card.title}
+                to={card.to}
+                className="group bg-white rounded-2xl p-5 shadow-lg hover:-translate-y-1 hover:shadow-2xl transition-all duration-300"
+              >
+                <p className="text-blue-950 font-heading font-bold text-base leading-snug">
+                  {card.title}{' '}
+                  <span className="inline-block transform group-hover:translate-x-1.5 transition-transform duration-300">&rarr;</span>
+                </p>
+                <p className="text-slate-500 text-sm font-body mt-1.5">{card.desc}</p>
+              </Link>
+            ))}
+          </motion.div>
+        </div>
+        {/* Smoke fade where hero video ends */}
+        <div className="absolute bottom-0 left-0 right-0 h-44 pointer-events-none">
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a1e] via-[#0a0a1e]/40 to-transparent" />
+          <div className="absolute -bottom-12 left-[15%] w-[28rem] h-36 bg-white/[0.08] blur-3xl rounded-full" />
+          <div className="absolute -bottom-12 right-[15%] w-[28rem] h-36 bg-brand-cyan/10 blur-3xl rounded-full" />
         </div>
       </section>
 
       {/* TECH STACK STRIP */}
-      <div className="py-16 md:py-5 overflow-hidden relative">
+      <div className="pt-24 pb-16 md:pt-12 md:pb-5 overflow-hidden relative">
         <div className="max-w-7xl mx-auto px-4 mb-12 relative z-10">
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -328,6 +455,9 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      {/* RECOGNIZED AGENCY */}
+      <Recognized />
 
       {/* DIGITAL GROWTH CHALLENGE SECTION */}
       <section className="py-16 md:py-20 relative overflow-hidden">
@@ -505,7 +635,7 @@ const Home = () => {
               transition={{ delay: 0.3, duration: 0.8 }}
               className="text-white/60 mt-6 max-w-3xl mx-auto text-lg leading-relaxed font-body"
             >
-              From your first website to advanced AI automation and digital marketing, New Ai Tech Softs provides end-to-end digital services designed around your business goals.
+              From your first website to advanced AI automation and digital marketing, New Ai Tech Softs provides end-to-end digital services designed around your business goals — supporting businesses locally while growing our presence across the USA & UK.
             </motion.p>
           </div>
 
@@ -527,25 +657,25 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.06 }}
-                className="bg-white/[0.05] backdrop-blur-xl border border-white/[0.08] rounded-2xl p-6 hover:bg-[#0a0a14] hover:border-white/[0.15] transition-all duration-400 group cursor-pointer"
+                className="bg-white/[0.05] backdrop-blur-xl border border-white/[0.08] rounded-2xl p-6 hover:bg-[#1db9f6] hover:border-white/[0.15] transition-all duration-400 group cursor-pointer"
               >
                 <div className="flex items-start gap-4 mb-4">
-                  <div className={`w-11 h-11 rounded-xl ${colorMap[service.color].bg} flex items-center justify-center ${colorMap[service.color].text} text-lg shrink-0 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`w-11 h-11 rounded-xl ${colorMap[service.color].bg} flex items-center justify-center ${colorMap[service.color].text} text-lg shrink-0 group-hover:scale-110 group-hover:bg-black/10 group-hover:text-black transition-all duration-300`}>
                     {service.icon}
                   </div>
                   <div>
-                    <h3 className="text-base font-heading font-bold text-white group-hover:text-brand-cyan transition-colors duration-300">{service.title}</h3>
+                    <h3 className="text-base font-heading font-bold text-white group-hover:text-black transition-colors duration-300">{service.title}</h3>
                   </div>
                 </div>
-                <p className="text-white/45 text-sm font-body leading-relaxed mb-5 line-clamp-4">{service.desc}</p>
+                <p className="text-white/45 group-hover:text-black text-sm font-body leading-relaxed mb-5 line-clamp-4 transition-colors duration-300">{service.desc}</p>
                 <div className="flex flex-wrap gap-2 mb-5">
                   {service.tags.map((tag, j) => (
-                    <span key={j} className="text-[11px] font-heading font-semibold text-white/40 bg-white/[0.05] border border-white/[0.06] rounded-lg px-3 py-1.5 group-hover:bg-white/[0.08] group-hover:text-white/60 transition-all duration-300">
+                    <span key={j} className="text-[11px] font-heading font-semibold text-white/40 bg-white/[0.05] border border-white/[0.06] rounded-lg px-3 py-1.5 group-hover:bg-black/10 group-hover:text-black group-hover:border-black/20 transition-all duration-300">
                       {tag}
                     </span>
                   ))}
                 </div>
-                <Link to="/services" className="flex items-center gap-2 text-brand-cyan text-sm font-heading font-bold opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300">
+                <Link to="/services" className="flex items-center gap-2 text-brand-cyan group-hover:text-black text-sm font-heading font-bold opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300">
                   Explore Service <span className="text-xs">→</span>
                 </Link>
               </motion.div>
@@ -568,6 +698,9 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* UGC VIDEO ADS */}
+      <UgcAds />
 
       {/* FEATURED PROJECTS */}
       <section className="py-16 md:py-20 overflow-hidden relative">
@@ -721,6 +854,9 @@ const Home = () => {
           )}
         </AnimatePresence>
       </section>
+
+      {/* BRANDS THAT TRUST US */}
+      <Brands />
 
       {/* FOUNDER SECTION */}
       <FounderSection />

@@ -60,7 +60,7 @@ const Contact = () => {
 
       <Helmet>
         <title>Contact Us | New Ai Tech Softs - Software House in Islamabad</title>
-        <meta name="description" content="Get in touch with New Ai Tech Softs, a leading software house in Islamabad. Contact us for web development, mobile app development, AI solutions, and custom software projects." />
+        <meta name="description" content="Get in touch with New Ai Tech Softs, a leading software house in Islamabad serving clients across the USA & UK. Contact us for web development, mobile app development, AI solutions, and custom software projects." />
         <meta name="keywords" content="contact, software house Islamabad, web development, mobile app development, AI solutions, custom software, New Ai Tech Softs contact" />
         <meta name="author" content="New Ai Tech Softs" />
         <meta name="robots" content="index, follow" />
@@ -121,7 +121,7 @@ const Contact = () => {
           className="font-body text-white/60 text-lg max-w-2xl mx-auto"
         >
           Have an idea or a project in mind? Fill out the form below or reach out to us directly.
-          Let's turn your vision into a digital masterpiece.
+          Let's turn your vision into a digital masterpiece. Looking for a reliable technology partner in the USA or UK? We support businesses across the USA, UK, and beyond.
         </motion.p>
       </section>
 

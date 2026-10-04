@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FaBars, FaTimes, FaHome, FaBlog, FaInfoCircle, FaLaptopCode, FaBriefcase, FaEnvelope, FaLightbulb } from 'react-icons/fa';
+import { FaBars, FaTimes, FaHome, FaBlog, FaInfoCircle, FaLaptopCode, FaBriefcase, FaEnvelope } from 'react-icons/fa';
 import logo from '../assets/logo.svg';
 
 const Navbar = () => {
@@ -29,7 +29,7 @@ const Navbar = () => {
 
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2.5 group">
-              <img src={logo} alt="New Ai Tech Softs" className="h-9 w-auto transition-transform duration-300 group-hover:scale-105" />
+              <img src={logo} alt="New Ai Tech Softs" className="h-9 w-auto rounded-[5%] transition-transform duration-300 group-hover:scale-105" />
               <span className="text-lg font-heading font-bold text-white tracking-wide hidden sm:block">
                 NEW AI TECH <span className="text-brand-cyan">SOFTS</span>
               </span>
@@ -39,7 +39,6 @@ const Navbar = () => {
             <div className="hidden md:flex items-center gap-1">
               <NavLink to="/" icon={<FaHome />} text="Home" activeClass={isActive('/')} />
               <NavLink to="/services" icon={<FaLaptopCode />} text="Services" activeClass={isActive('/services')} />
-              <NavLink to="/products" icon={<FaLightbulb />} text="Products" activeClass={isActive('/products')} />
               <NavLink to="/portfolio" icon={<FaBriefcase />} text="Work" activeClass={isActive('/portfolio')} />
               <NavLink to="/about" icon={<FaInfoCircle />} text="About" activeClass={isActive('/about')} />
               <NavLink to="/blog" icon={<FaBlog />} text="Blog" activeClass={isActive('/blog')} />
@@ -77,7 +76,6 @@ const Navbar = () => {
         <div className="flex flex-col p-6 space-y-1 overflow-y-auto flex-grow">
           <MobileLink to="/" icon={<FaHome />} text="Home" toggle={toggleMenu} activeClass={isActive('/')} />
           <MobileLink to="/services" icon={<FaLaptopCode />} text="Services" toggle={toggleMenu} activeClass={isActive('/services')} />
-          <MobileLink to="/products" icon={<FaLightbulb />} text="Products" toggle={toggleMenu} activeClass={isActive('/products')} />
           <MobileLink to="/portfolio" icon={<FaBriefcase />} text="Work" toggle={toggleMenu} activeClass={isActive('/portfolio')} />
           <MobileLink to="/about" icon={<FaInfoCircle />} text="About" toggle={toggleMenu} activeClass={isActive('/about')} />
           <MobileLink to="/blog" icon={<FaBlog />} text="Blog" toggle={toggleMenu} activeClass={isActive('/blog')} />
@@ -90,7 +88,7 @@ const Navbar = () => {
             </button>
           </Link>
           <div className="flex items-center justify-center gap-2">
-            <img src={logo} alt="New Ai Tech Softs" className="h-5 w-auto" />
+            <img src={logo} alt="New Ai Tech Softs" className="h-5 w-auto rounded-[5%]" />
             <span className="text-white/30 text-[10px] uppercase tracking-[0.2em] font-semibold">New Ai Tech Softs</span>
           </div>
         </div>

@@ -170,6 +170,13 @@ const BlogDetail = () => {
               "logo": { "@type": "ImageObject", "url": "https://newaitechsofts.com/logo.webp" }
             },
             "datePublished": blog.date,
+            "dateModified": blog.date,
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": `https://newaitechsofts.com/blog/${blog.slug}`
+            },
+            "articleSection": blog.category || 'Tech Insights',
+            "keywords": `${blog.category || 'tech'}, ${blog.title}, New Ai Tech Softs, software house Islamabad`,
             "url": `https://newaitechsofts.com/blog/${blog.slug}`
           })}
         </script>
@@ -209,6 +216,7 @@ const BlogDetail = () => {
               <img
                 src={blog.img}
                 alt={blog.title}
+                onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = '/logo.webp'; }}
                 className="w-full h-auto max-h-[500px] object-contain"
               />
             </div>

@@ -129,7 +129,7 @@ export default function Chatbot() {
       {/* Floating Chat Button */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-5 right-5 z-50 w-14 h-14 bg-gradient-to-br from-brand-cyan to-brand-blue rounded-full shadow-lg shadow-brand-cyan/25 flex items-center justify-center hover:shadow-brand-cyan/40 hover:scale-110 transition-all duration-300"
+        className="fixed bottom-5 right-5 z-50 w-14 h-14 bg-gradient-to-br from-brand-cyan to-blue-400 rounded-full shadow-lg shadow-brand-cyan/25 flex items-center justify-center hover:shadow-brand-cyan/40 hover:scale-110 transition-all duration-300"
         whileTap={{ scale: 0.9 }}
         aria-label={isOpen ? 'Close chat' : 'Open chat'}
       >
@@ -158,10 +158,10 @@ export default function Chatbot() {
             style={{ height: 'min(560px, calc(100vh - 160px))' }}
           >
             {/* Header */}
-            <div className="bg-gradient-to-r from-brand-cyan/10 to-brand-blue/10 px-5 py-4 border-b border-slate-700/50">
+            <div className="bg-gradient-to-r from-brand-cyan/10 to-blue-400/10 px-5 py-4 border-b border-slate-700/50">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-lg overflow-hidden p-0">
-                  <img src={logo} alt="NTS" className="w-full h-full object-cover" />
+                  <img src={logo} alt="NTS" className="w-full h-full object-cover rounded-[5%]" />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-white font-semibold text-sm">NewAiTechSofts Assistant</h3>
@@ -193,7 +193,7 @@ export default function Chatbot() {
                   <div
                     className={`max-w-[80%] px-4 py-2.5 rounded-2xl text-sm leading-relaxed whitespace-pre-line ${
                       msg.sender === 'user'
-                        ? 'bg-gradient-to-br from-brand-cyan to-brand-blue text-white rounded-br-md'
+                        ? 'bg-gradient-to-br from-brand-cyan to-blue-400 text-white rounded-br-md'
                         : 'bg-slate-800 text-slate-200 border border-slate-700/50 rounded-bl-md'
                     }`}
                     dangerouslySetInnerHTML={{ __html: formatMessage(msg.text) }}
@@ -255,7 +255,7 @@ export default function Chatbot() {
                 <motion.button
                   type="submit"
                   disabled={!input.trim() || isTyping}
-                  className="w-10 h-10 bg-gradient-to-br from-brand-cyan to-brand-blue rounded-xl flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-brand-cyan/20"
+                  className="w-10 h-10 bg-gradient-to-br from-brand-cyan to-blue-400 rounded-xl flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-brand-cyan/20"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >

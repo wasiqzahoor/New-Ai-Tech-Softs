@@ -198,7 +198,198 @@ If you're a business with no digital presence or an outdated online profile, New
 Ready to build your digital presence? Contact New Ai Tech Softs today.`,
     date: "August 10, 2026",
     author: "Wasiq Zahoor",
-    img: "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkIOVFs2HspOhv495HldKN5M9RcyAVPYoTYI4numIa3DQDZF4jbR0ypgw2sM8yfR7Ul5Wg41cjEql9dG3en5Q_3unfSMUsw5r6_-V7Ot6UZZYUffhBLITckSTpYdnLvojJf6Oere6nYXNTL=s1360-w1360-h1020-rw",
+    img: "/blog/novasky-blog.webp",
+    category: "Case Study"
+  },
+  {
+    id: 23,
+    slug: "bionature-complete-digital-presence-case-study",
+    title: "BioNature: How We Built a Complete Digital Presence for a Medicine Distributor",
+    excerpt: "How New Ai Tech Softs built BioNature's complete digital presence — a professional e-commerce website, Google Business Profile, and local SEO for the Islamabad-based medicine distributor behind Misaka, Gyn-Guard and Laxity.",
+    content: `BioNature (Pvt) Ltd is a trusted medicine distributor based in Islamabad, Pakistan, offering everyday healthcare products for the whole family. Their product range includes Misaka syrup for cough & congestion, Gyn-Guard for intimate hygiene, and Laxity for digestive comfort — quality products rooted in the power of nature.
+
+Before partnering with New Ai Tech Softs, BioNature had no proper digital presence. There was no website, no Google Business Profile, and no way for customers to discover their products or place orders online. In a market where patients and families search for healthcare products on Google every day, this meant lost trust, lost visibility, and lost sales.
+
+When BioNature approached New Ai Tech Softs, the goal was clear — build a complete digital presence from the ground up: a professional website, a verified Google listing, and strong local SEO. The key challenges were:
+
+1. No Website: Customers had no way to learn about Misaka, Gyn-Guard and Laxity online. There was no platform to explain product benefits, share reviews, or take orders.
+
+2. No Google Presence: When someone searched for medicine distributors in Islamabad or healthcare products in Pakistan, BioNature simply didn't appear in search results or Google Maps.
+
+3. No Online Ordering: Customers could only buy through physical stores. There was no WhatsApp ordering, no direct channel between the brand and its customers.
+
+At New Ai Tech Softs, we delivered a complete digital ecosystem for BioNature, covering every touchpoint a modern healthcare brand needs.
+
+We designed and developed a modern e-commerce website for BioNature at bionaturepvtltd.com. The website was built to:
+
+- Showcase the complete product range with professional imagery, benefits, and usage details
+- Build trust with customer reviews and a clean, medical-grade design
+- Take orders directly through WhatsApp ordering integration
+- Work flawlessly on mobile, where most healthcare searches happen
+
+The website now serves as the digital headquarters of BioNature, giving customers a professional first impression and an easy way to order.
+
+🔗 Website: www.bionaturepvtltd.com
+
+We created and fully optimized a Google Business Profile for BioNature. This includes:
+
+- Verified business listing with correct address, hours, and contact details
+- Product and service categories for medicine distribution
+- Customer reviews setup to build public trust
+- Professional photos of products and the brand
+
+Now, when anyone searches for medicine distributors in Islamabad or healthcare products in Pakistan, BioNature appears in Google search results and Google Maps.
+
+We optimized BioNature for local search with:
+
+- Location-based keywords targeting Islamabad and Pakistan-wide customers
+- SEO-friendly product pages for Misaka, Gyn-Guard and Laxity
+- Fast loading times and mobile-first design for better rankings
+- Structured business information across the web
+
+BioNature now has a legitimate, professional digital presence that matches the quality of their healthcare products. Customers can discover the brand on Google, explore products on a beautiful website, read reviews, and order directly through WhatsApp — a complete journey from search to purchase.
+
+The healthcare and pharmaceutical distribution industry is competitive. Customers now start their search for trusted medicine brands online. Without a digital presence, quality companies like BioNature were losing potential customers to competitors who had invested in their online visibility.
+
+By building a complete digital ecosystem, BioNature is now positioned to capture online leads, build trust through reviews and social proof, and grow their distribution business across Pakistan in the digital age.
+
+If you're a business with no digital presence or an outdated online profile, New Ai Tech Softs can help you transform your brand just like we did for BioNature.
+
+Ready to build your digital presence? Contact New Ai Tech Softs today.`,
+    date: "October 3, 2026",
+    author: "Wasiq Zahoor",
+    img: "/blog/bionature-blog.webp",
+    category: "Case Study"
+  },
+  {
+    id: 24,
+    slug: "vesco-science-korean-biotech-website-case-study",
+    title: "Vesco Science: Building a Bilingual Website for a Korean Biotech Leader",
+    excerpt: "How New Ai Tech Softs designed and developed a premium English/Korean website for Vesco Science Co., Ltd. — a Korean regenerative biotechnology company offering exosomes, dermal fillers, PDRN and custom manufacturing.",
+    content: `Vesco Science Co., Ltd. (VescoScience) is a Korean regenerative biotechnology and custom manufacturing company developing advanced biotechnology solutions through integrated R&D, formulation, manufacturing and quality systems. From scientific discovery to scalable manufacturing, they serve regenerative medicine, aesthetics and specialty healthcare markets worldwide.
+
+When Vesco Science partnered with New Ai Tech Softs, the mission was ambitious — build a world-class digital presence worthy of a Korean biotechnology leader. The website had to communicate complex science to a global audience, in two languages, while presenting products, technologies and partnership opportunities. The key challenges were:
+
+1. Complex Science, Simply Told: Exosome isolation, PDRN/PN platforms, lyophilization, cold-chain manufacturing — advanced concepts that needed to be clear and compelling for scientists, partners and buyers alike.
+
+2. Two Languages, One Experience: A seamless English/Korean bilingual website where every technology, product and quality page reads naturally in both languages.
+
+3. Product + Trust Story: Beyond products like exosomes, dermal fillers, peptide bio-remodeling, botulinum toxin and PDRN/PN — the site had to prove manufacturing credibility through R&D, facility, quality systems and global partnership stories.
+
+At New Ai Tech Softs, we designed and developed a premium bilingual website for Vesco Science at vescoscience.com. Every section was crafted to educate, impress and convert.
+
+We built six dedicated technology platform pages covering:
+
+- Exosome technology — isolation, purification and characterization of extracellular vesicles
+- PDRN / PN technology — regenerative polynucleotide platforms and formulation
+- Peptide technology — bioactive peptides and peptide complex formulation
+- HA & regenerative formulations — hyaluronic acid and advanced aesthetic systems
+- Lyophilization — protecting sensitive biomaterials and improving storage stability
+- Cold-chain systems — temperature-controlled handling, storage and transport
+
+Each platform page combines scientific depth with clean visuals, so visitors understand the technology without a PhD.
+
+We created a complete product catalog for Vesco Science featuring:
+
+- Exosomes for regenerative applications
+- Dermal fillers
+- Peptide bio-remodeling solutions
+- Botulinum toxin
+- PDRN / PN products
+
+Every product page connects to partnership inquiry flows, turning interest into qualified global leads.
+
+🔗 Website: www.vescoscience.com
+
+Trust is everything in biotechnology. We built dedicated sections showcasing:
+
+- R&D capabilities — continuous research driving biotech innovation
+- Advanced manufacturing — precision facilities with controlled environments
+- Quality management — raw material control, process monitoring, analytical and microbial testing, batch traceability
+- Global network and the strategic Vesco Science × EverCeutical partnership
+
+We optimized Vesco Science for global search with:
+
+- Bilingual SEO targeting regenerative biotechnology and exosome keywords in English and Korean
+- Fast loading times and mobile-first design for better rankings
+- Clean site architecture across technology, product, research and quality pages
+- Structured business information for international discoverability
+
+Vesco Science now has a premium digital presence that matches the quality of their science. Global partners can explore technologies in their own language, browse the product catalog, verify quality systems, and start a partnership conversation — a complete journey from discovery to inquiry.
+
+The regenerative biotechnology industry is global and competitive. Companies choosing manufacturing and technology partners start their search online. Without a world-class website, even breakthrough science stays invisible.
+
+By building a bilingual, SEO-optimized platform, Vesco Science is now positioned to attract global partnerships, communicate scientific leadership, and grow across regenerative medicine and aesthetics markets.
+
+If you're a business with no digital presence or an outdated online profile, New Ai Tech Softs can help you transform your brand just like we did for Vesco Science.
+
+Ready to build your digital presence? Contact New Ai Tech Softs today.`,
+    date: "October 3, 2026",
+    author: "Wasiq Zahoor",
+    img: "/blog/vescoscience-blog.webp",
+    category: "Case Study"
+  },
+  {
+    id: 25,
+    slug: "nanoventera-exosome-website-case-study",
+    title: "Nanoventra: Building a Premium Website for Next-Generation Exosome Technology",
+    excerpt: "How New Ai Tech Softs designed and developed a premium website for Nanoventera — high-purity exosome solutions for regenerative science, aesthetic medicine and cellular therapeutics at nanoventera.com.",
+    content: `Nanoventra engineers high-purity extracellular vesicle (exosome) solutions designed to advance regenerative science, aesthetic medicine, and cellular therapeutics. With 15+ years of exosome research, 50+ research partners worldwide, and a 97% product purity standard, they operate at the cutting edge of next-generation exosome technology for regenerative medicine.
+
+When Nanoventera partnered with New Ai Tech Softs, the challenge was clear — build a premium website that makes complex exosome science accessible to researchers, clinics and global partners. The key challenges were:
+
+1. Technical Science, Simply Told: Extracellular vesicles, purity standards, regenerative applications — advanced concepts that needed clear, trustworthy storytelling for scientists and buyers alike.
+
+2. Credibility First: In biotechnology, trust wins deals. The site had to prove research depth, purity standards and global partnerships from the very first scroll.
+
+3. Products + Support: Beyond showcasing exosome solutions, visitors needed product browsing, educational resources, and an easy path to contact and support.
+
+At New Ai Tech Softs, we designed and developed a premium website for Nanoventera at nanoventera.com. Every section was built to educate, build trust, and convert.
+
+We built a complete product catalog experience for Nanoventera featuring:
+
+- High-purity exosome solutions for regenerative science
+- Products for aesthetic medicine and cellular therapeutics
+- Global search across products, services and resources
+- Clear product-to-contact journeys for researchers and clinics
+
+Visitors can explore the science, browse solutions, and reach out — all in a few clicks.
+
+🔗 Website: www.nanoventra.com
+
+Trust is everything in biotechnology. We made credibility impossible to miss:
+
+- 15+ years of exosome research highlighted as a hero trust signal
+- 50+ research partners worldwide proving global confidence
+- 97% product purity standard stated clearly and proudly
+- Technology storytelling explaining next-generation exosome science
+
+We created a blog and help & support center for Nanoventera with:
+
+- Educational articles on exosomes and regenerative medicine
+- Resources for researchers, clinics and partners
+- Support flows answering common product and science questions
+- Fresh content feeding organic search growth
+
+We optimized Nanoventera for global search with:
+
+- SEO targeting exosome, extracellular vesicle and regenerative medicine keywords
+- Fast loading times and mobile-first design for better rankings
+- Clean architecture across products, technology, blog and support pages
+- Structured content helping researchers find answers fast
+
+Nanoventra now has a premium digital presence worthy of breakthrough science. Global visitors can explore exosome technology, verify research credibility, browse products, read educational content, and contact the team — a complete journey from discovery to partnership.
+
+The regenerative biotechnology industry moves fast. Companies choosing exosome partners start their search online. Without a world-class website, even the purest science stays invisible.
+
+By building an SEO-optimized platform with trust at its core, Nanoventera is now positioned to attract research partnerships, communicate scientific leadership, and grow across regenerative science and aesthetic medicine markets.
+
+If you're a business with no digital presence or an outdated online profile, New Ai Tech Softs can help you transform your brand just like we did for Nanoventera.
+
+Ready to build your digital presence? Contact New Ai Tech Softs today.`,
+    date: "October 3, 2026",
+    author: "Wasiq Zahoor",
+    img: "/blog/nanoventera-blog.webp",
     category: "Case Study"
   },
   {

@@ -41,12 +41,13 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2.5 mb-6">
-              <img src={logo} alt="New Ai Tech Softs" className="h-9 w-auto" />
+              <img src={logo} alt="New Ai Tech Softs" className="h-9 w-auto rounded-[5%]" />
               <span className="text-lg font-heading font-bold text-white">
                 NEW AI TECH <span className="text-brand-cyan">SOFTS</span>
               </span>
             </div>
             <p className="text-sm font-heading font-bold text-brand-cyan mb-3">Build. Grow. Automate. Scale.</p>
+            <p className="text-xs text-white/40 mb-4">Expanding our digital presence across the USA & UK 🇺🇸🇬🇧</p>
             <p className="text-sm leading-relaxed text-white/50 mb-8">
               New Ai Tech Softs provides web development, SEO, digital marketing, AI automation, cloud, creative and e-commerce solutions for modern businesses.
             </p>
@@ -63,13 +64,13 @@ const Footer = () => {
             <ul className="space-y-3">
               <FooterLink to="/service/web-development" text="Web Development" />
               <FooterLink to="/service/ui-ux-design" text="UI/UX Design" />
-              <FooterLink to="/service/seo-services" text="SEO Services" />
-              <FooterLink to="/service/ai-automation" text="AI Automation" />
-              <FooterLink to="/service/cloud-solutions" text="Cloud Solutions" />
+              <FooterLink to="/service/digital-marketing" text="SEO Services" />
+              <FooterLink to="/service/ai-chatbots-agents" text="AI Automation" />
+              <FooterLink to="/service/cloud-devops" text="Cloud Solutions" />
               <FooterLink to="/service/mobile-app-development" text="Mobile Apps" />
               <FooterLink to="/service/graphic-designing" text="Graphic Design" />
               <FooterLink to="/service/video-editing" text="Video Production" />
-              <FooterLink to="/service/ecommerce-development" text="E-commerce" />
+              <FooterLink to="/service/shopify-store-development" text="E-commerce" />
             </ul>
           </div>
 
@@ -86,10 +87,10 @@ const Footer = () => {
             <h3 className="text-white font-heading font-bold text-sm uppercase tracking-widest mb-6 mt-8">Solutions</h3>
             <ul className="space-y-3">
               <FooterLink to="/services" text="Business Growth" />
-              <FooterLink to="/services" text="Lead Generation" />
-              <FooterLink to="/services" text="AI Automation" />
-              <FooterLink to="/services" text="E-commerce Growth" />
-              <FooterLink to="/services" text="Digital Transformation" />
+              <FooterLink to="/service/digital-marketing" text="Lead Generation" />
+              <FooterLink to="/service/ai-chatbots-agents" text="AI Automation" />
+              <FooterLink to="/service/shopify-marketing" text="E-commerce Growth" />
+              <FooterLink to="/service/it-solutions-consulting" text="Digital Transformation" />
             </ul>
           </div>
 

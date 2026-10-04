@@ -22,8 +22,8 @@ const About = () => {
     <div className="text-white min-h-screen pt-24 pb-12 overflow-hidden">
       <Helmet>
         <title>About New Ai Tech Softs | Our Mission, Vision & Team</title>
-        <meta name="description" content="Learn more about New Ai Tech Softs, a leading software house in Islamabad. Discover our mission, our professional team, and how we deliver innovative software solutions." />
-        <meta name="keywords" content="about New Ai Tech Softs, software house Islamabad, our team, mission, vision, IT company Pakistan, web development company" />
+        <meta name="description" content="Learn more about New Ai Tech Softs, a leading software house in Islamabad expanding across the USA & UK. Discover our mission, our professional team, and how we deliver innovative software solutions." />
+        <meta name="keywords" content="about New Ai Tech Softs, software house Islamabad, software company USA, web development UK, our team, mission, vision, IT company Pakistan, web development company" />
         <meta name="author" content="New Ai Tech Softs" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://newaitechsofts.com/about" />
@@ -31,7 +31,7 @@ const About = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://newaitechsofts.com/about" />
         <meta property="og:title" content="About New Ai Tech Softs | Our Mission, Vision & Team" />
-        <meta property="og:description" content="Learn more about New Ai Tech Softs, a leading software house in Islamabad. Discover our mission, our professional team, and how we deliver innovative software solutions." />
+        <meta property="og:description" content="Learn more about New Ai Tech Softs, a leading software house in Islamabad expanding across the USA & UK. Discover our mission, our professional team, and how we deliver innovative software solutions." />
         <meta property="og:image" content="https://newaitechsofts.com/logo.webp" />
         <meta property="og:site_name" content="New Ai Tech Softs" />
         <meta property="og:locale" content="en_US" />
@@ -39,7 +39,7 @@ const About = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://newaitechsofts.com/about" />
         <meta name="twitter:title" content="About New Ai Tech Softs | Our Mission, Vision & Team" />
-        <meta name="twitter:description" content="Learn more about New Ai Tech Softs, a leading software house in Islamabad. Discover our mission, our professional team, and how we deliver innovative software solutions." />
+        <meta name="twitter:description" content="Learn more about New Ai Tech Softs, a leading software house in Islamabad expanding across the USA & UK. Discover our mission, our professional team, and how we deliver innovative software solutions." />
         <meta name="twitter:image" content="https://newaitechsofts.com/logo.webp" />
 
         <script type="application/ld+json">
@@ -47,7 +47,7 @@ const About = () => {
             "@context": "https://schema.org",
             "@type": "AboutPage",
             "name": "About New Ai Tech Softs",
-            "description": "Learn more about New Ai Tech Softs, a leading software house in Islamabad. Discover our mission, our professional team, and how we deliver innovative software solutions.",
+            "description": "Learn more about New Ai Tech Softs, a leading software house in Islamabad expanding across the USA & UK. Discover our mission, our professional team, and how we deliver innovative software solutions.",
             "url": "https://newaitechsofts.com/about",
             "mainEntity": {
               "@type": "Organization",
@@ -110,6 +110,9 @@ const About = () => {
               <p>
                 We are a team of visionary developers, designers, and strategists. Our expertise in <span className="text-white">MERN stack development</span>, custom <span className="text-white">mobile applications</span>, and AI-driven solutions bridges the gap between your concept and reality.
               </p>
+              <p>
+                With a growing global footprint, we are now bringing our software, AI, automation, web, app, and digital solutions to businesses across the <span className="text-white font-semibold">USA and UK</span>.
+              </p>
             </div>
 
             {/* Trust Badges */}
@@ -157,7 +160,7 @@ const About = () => {
 
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full flex items-center justify-center font-bold">
-                    <img src={logo} alt="New Ai Tech Softs Logo" />
+                    <img src={logo} alt="New Ai Tech Softs Logo" className="rounded-[5%]" />
                   </div>
                   <div>
                     <p className="text-white font-bold font-heading">New Ai Tech Softs</p>

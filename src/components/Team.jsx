@@ -146,6 +146,8 @@ const TeamCard = ({ member, index }) => {
               <img
                 src={img}
                 alt={name}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover object-top transition-all duration-500"
                 style={{
                   filter: hovered ? 'grayscale(0%) brightness(1)' : 'grayscale(20%) brightness(0.85)',

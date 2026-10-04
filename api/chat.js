@@ -2,6 +2,40 @@ import companyKnowledge from '../src/data/companyKnowledge.js';
 
 const GROQ_API_KEY = process.env.GROQ_API_KEY;
 
+// ---- Simple in-memory rate limiting: 20 requests / minute / IP ----
+const RATE_LIMIT = 20;
+const RATE_WINDOW_MS = 60 * 1000;
+const requestLog = new Map();
+
+function isRateLimited(ip) {
+  const now = Date.now();
+  const hits = (requestLog.get(ip) || []).filter((t) => now - t < RATE_WINDOW_MS);
+  hits.push(now);
+  requestLog.set(ip, hits);
+  // Prevent unbounded memory growth
+  if (requestLog.size > 5000) {
+    const oldest = [...requestLog.keys()].slice(0, 1000);
+    oldest.forEach((k) => requestLog.delete(k));
+  }
+  return hits.length > RATE_LIMIT;
+}
+
+const MAX_MESSAGES = 20;
+const MAX_MESSAGE_CHARS = 2000;
+
+function sanitizeMessages(messages) {
+  if (!Array.isArray(messages)) return null;
+  const clean = [];
+  for (const m of messages.slice(-MAX_MESSAGES)) {
+    if (!m || typeof m.content !== 'string') continue;
+    const role = m.role === 'user' ? 'user' : 'assistant';
+    const content = m.content.slice(0, MAX_MESSAGE_CHARS);
+    if (!content.trim()) continue;
+    clean.push({ role, content });
+  }
+  return clean.length > 0 ? clean : null;
+}
+
 function buildSystemPrompt() {
   const k = companyKnowledge;
   return `You are a friendly, professional AI assistant for New Ai Tech Softs — a leading software house based in Islamabad, Pakistan. Your name is NTS Assistant. You help visitors learn about the company, its services, products, and how to get in touch.
@@ -44,7 +78,7 @@ Quote: "${k.founder.quote}"
 TEAM:
 ${k.team.map(m => `${m.name} — ${m.role}`).join('\n')}
 
-SERVICES (12):
+SERVICES (15):
 ${k.services.map(s => `- ${s.name}: ${s.description} (Tools: ${s.tools.join(', ')})`).join('\n')}
 
 PRODUCTS (7):
@@ -76,15 +110,26 @@ export default async function handler(req, res) {
   try {
     const { messages, stream } = req.body;
 
-    if (!messages || !Array.isArray(messages)) {
-      return res.status(400).json({ error: 'Messages array is required' });
+    const clientIp = req.headers['x-forwarded-for']?.split(',')[0]?.trim() || req.socket?.remoteAddress || 'unknown';
+    if (isRateLimited(clientIp)) {
+      return res.status(429).json({ error: 'Too many requests. Please wait a moment and try again.' });
+    }
+
+    const cleanMessages = sanitizeMessages(messages);
+    if (!cleanMessages) {
+      return res.status(400).json({ error: 'Valid messages array is required' });
+    }
+
+    if (!GROQ_API_KEY) {
+      console.error('Chat API error: GROQ_API_KEY is not configured');
+      return res.status(503).json({ error: 'AI service is not configured. Please contact us at info@newaitechsofts.com' });
     }
 
     const systemPrompt = buildSystemPrompt();
 
     const apiMessages = [
       { role: 'system', content: systemPrompt },
-      ...messages.slice(-20)
+      ...cleanMessages
     ];
 
     if (stream) {

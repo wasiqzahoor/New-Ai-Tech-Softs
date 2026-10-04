@@ -126,6 +126,9 @@ const Blog = () => {
                   <img
                     src={blog.img}
                     alt={blog.title}
+                    loading="lazy"
+                    decoding="async"
+                    onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = '/logo.webp'; }}
                     className="w-full h-auto max-h-80 object-contain group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />

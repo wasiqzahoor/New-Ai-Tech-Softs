@@ -82,7 +82,7 @@ const FounderSection = () => {
                   className="absolute bottom-5 left-5 right-5 bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-2xl p-4 flex items-center gap-4"
                 >
                   <div className="w-12 h-12 rounded-xl overflow-hidden shrink-0">
-                    <img src={logo} alt="New Ai Tech Softs" className="w-full h-full object-contain" />
+                    <img src={logo} alt="New Ai Tech Softs" className="w-full h-full object-contain rounded-[5%]" />
                   </div>
                   <div>
                     <p className="text-white font-heading font-bold text-sm leading-tight">CEO & Founder</p>

@@ -235,7 +235,7 @@ const ProjectDetail = () => {
                 src={project.img}
                 alt={project.title}
                 className="w-full h-auto object-cover"
-                onError={(e) => { e.target.src = 'https://via.placeholder.com/1200x600?text=Project+Image'; }}
+                onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = '/logo.webp'; }}
               />
             </div>
 
@@ -504,8 +504,10 @@ const ProjectDetail = () => {
                     <img
                       src={relProject.img}
                       alt={relProject.title}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      onError={(e) => { e.target.src = 'https://via.placeholder.com/400x200?text=Project'; }}
+                      onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = '/logo.webp'; }}
                     />
                   </div>
                   <div className="p-6">

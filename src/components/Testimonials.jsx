@@ -23,6 +23,8 @@ const TestimonialCard = ({ item, index }) => (
       <img
         src={item.image}
         alt={item.name}
+        loading="lazy"
+        decoding="async"
         className="w-12 h-12 rounded-full border-2 border-brand-cyan/30 object-cover"
       />
       <div className="flex-1 min-w-0">

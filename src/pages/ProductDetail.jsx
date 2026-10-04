@@ -176,7 +176,7 @@ const ProductDetail = () => {
                 src={product.image}
                 alt={`${product.name} - New Ai Tech Softs`}
                 className="max-h-64 w-auto object-contain"
-                onError={(e) => { e.target.src = 'https://via.placeholder.com/400x200?text=Product'; }}
+                onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = '/logo.webp'; }}
               />
             </div>
 
@@ -347,6 +347,8 @@ const ProductDetail = () => {
                       <img
                         src={relProduct.image}
                         alt={relProduct.name}
+                        loading="lazy"
+                        decoding="async"
                         className="max-h-28 w-auto object-contain group-hover:scale-110 transition-transform duration-500"
                       />
                     </div>

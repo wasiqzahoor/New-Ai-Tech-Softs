@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://newtechsofts.com/sitemap.xml
+Sitemap: https://newaitechsofts.com/sitemap.xml

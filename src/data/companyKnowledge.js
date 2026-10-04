@@ -15,7 +15,7 @@ const companyKnowledge = {
       projects: "100+ Projects Delivered",
       clients: "50+ Happy Clients"
     },
-    description: "New Ai Tech Softs is a leading software house in Islamabad, Pakistan that provides web development, mobile app development, AI automation, cloud solutions, digital marketing, and custom software development services for modern businesses worldwide.",
+    description: "New Ai Tech Softs is a leading software house in Islamabad, Pakistan that provides web development, mobile app development, AI automation, cloud solutions, digital marketing, and custom software development services for modern businesses worldwide. The company is actively expanding its presence across the USA and UK, bringing its digital solutions to businesses in these markets.",
     vision: "To be the globally trusted partner for digital transformation — setting new benchmarks in innovation and technology.",
     mission: "Empower businesses with cutting-edge solutions that drive sustainable growth and operational efficiency.",
     promise: ["100% confidentiality", "Technical response within 24 hours", "Enterprise-grade encryption for project data"]
@@ -35,7 +35,7 @@ const companyKnowledge = {
       facebook: "https://www.facebook.com/newaitechsofts/",
       instagram: "https://www.instagram.com/newaitechsofts/"
     },
-    serviceArea: "UK, USA, UAE, and Pakistan"
+    serviceArea: "Pakistan, UAE, and actively expanding across the USA & UK"
   },
 
   founder: {
@@ -143,6 +143,30 @@ const companyKnowledge = {
       description: "Transform raw footage into compelling stories with professional video editing.",
       features: ["YouTube Video Editing", "Social Media Reels", "Corporate Videos", "Motion Graphics", "Color Grading"],
       tools: ["Premiere Pro", "DaVinci Resolve", "After Effects"]
+    },
+    {
+      name: "UGC Video Ads",
+      slug: "ugc-video-ads",
+      tagline: "Scroll-Stopping Ads",
+      description: "Authentic UGC-style ads, product videos and reels scripted, shot and edited for TikTok, Reels, Shorts and Meta ads.",
+      features: ["UGC Ads", "Product Videos", "Reels & Shorts", "Promo Videos", "Brand Stories", "Ad Creatives"],
+      tools: ["Premiere Pro", "After Effects", "CapCut", "TikTok Ads Manager", "Meta Ads"]
+    },
+    {
+      name: "Shopify Store Development",
+      slug: "shopify-store-development",
+      tagline: "Sell Online Faster",
+      description: "High-converting custom Shopify stores with optimized themes, checkout, app integrations and migration.",
+      features: ["Custom Shopify Themes", "Product Page Optimization", "Checkout Optimization", "App Integrations", "Store Migration", "Speed Optimization"],
+      tools: ["Shopify", "Shopify Plus", "Liquid", "Klaviyo", "Google Analytics"]
+    },
+    {
+      name: "Shopify Marketing",
+      slug: "shopify-marketing",
+      tagline: "Traffic That Converts",
+      description: "Grow Shopify stores with Meta/TikTok ads, email flows, Shopify SEO, UGC creatives and CRO audits.",
+      features: ["Meta & TikTok Ads", "Email & SMS Flows", "Shopify SEO", "UGC Ad Creatives", "CRO Audits", "Google Shopping Ads"],
+      tools: ["Meta Ads", "TikTok Ads Manager", "Klaviyo", "Google Ads", "CapCut"]
     },
     {
       name: "IT Solutions & Consulting",

@@ -130,6 +130,8 @@ const ReviewCard = ({ name, role, company, text, rating }) => (
         <img
           src={`https://ui-avatars.com/api/?name=${name}&background=0C447C&color=fff&bold=true`}
           alt={name}
+          loading="lazy"
+          decoding="async"
           className="w-11 h-11 rounded-full border border-white/10"
         />
         <div>

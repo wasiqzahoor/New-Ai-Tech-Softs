@@ -5,13 +5,15 @@ import { Helmet } from 'react-helmet-async';
 import { 
   FaArrowLeft, FaCheckCircle, FaChevronRight, FaRocket, FaPhone,
   FaReact, FaMobileAlt, FaFigma, FaSearch, FaAws, FaRobot,
-  FaCode, FaDesktop, FaPalette, FaVideo, FaCogs, FaHeadset
+  FaCode, FaDesktop, FaPalette, FaVideo, FaCogs, FaHeadset,
+  FaShopify, FaBullhorn
 } from 'react-icons/fa';
 import { services } from '../data/servicesData';
 
 const iconMap = {
   FaReact, FaMobileAlt, FaFigma, FaSearch, FaAws, FaRobot,
   FaCode, FaDesktop, FaPalette, FaVideo, FaCogs, FaHeadset,
+  FaShopify, FaBullhorn,
 };
 
 const colorMap = {

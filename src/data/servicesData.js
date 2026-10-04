@@ -7,7 +7,7 @@ export const services = [
     title: "Web Development",
     tagline: "The Digital Core",
     shortDesc: "Build fast, responsive and SEO-optimized websites using React, Next.js, Node.js and the MERN stack. We develop custom web applications, SaaS platforms, e-commerce stores and enterprise portals that rank higher on Google and convert more visitors into customers.",
-    description: "We architect robust, high-performance web applications tailored to your business. Our focus is on clean code, security, and exceptional user engagement. From custom SaaS platforms to enterprise portals, we deliver solutions that scale with your vision.",
+    description: "We architect robust, high-performance web applications tailored to your business. Our focus is on clean code, security, and exceptional user engagement. From custom SaaS platforms to enterprise portals, we deliver solutions that scale with your vision — now serving clients across the USA and UK.",
     icon: "FaReact",
     color: "cyan",
     features: ["Custom SaaS Platforms", "Next.js & MERN Stack", "Enterprise Portals", "Headless CMS Solutions", "E-commerce Solutions", "Progressive Web Apps"],
@@ -347,6 +347,93 @@ export const services = [
       { q: "What are your support hours?", a: "We offer 24/7 support for critical issues and business-hours support for standard queries." },
       { q: "What's your average response time?", a: "Critical issues: under 15 minutes. High priority: under 1 hour. Standard: under 4 hours." },
       { q: "Do you support third-party software?", a: "Yes, we provide support for your entire tech stack including third-party integrations and APIs." }
+    ]
+  },
+  {
+    id: 13,
+    slug: "ugc-video-ads",
+    title: "UGC Video Ads",
+    tagline: "Scroll-Stopping Ads",
+    shortDesc: "Authentic UGC-style ads, product videos and reels that stop the scroll and sell. We script, shoot and edit high-converting videos for TikTok, Instagram Reels, YouTube Shorts and Meta ads — built around hook, proof and CTA frameworks.",
+    description: "We create authentic, high-converting UGC video ads that feel native to every feed. From concept and scripting to shooting, editing, captions and ad-ready variants — our videos are engineered around proven direct-response frameworks: strong hooks, social proof, and clear calls to action that turn viewers into customers.",
+    icon: "FaVideo",
+    color: "red",
+    features: ["UGC Ads", "Product Videos", "Reels & Shorts", "Promo Videos", "Brand Stories", "Ad Creatives"],
+    tools: ["Premiere Pro", "After Effects", "DaVinci Resolve", "CapCut", "TikTok Ads Manager", "Meta Ads"],
+    images: [
+      "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800",
+      "https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=800",
+      "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800"
+    ],
+    process: [
+      { step: "Concept & Script", desc: "We research your product, audience and competitors, then write scroll-stopping scripts built on hook, proof and CTA frameworks." },
+      { step: "Shoot Direction", desc: "Authentic UGC-style shoots with creators, product close-ups and real-use scenarios that feel native to every platform." },
+      { step: "Edit & Captions", desc: "Fast-paced edits with captions, motion graphics, sound design and color grading optimized for sound-off viewing." },
+      { step: "Ad Variants", desc: "Multiple hooks, formats and aspect ratios (9:16, 1:1, 16:9) so you can test and scale winning creatives." },
+      { step: "Launch & Iterate", desc: "We help you launch on TikTok, Reels, Shorts and Meta ads — then iterate on performance data to keep improving ROAS." }
+    ],
+    faqs: [
+      { q: "What is UGC advertising?", a: "UGC (User-Generated Content) ads look like authentic customer videos instead of polished commercials. They consistently outperform traditional ads on TikTok, Reels and Meta." },
+      { q: "How many videos do I get?", a: "Packages start from 4 videos per month. Each video includes multiple hook variants and platform-ready formats." },
+      { q: "Do you handle posting and ad management?", a: "We deliver ready-to-post videos, and can also manage your TikTok, Meta and Google ad campaigns as an add-on service." }
+    ]
+  },
+  {
+    id: 14,
+    slug: "shopify-store-development",
+    title: "Shopify Store Development",
+    tagline: "Sell Online Faster",
+    shortDesc: "Launch a high-converting Shopify store designed to sell from day one. We build custom Shopify themes, product pages, checkout optimization, app integrations and migration from WooCommerce or custom platforms — everything your online store needs to grow.",
+    description: "We design and develop custom Shopify stores that turn visitors into repeat customers. From pixel-perfect themes and mobile-first product pages to checkout optimization, payment gateways, shipping setup and third-party app integrations — we handle the complete store build so you can focus on selling.",
+    icon: "FaShopify",
+    color: "emerald",
+    features: ["Custom Shopify Themes", "Product Page Optimization", "Checkout Optimization", "App Integrations", "Store Migration", "Speed Optimization"],
+    tools: ["Shopify", "Shopify Plus", "Liquid", "Klaviyo", "Judge.me", "Replo", "Google Analytics"],
+    images: [
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800",
+      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800",
+      "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=800"
+    ],
+    process: [
+      { step: "Discovery", desc: "We study your products, customers and competitors to plan a store structure built for conversions." },
+      { step: "Design", desc: "Custom, mobile-first theme design matching your brand with conversion-focused layouts." },
+      { step: "Development", desc: "Theme build, product setup, collections, payment gateways, shipping and app integrations." },
+      { step: "Optimization", desc: "Speed optimization, checkout flow improvements and analytics setup before launch." },
+      { step: "Launch & Support", desc: "Store launch with testing, staff training and ongoing support as you scale." }
+    ],
+    faqs: [
+      { q: "How long does a Shopify store take to build?", a: "A standard store takes 2-4 weeks. Custom Plus builds with migrations take 4-8 weeks." },
+      { q: "Can you migrate my existing store to Shopify?", a: "Yes, we migrate products, customers, orders and content from WooCommerce, Wix, Magento or custom platforms without losing SEO rankings." },
+      { q: "Do you provide ongoing store maintenance?", a: "Yes, we offer maintenance plans covering updates, new features, CRO improvements and priority support." }
+    ]
+  },
+  {
+    id: 15,
+    slug: "shopify-marketing",
+    title: "Shopify Marketing",
+    tagline: "Traffic That Converts",
+    shortDesc: "Grow your Shopify store with marketing that actually drives sales. We run Meta and TikTok ads, email and SMS flows, SEO for product pages, UGC ad creatives and CRO audits — a complete growth engine for your online store.",
+    description: "We turn Shopify stores into growth machines. Our marketing combines paid advertising (Meta, TikTok, Google Shopping), lifecycle email and SMS, product-page SEO, scroll-stopping UGC creatives and continuous conversion rate optimization — all measured against one metric: profitable revenue growth for stores in the USA, UK, and beyond.",
+    icon: "FaBullhorn",
+    color: "teal",
+    features: ["Meta & TikTok Ads", "Email & SMS Flows", "Shopify SEO", "UGC Ad Creatives", "CRO Audits", "Google Shopping Ads"],
+    tools: ["Meta Ads", "TikTok Ads Manager", "Klaviyo", "Google Ads", "Triple Whale", "Hotjar", "CapCut"],
+    images: [
+      "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=800",
+      "https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=800",
+      "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800"
+    ],
+    process: [
+      { step: "Audit", desc: "Deep CRO and analytics audit of your store, ads and funnels to find the biggest growth leaks." },
+      { step: "Strategy", desc: "A prioritized growth roadmap across paid ads, email, SEO and creatives with clear revenue targets." },
+      { step: "Creatives", desc: "UGC ads, product videos and ad variants produced in-house for every campaign." },
+      { step: "Launch", desc: "Campaigns launched across Meta, TikTok and Google with structured testing." },
+      { step: "Scale", desc: "Winners scaled, losers killed. Weekly reporting and continuous CRO improvements." }
+    ],
+    faqs: [
+      { q: "What ad budget do I need?", a: "We recommend starting from $1,000/month ad spend for meaningful testing. Our management fee is separate and depends on scope." },
+      { q: "Do you only work with Shopify stores?", a: "Shopify is our specialty, but we also market WooCommerce and custom e-commerce stores." },
+      { q: "How fast will I see results?", a: "Paid ads show initial data in 2-4 weeks. Email flows and SEO compound over 2-3 months for lasting growth." }
     ]
   }
 ];

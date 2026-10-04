@@ -28,6 +28,7 @@ const Blog = React.lazy(() => import('./pages/Blog'));
 const BlogDetail = React.lazy(() => import('./pages/BlogDetail'));
 const ProductPage = React.lazy(() => import('./pages/Product'));
 const ProductDetail = React.lazy(() => import('./pages/ProductDetail'));
+const NotFound = React.lazy(() => import('./pages/NotFound'));
 
 const LoadingFallback = () => (
   <div className="flex items-center justify-center min-h-[60vh]">
@@ -127,7 +128,7 @@ function App() {
                 <Route path="/product/:slug" element={<ProductDetail />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/:slug" element={<BlogDetail />} />
-                <Route path="*" element={<Home />} />
+                <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>
           </main>

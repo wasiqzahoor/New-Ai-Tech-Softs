@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   FaReact, FaMobileAlt, FaFigma, FaSearch, FaAws, FaRobot, FaRocket,
-  FaChevronRight, FaCode, FaDesktop, FaPalette, FaVideo, FaCogs, FaHeadset
+  FaChevronRight, FaCode, FaDesktop, FaPalette, FaVideo, FaCogs, FaHeadset,
+  FaShopify, FaBullhorn
 } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -10,6 +11,7 @@ import { services } from '../data/servicesData';
 
 const iconMap = {
   FaReact, FaMobileAlt, FaFigma, FaSearch, FaAws, FaRobot, FaCode, FaDesktop, FaPalette, FaVideo, FaCogs, FaHeadset,
+  FaShopify, FaBullhorn,
 };
 
 const colorMap = {
@@ -42,7 +44,7 @@ const ServiceCard = ({ service, index }) => {
       className="group relative"
     >
       <Link to={`/service/${service.slug}`} className="block h-full">
-        <div className="relative h-full min-h-[420px] bg-white/[0.05] backdrop-blur-xl rounded-2xl border border-white/[0.08] overflow-hidden transition-all duration-400 hover:bg-[#0a0a14] hover:border-white/[0.15] flex flex-col">
+        <div className="relative h-full min-h-[420px] bg-white/[0.05] backdrop-blur-xl rounded-2xl border border-white/[0.08] overflow-hidden transition-all duration-400 hover:bg-[#1db9f6] hover:border-white/[0.15] flex flex-col">
 
           {/* Image Section */}
           <div className="relative h-44 shrink-0 overflow-hidden">
@@ -59,14 +61,14 @@ const ServiceCard = ({ service, index }) => {
           {/* Icon - Overlapping */}
           <div className="relative flex justify-center -mt-8 z-10 shrink-0">
             <motion.div
-              className="w-16 h-16 rounded-2xl bg-[#0a0a14] backdrop-blur-md border border-white/[0.12] flex items-center justify-center shadow-xl group-hover:border-white/[0.2] transition-all duration-300"
+              className="w-16 h-16 rounded-2xl bg-[#0a0a14] backdrop-blur-md border border-white/[0.12] flex items-center justify-center shadow-xl group-hover:border-black/30 transition-all duration-300"
             >
               <motion.div
                 className="text-2xl"
                 animate={{ scale: isHovered ? [1, 1.2, 1] : 1 }}
                 transition={{ duration: 0.4 }}
               >
-                <span className={colors.primary}><IconComp /></span>
+                <span className={`${colors.primary} group-hover:text-black transition-colors duration-300`}><IconComp /></span>
               </motion.div>
             </motion.div>
           </div>
@@ -75,19 +77,19 @@ const ServiceCard = ({ service, index }) => {
           <div className="px-5 pt-4 pb-5 flex flex-col flex-1">
             {/* Tagline */}
             <div className="flex items-center gap-2 mb-1.5">
-              <div className="h-[2px] w-5 bg-gradient-to-r from-brand-mid to-transparent rounded-full" />
-              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-mid font-heading">
+              <div className="h-[2px] w-5 bg-gradient-to-r from-brand-mid to-transparent group-hover:from-black rounded-full transition-all duration-300" />
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-mid group-hover:text-black font-heading transition-colors duration-300">
                 {service.tagline}
               </span>
             </div>
 
             {/* Title */}
-            <h3 className="text-lg font-heading font-bold text-white mb-2 leading-tight group-hover:text-brand-cyan transition-colors duration-300">
+            <h3 className="text-lg font-heading font-bold text-white mb-2 leading-tight group-hover:text-black transition-colors duration-300">
               {service.title}
             </h3>
 
             {/* Description */}
-            <p className="text-white/45 text-[13px] leading-relaxed mb-4 font-body line-clamp-3">
+            <p className="text-white/45 group-hover:text-black text-[13px] leading-relaxed mb-4 font-body line-clamp-3 transition-colors duration-300">
               {service.shortDesc}
             </p>
 
@@ -96,7 +98,7 @@ const ServiceCard = ({ service, index }) => {
               {service.features.slice(0, 3).map((f, i) => (
                 <span
                   key={i}
-                  className="text-[10px] font-semibold px-2.5 py-1 rounded-md border border-white/[0.06] bg-white/[0.04] text-white/40 group-hover:bg-white/[0.08] group-hover:text-white/60 group-hover:border-white/[0.1] transition-all duration-300"
+                  className="text-[10px] font-semibold px-2.5 py-1 rounded-md border border-white/[0.06] bg-white/[0.04] text-white/40 group-hover:bg-black/10 group-hover:text-black group-hover:border-black/20 transition-all duration-300"
                 >
                   {f}
                 </span>
@@ -104,12 +106,12 @@ const ServiceCard = ({ service, index }) => {
             </div>
 
             {/* CTA */}
-            <div className="mt-auto flex items-center justify-between pt-3 border-t border-white/[0.06]">
-              <span className="text-xs font-bold flex items-center gap-2 transition-all duration-300 font-heading text-brand-cyan opacity-0 group-hover:opacity-100 translate-x-[-8px] group-hover:translate-x-0">
+            <div className="mt-auto flex items-center justify-between pt-3 border-t border-white/[0.06] group-hover:border-black/20 transition-colors duration-300">
+              <span className="text-xs font-bold flex items-center gap-2 transition-all duration-300 font-heading text-brand-cyan group-hover:text-black opacity-0 group-hover:opacity-100 translate-x-[-8px] group-hover:translate-x-0">
                 Explore Service
                 <FaChevronRight className="text-[10px]" />
               </span>
-              <div className="w-9 h-9 rounded-full border border-white/[0.08] flex items-center justify-center text-white/30 group-hover:text-brand-cyan group-hover:border-brand-cyan/30 transition-all duration-300">
+              <div className="w-9 h-9 rounded-full border border-white/[0.08] flex items-center justify-center text-white/30 group-hover:text-black group-hover:border-black/30 transition-all duration-300">
                 <FaChevronRight className="text-[10px]" />
               </div>
             </div>
@@ -183,7 +185,7 @@ const Services = () => {
               ]
             },
             "areaServed": "Worldwide",
-            "serviceType": ["Web Development", "Mobile App Development", "UI/UX Design", "AI Chatbots & AI Agents", "SaaS Development", "Digital Marketing", "Cloud & DevOps", "Desktop Applications", "Graphic Designing", "Video Editing", "IT Solutions & Consulting", "Technical Support Services"]
+            "serviceType": ["Web Development", "Mobile App Development", "UI/UX Design", "AI Chatbots & AI Agents", "SaaS Development", "Digital Marketing", "Cloud & DevOps", "Desktop Applications", "Graphic Designing", "Video Editing", "UGC Video Ads", "Shopify Store Development", "Shopify Marketing", "IT Solutions & Consulting", "Technical Support Services"]
           })}
         </script>
       </Helmet>
@@ -227,7 +229,7 @@ const Services = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 1, duration: 0.8 }}
               >
-                From web development to AI solutions – end-to-end digital services from a leading software house in Islamabad.
+                From web development to AI solutions – end-to-end digital services from a leading software house in Islamabad, now bringing our expertise to businesses across the USA & UK.
               </motion.p>
               
               <motion.div 
