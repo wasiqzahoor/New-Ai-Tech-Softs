@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import emailjs from '@emailjs/browser';
 import { Link } from 'react-router-dom';
 import { FaFacebookF, FaLinkedinIn, FaInstagram, FaSpinner, FaCheckCircle, FaEnvelope, FaMapMarkerAlt, FaPaperPlane, FaWhatsapp } from 'react-icons/fa';
 import logo from '../assets/logo.webp';
@@ -9,26 +8,35 @@ const Footer = () => {
   const [loading, setLoading] = useState(false);
   const [sent, setSent] = useState(false);
 
-  const handleSubscribe = (e) => {
+  const handleSubscribe = async (e) => {
     e.preventDefault();
     if (!email) return;
     setLoading(true);
 
-    const serviceID = 'service_34q2txe';
-    const templateID = 'template_baef89a';
-    const publicKey = 'N6j59YQ27zhPSV4eQ';
-    const templateParams = { user_email: email };
+    try {
+      const response = await fetch('https://formspree.io/f/mbgdrvqk', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          email: email,
+          type: 'Newsletter Subscription',
+          _subject: 'New Newsletter Subscriber - New Ai Tech Softs',
+        }),
+      });
 
-    emailjs.send(serviceID, templateID, templateParams, publicKey)
-      .then(() => console.log('Email sent'))
-      .catch((err) => console.log('Error:', err));
+      if (!response.ok) throw new Error('Subscription failed');
 
-    setTimeout(() => {
       setLoading(false);
       setSent(true);
       setEmail('');
       setTimeout(() => setSent(false), 3000);
-    }, 1000);
+    } catch (err) {
+      console.error('Newsletter error:', err);
+      setLoading(false);
+    }
   };
 
   return (

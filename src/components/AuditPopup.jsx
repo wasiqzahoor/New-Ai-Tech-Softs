@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaTimes, FaCheckCircle, FaSpinner } from 'react-icons/fa';
-import emailjs from '@emailjs/browser';
 
 const STORAGE_KEY = 'nts-audit-popup-seen';
 const SHOW_DELAY_MS = 7000;
@@ -73,7 +72,7 @@ const AuditPopup = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
     if (!form.name.trim() || !form.email.trim() || !form.service) {
@@ -82,33 +81,32 @@ const AuditPopup = () => {
     }
     setIsSending(true);
 
-    emailjs
-      .send(
-        'service_34q2txe',
-        'template_to8li2i',
-        {
-          user_name: form.name,
-          user_email: form.email,
-          user_phone: '',
-          project_type: `Homepage Popup Inquiry — ${form.service}`,
-          message: form.message
-            ? `Service Needed: ${form.service}\nMessage: ${form.message}\n\nThis inquiry came from the homepage popup.`
-            : `Service Needed: ${form.service}\n\nThis inquiry came from the homepage popup.`,
-          to_email: 'info@newaitechsofts.com',
+    try {
+      const response = await fetch('https://formspree.io/f/mbgdrvqk', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
         },
-        'N6j59YQ27zhPSV4eQ'
-      )
-      .then(
-        () => {
-          setIsSending(false);
-          setIsSent(true);
-          markSeen();
-        },
-        () => {
-          setIsSending(false);
-          setError('Failed to send. Please check your connection or contact us at info@newaitechsofts.com');
-        }
-      );
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          service: form.service,
+          message: form.message || 'Homepage popup inquiry',
+          _subject: `Homepage Popup Inquiry from ${form.name}`,
+        }),
+      });
+
+      if (!response.ok) throw new Error('Form submission failed');
+
+      setIsSending(false);
+      setIsSent(true);
+      markSeen();
+    } catch (err) {
+      console.error('Popup form error:', err);
+      setIsSending(false);
+      setError('Failed to send. Please check your connection or contact us at info@newaitechsofts.com');
+    }
   };
 
   return (

@@ -44,37 +44,28 @@ const ServiceCard = ({ service, index }) => {
       className="group relative"
     >
       <Link to={`/service/${service.slug}`} className="block h-full">
-        <div className="relative h-full min-h-[420px] bg-white/[0.05] backdrop-blur-xl rounded-2xl border border-white/[0.08] overflow-hidden transition-all duration-400 hover:bg-[#1db9f6] hover:border-white/[0.15] flex flex-col">
+        <div className="relative h-full bg-white/[0.05] backdrop-blur-xl rounded-2xl border border-white/[0.08] overflow-hidden transition-all duration-400 hover:bg-[#1db9f6] hover:border-white/[0.15] hover:-translate-y-1.5 hover:shadow-2xl flex flex-col p-6">
 
-          {/* Image Section */}
-          <div className="relative h-44 shrink-0 overflow-hidden">
-            <motion.img
-              src={service.images[0]}
-              alt={service.title}
-              className="w-full h-full object-cover"
-              animate={{ scale: isHovered ? 1.08 : 1 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a14] via-black/20 to-transparent" />
-          </div>
-
-          {/* Icon - Overlapping */}
-          <div className="relative flex justify-center -mt-8 z-10 shrink-0">
+          {/* Icon + Number row */}
+          <div className="flex items-start justify-between mb-5">
             <motion.div
-              className="w-16 h-16 rounded-2xl bg-[#0a0a14] backdrop-blur-md border border-white/[0.12] flex items-center justify-center shadow-xl group-hover:border-black/30 transition-all duration-300"
+              className="w-14 h-14 rounded-2xl bg-[#0a0a14] border border-white/[0.12] flex items-center justify-center shadow-xl group-hover:border-black/30 group-hover:bg-black/10 transition-all duration-300"
             >
               <motion.div
                 className="text-2xl"
-                animate={{ scale: isHovered ? [1, 1.2, 1] : 1 }}
+                animate={{ scale: isHovered ? [1, 1.2, 1] : 1, rotate: isHovered ? [0, -8, 0] : 0 }}
                 transition={{ duration: 0.4 }}
               >
                 <span className={`${colors.primary} group-hover:text-black transition-colors duration-300`}><IconComp /></span>
               </motion.div>
             </motion.div>
+            <span className="font-heading font-bold text-4xl text-white/[0.07] group-hover:text-black/10 transition-colors duration-300 leading-none">
+              {String(index + 1).padStart(2, '0')}
+            </span>
           </div>
 
           {/* Content */}
-          <div className="px-5 pt-4 pb-5 flex flex-col flex-1">
+          <div className="flex flex-col flex-1">
             {/* Tagline */}
             <div className="flex items-center gap-2 mb-1.5">
               <div className="h-[2px] w-5 bg-gradient-to-r from-brand-mid to-transparent group-hover:from-black rounded-full transition-all duration-300" />
@@ -84,7 +75,7 @@ const ServiceCard = ({ service, index }) => {
             </div>
 
             {/* Title */}
-            <h3 className="text-lg font-heading font-bold text-white mb-2 leading-tight group-hover:text-black transition-colors duration-300">
+            <h3 className="text-xl font-heading font-bold text-white mb-2 leading-tight group-hover:text-black transition-colors duration-300">
               {service.title}
             </h3>
 

@@ -393,6 +393,75 @@ Ready to build your digital presence? Contact New Ai Tech Softs today.`,
     category: "Case Study"
   },
   {
+    id: 26,
+    slug: "new-ai-tech-softs-services-how-to-get-started",
+    title: "What Services Does New Ai Tech Softs Offer — And How to Get Started?",
+    excerpt: "A complete guide to all 15 services offered by New Ai Tech Softs (Pvt) Ltd — web development, apps, AI, marketing, e-commerce and more — plus exactly how to hire us for your project in 4 simple steps.",
+    content: `New Ai Tech Softs (Pvt) Ltd is a full-service software house helping businesses build, grow, automate and scale. But with 15 professional services on offer, many clients ask the same two questions: what exactly do you do — and how do I get started? This guide answers both.
+
+Our services fall into five simple groups:
+
+## 1. Build — Websites, Apps & Stores
+
+- Web Development: fast, SEO-optimized websites, SaaS platforms and enterprise portals using React, Next.js and the MERN stack.
+- Mobile App Development: cross-platform iOS and Android apps with Flutter and React Native.
+- UI/UX Design: user research, wireframes, prototypes and complete design systems in Figma.
+- Shopify Store Development: high-converting custom Shopify themes, checkout optimization, app integrations and store migration.
+- Desktop Application Development: reliable Windows, macOS and Linux software.
+
+If you need something customers can click, tap or buy from — it lives in this group.
+
+## 2. Grow — Marketing That Brings Customers
+
+- Digital Marketing: SEO, Google Ads, social media and email automation that drive qualified traffic.
+- Shopify Marketing: Meta and TikTok ads, email/SMS flows, Shopify SEO and CRO audits built for store revenue.
+- Graphic Designing: logos, brand identity, social media graphics and packaging.
+
+If your problem is traffic, leads or sales — start here.
+
+## 3. Automate — AI & Intelligent Systems
+
+- AI Chatbots & AI Agents: RAG-powered chatbots, WhatsApp automation and workflow AI that cut costs by 40-70%.
+- SaaS Development: complete software products from MVP to enterprise scale.
+- Cloud & DevOps: AWS architecture, Docker, CI/CD pipelines and 99.9% uptime.
+- IT Solutions & Consulting: digital transformation roadmaps and system architecture.
+
+If you want machines to handle repetitive work — this is your group.
+
+## 4. Create — Video & Content
+
+- Video Editing: YouTube videos, corporate films, motion graphics and color grading.
+- UGC Video Ads: authentic scroll-stopping ads, product videos and reels for TikTok, Reels, Shorts and Meta ads.
+
+If you need attention and engagement — we script, shoot and edit it.
+
+## 5. Support — Always-On Help
+
+- Technical Support Services: 24/7 help desk, bug fixes, server monitoring and security response.
+
+Already have systems running? We keep them running.
+
+## How to Get Our Services in 4 Simple Steps
+
+Getting started with New Ai Tech Softs takes minutes:
+
+1. Contact Us: Fill out the contact form at newaitechsofts.com/contact, message us on WhatsApp at +92 341 5287464, or email info@newaitechsofts.com. Tell us what you need — even a rough idea is enough.
+
+2. Free Consultation: Our team reviews your requirements and schedules a free consultation to understand your goals, timeline and budget.
+
+3. Proposal & Plan: You receive a clear proposal with scope, timeline and pricing. No hidden costs, no confusing jargon.
+
+4. We Build, You Grow: Our developers, designers and marketers execute the project with regular updates — and stay with you after launch with support and maintenance.
+
+We serve clients locally in Pakistan and the UAE — and we are actively expanding across the USA and UK.
+
+Ready to start? Contact New Ai Tech Softs today and tell us what you want to build.`,
+    date: "October 4, 2026",
+    author: "Wasiq Zahoor",
+    img: "/logo.webp",
+    category: "Company Guide"
+  },
+  {
     id: 21,
     slug: "everceutical-website-redesign-case-study",
     title: "EverCeutical: Premium Website Redesign for a Korean Exosome Biotechnology Company",

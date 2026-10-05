@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import emailjs from '@emailjs/browser';
-import { FaEnvelope, FaWhatsapp, FaMapMarkerAlt, FaLinkedin, FaFacebook, FaInstagram, FaPaperPlane, FaGlobeAmericas, FaShieldAlt, FaRocket, FaSpinner } from 'react-icons/fa';
+import { FaEnvelope, FaWhatsapp, FaMapMarkerAlt, FaLinkedin, FaFacebook, FaInstagram, FaPaperPlane, FaGlobeAmericas, FaShieldAlt, FaRocket, FaSpinner, FaCheckCircle, FaTimes, FaExclamationTriangle } from 'react-icons/fa';
 
 const Contact = () => {
   const [isSending, setIsSending] = useState(false);
+  const [popup, setPopup] = useState(null); // 'success' | 'error' | null
   const [formData, setFormData] = useState({
     name: '', email: '', phone: '', projectType: '', message: ''
   });
@@ -14,33 +14,53 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSending(true);
 
-    const serviceID = 'service_34q2txe';
-    const templateID = 'template_to8li2i';
-    const publicKey = 'N6j59YQ27zhPSV4eQ';
-
-    const templateParams = {
-      user_name: formData.name,
-      user_email: formData.email,
-      user_phone: formData.phone,
-      project_type: formData.projectType,
-      message: formData.message,
-      to_email: 'info@newaitechsofts.com'
-    };
-
-    emailjs.send(serviceID, templateID, templateParams, publicKey)
-      .then(() => {
-        alert("Success! Your inquiry has been sent to info@newaitechsofts.com");
-        setFormData({ name: '', email: '', phone: '', projectType: '', message: '' });
-        setIsSending(false);
-      }, () => {
-        alert("Failed to send message. Please check your internet or try later.");
-        setIsSending(false);
+    try {
+      const response = await fetch('https://formspree.io/f/mbgdrvqk', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          projectType: formData.projectType,
+          message: formData.message,
+          _subject: `New Website Inquiry from ${formData.name}`,
+        }),
       });
+
+      if (!response.ok) throw new Error('Form submission failed');
+
+      setFormData({ name: '', email: '', phone: '', projectType: '', message: '' });
+      setIsSending(false);
+      setPopup('success');
+    } catch (err) {
+      console.error('Contact form error:', err);
+      setIsSending(false);
+      setPopup('error');
+    }
   };
+
+  // Lock body scroll + close popup on Escape
+  useEffect(() => {
+    if (!popup) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const onKey = (e) => {
+      if (e.key === 'Escape') setPopup(null);
+    };
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.body.style.overflow = prev;
+      document.removeEventListener('keydown', onKey);
+    };
+  }, [popup]);
 
   const contactCards = [
     { icon: <FaEnvelope />, label: "Email our team", value: "info@newaitechsofts.com" },
@@ -307,6 +327,76 @@ const Contact = () => {
           ))}
         </div>
       </section>
+
+      {/* SUCCESS / ERROR POPUP */}
+      <AnimatePresence>
+        {popup && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[120] flex items-center justify-center p-4 bg-black/70 backdrop-blur-md"
+            onClick={() => setPopup(null)}
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.92, y: 24 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.92, y: 24 }}
+              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative w-full max-w-md bg-[#0d0d18]/95 backdrop-blur-2xl border border-white/[0.12] shadow-2xl rounded-3xl p-8 text-center"
+            >
+              <button
+                onClick={() => setPopup(null)}
+                aria-label="Close"
+                className="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/[0.06] border border-white/[0.1] text-white/60 hover:text-white hover:bg-white/[0.12] flex items-center justify-center transition-all"
+              >
+                <FaTimes />
+              </button>
+
+              {popup === 'success' ? (
+                <>
+                  <div className="w-16 h-16 rounded-full bg-brand-cyan/10 border border-brand-cyan/30 text-brand-cyan text-3xl flex items-center justify-center mx-auto mb-5">
+                    <FaCheckCircle />
+                  </div>
+                  <h3 className="text-2xl font-heading font-bold text-white mb-3">
+                    Message Sent Successfully!
+                  </h3>
+                  <p className="text-white/60 font-body mb-7">
+                    Thanks for reaching out — our team will contact you within 24 hours
+                    at <span className="text-white font-semibold">info@newaitechsofts.com</span>.
+                  </p>
+                  <button
+                    onClick={() => setPopup(null)}
+                    className="w-full bg-gradient-to-r from-brand-mid to-purple-600 text-white py-3.5 rounded-xl font-heading font-bold shadow-lg shadow-brand-mid/25 hover:shadow-brand-mid/40 hover:-translate-y-0.5 transition-all"
+                  >
+                    Continue Browsing
+                  </button>
+                </>
+              ) : (
+                <>
+                  <div className="w-16 h-16 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-3xl flex items-center justify-center mx-auto mb-5">
+                    <FaExclamationTriangle />
+                  </div>
+                  <h3 className="text-2xl font-heading font-bold text-white mb-3">
+                    Failed to Send Message
+                  </h3>
+                  <p className="text-white/60 font-body mb-7">
+                    Please check your internet connection and try again — or reach us
+                    directly on WhatsApp at <span className="text-white font-semibold">+92 341 5287464</span>.
+                  </p>
+                  <button
+                    onClick={() => setPopup(null)}
+                    className="w-full bg-gradient-to-r from-brand-mid to-purple-600 text-white py-3.5 rounded-xl font-heading font-bold shadow-lg shadow-brand-mid/25 hover:shadow-brand-mid/40 hover:-translate-y-0.5 transition-all"
+                  >
+                    Try Again
+                  </button>
+                </>
+              )}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
     </div>
   );

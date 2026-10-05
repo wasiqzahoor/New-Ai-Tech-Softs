@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaPaperPlane, FaTimes, FaComments, FaCalendarAlt, FaHandshake, FaArrowRight, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaPaperPlane, FaTimes, FaComments, FaRobot, FaCalendarAlt, FaHandshake, FaArrowRight, FaLinkedin, FaGithub } from 'react-icons/fa';
 import logo from '../assets/logo.svg';
 
 const QUICK_ACTIONS = [
@@ -140,7 +140,7 @@ export default function Chatbot() {
             </motion.div>
           ) : (
             <motion.div key="chat" initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.8, opacity: 0 }} transition={{ duration: 0.2 }}>
-              <FaComments className="w-6 h-6 text-white" />
+              <FaRobot className="w-6 h-6 text-white" />
             </motion.div>
           )}
         </AnimatePresence>

@@ -33,7 +33,6 @@ const colorMap = {
 const ServiceDetail = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
-  const [currentImage, setCurrentImage] = useState(0);
   const [openFaq, setOpenFaq] = useState(null);
 
   const service = services.find((s) => s.slug === slug);
@@ -42,14 +41,6 @@ const ServiceDetail = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [slug]);
-
-  useEffect(() => {
-    if (!service) return;
-    const timer = setInterval(() => {
-      setCurrentImage((prev) => (prev === service.images.length - 1 ? 0 : prev + 1));
-    }, 4000);
-    return () => clearInterval(timer);
-  }, [service]);
 
   if (!service) {
     return (
@@ -246,107 +237,74 @@ const ServiceDetail = () => {
         </motion.button>
       </div>
 
-      {/* --- HERO: Image Carousel + Title --- */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          
-          {/* Left: Image Carousel */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="relative"
-          >
-            <div className="relative h-[300px] sm:h-[400px] lg:h-[480px] rounded-3xl overflow-hidden border border-white/[0.12] shadow-xl">
-              <AnimatePresence mode="wait">
-                <motion.img
-                  key={currentImage}
-                  src={service.images[currentImage]}
-                  initial={{ opacity: 0, scale: 1.1 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.8 }}
-                  className="absolute inset-0 w-full h-full object-cover"
-                  alt={`${service.title} - Image ${currentImage + 1}`}
-                />
-              </AnimatePresence>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+      {/* --- HERO: Service Intro --- */}
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="space-y-6"
+        >
+          <div className={`inline-flex items-center gap-2 ${colors.bg} ${colors.border} border px-4 py-2 rounded-full`}>
+            <IconComp className={colors.primary} />
+            <span className={`text-xs font-bold uppercase tracking-wider ${colors.primary} font-heading`}>{service.tagline}</span>
+          </div>
 
-              {/* Image Navigation */}
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-                {service.images.map((_, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setCurrentImage(i)}
-                    className={`h-2 rounded-full transition-all duration-300 ${i === currentImage ? 'w-8 bg-brand-mid' : 'w-2 bg-white/30 hover:bg-white/50'}`}
-                  />
-                ))}
-              </div>
+          <div className="flex justify-center">
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="w-20 h-20 rounded-3xl bg-[#0a0a14] border border-white/[0.12] flex items-center justify-center shadow-xl text-4xl"
+            >
+              <span className={colors.primary}><IconComp /></span>
+            </motion.div>
+          </div>
 
-              {/* Image Counter */}
-              <div className="absolute top-4 right-4 bg-white/[0.08] backdrop-blur-md px-3 py-1 rounded-full text-xs text-white/60 font-semibold font-body">
-                {currentImage + 1} / {service.images.length}
-              </div>
-            </div>
-          </motion.div>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-extrabold leading-tight">
+            {service.title.split(' ').map((word, i) => (
+              <span key={i} className={i === service.title.split(' ').length - 1 ? 'text-brand-mid' : 'text-white'}>
+                {word}{' '}
+              </span>
+            ))}
+          </h1>
 
-          {/* Right: Service Info */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-6"
-          >
-            <div className={`inline-flex items-center gap-2 ${colors.bg} ${colors.border} border px-4 py-2 rounded-full`}>
-              <IconComp className={colors.primary} />
-              <span className={`text-xs font-bold uppercase tracking-wider ${colors.primary} font-heading`}>{service.tagline}</span>
-            </div>
+          <p className="text-white/60 text-lg leading-relaxed font-body max-w-2xl mx-auto">{service.description}</p>
 
-            <h1 className="text-4xl sm:text-5xl font-heading font-extrabold leading-tight">
-              {service.title.split(' ').map((word, i) => (
-                <span key={i} className={i === service.title.split(' ').length - 1 ? 'text-brand-mid' : 'text-white'}>
-                  {word}{' '}
-                </span>
+          {/* Features */}
+          <div className="text-left">
+            <h3 className="text-sm font-bold text-white/40 uppercase tracking-widest mb-4 font-heading text-center">What's Included</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {service.features.map((feat, i) => (
+                <motion.div 
+                  key={i} 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.05 }}
+                  className="flex items-center gap-3 bg-white/[0.08] backdrop-blur-xl rounded-xl px-4 py-3 border border-white/[0.12] shadow-xl"
+                >
+                  <FaCheckCircle className={`${colors.primary} shrink-0`} />
+                  <span className="text-sm text-white/80 font-medium font-body">{feat}</span>
+                </motion.div>
               ))}
-            </h1>
-
-            <p className="text-white/60 text-lg leading-relaxed font-body">{service.description}</p>
-
-            {/* Features */}
-            <div>
-              <h3 className="text-sm font-bold text-white/40 uppercase tracking-widest mb-4 font-heading">What's Included</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {service.features.map((feat, i) => (
-                  <motion.div 
-                    key={i} 
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.05 }}
-                    className="flex items-center gap-3 bg-white/[0.08] backdrop-blur-xl rounded-xl px-4 py-3 border border-white/[0.12] shadow-xl"
-                  >
-                    <FaCheckCircle className={`${colors.primary} shrink-0`} />
-                    <span className="text-sm text-white/80 font-medium font-body">{feat}</span>
-                  </motion.div>
-                ))}
-              </div>
             </div>
+          </div>
 
-            {/* CTA */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Link to="/contact" className="flex-1">
-                <button className="w-full bg-gradient-to-r from-brand-mid to-purple-600 text-white px-8 py-4 rounded-full font-heading font-bold text-lg shadow-lg shadow-brand-mid/20 hover:shadow-brand-mid/40 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2">
-                  <FaRocket /> Get Started
-                </button>
-              </Link>
-              <Link to="/contact" className="flex-1">
-                <button className="w-full border border-white/20 text-white bg-white/[0.06] px-8 py-4 rounded-full font-heading font-bold hover:bg-white/[0.12] transition-all flex items-center justify-center gap-2">
-                  <FaPhone /> Talk to Expert
-                </button>
-              </Link>
-            </div>
-          </motion.div>
-        </div>
+          {/* CTA */}
+          <div className="flex flex-col sm:flex-row gap-4 pt-4 max-w-xl mx-auto">
+            <Link to="/contact" className="flex-1">
+              <button className="w-full bg-gradient-to-r from-brand-mid to-purple-600 text-white px-8 py-4 rounded-full font-heading font-bold text-lg shadow-lg shadow-brand-mid/20 hover:shadow-brand-mid/40 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2">
+                <FaRocket /> Get Started
+              </button>
+            </Link>
+            <Link to="/contact" className="flex-1">
+              <button className="w-full border border-white/20 text-white bg-white/[0.06] px-8 py-4 rounded-full font-heading font-bold hover:bg-white/[0.12] transition-all flex items-center justify-center gap-2">
+                <FaPhone /> Talk to Expert
+              </button>
+            </Link>
+          </div>
+        </motion.div>
       </section>
 
       {/* --- TOOLS & TECH --- */}

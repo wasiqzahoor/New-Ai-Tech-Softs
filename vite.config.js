@@ -1,10 +1,8 @@
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import react from '@vitejs/plugin-react'
 import Sitemap from 'vite-plugin-sitemap'
 
-const GROQ_API_KEY = process.env.GROQ_API_KEY
-
-function chatApiPlugin() {
+function chatApiPlugin(GROQ_API_KEY) {
   return {
     name: 'chat-api-plugin',
     configureServer(server) {
@@ -96,7 +94,15 @@ PROCESS: 1.Discovery 2.Strategy & Design 3.Development 4.QA 5.Deployment.`
 }
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => {
+  // Load .env file vars (Vite does NOT put them in process.env by itself)
+  const env = loadEnv(mode, process.cwd(), '');
+  const GROQ_API_KEY = env.GROQ_API_KEY || process.env.GROQ_API_KEY;
+  if (!GROQ_API_KEY) {
+    console.warn('[chat-api] WARNING: GROQ_API_KEY is missing — chatbot will return 503. Add it to .env (dev) or Vercel env vars (prod).');
+  }
+
+  return {
    build: {
     // Split big vendor libs into separate cached chunks so repeat
     // visits download much less (long-term browser caching)
@@ -112,7 +118,7 @@ export default defineConfig({
   },
   plugins: [
     react(),
-    chatApiPlugin(),
+    chatApiPlugin(GROQ_API_KEY),
     Sitemap({
       hostname: 'https://newaitechsofts.com',
       dynamicRoutes: [
@@ -182,6 +188,7 @@ export default defineConfig({
         '/blog/bionature-complete-digital-presence-case-study',
         '/blog/vesco-science-korean-biotech-website-case-study',
         '/blog/nanoventera-exosome-website-case-study',
+        '/blog/new-ai-tech-softs-services-how-to-get-started',
         '/blog/everceutical-website-redesign-case-study',
         '/blog/meet-chaudhary-wasiq-zahoor',
         '/blog/saas-development-2026-mvp-to-enterprise',
@@ -216,5 +223,6 @@ export default defineConfig({
         },
       ],
     })
-  ]
+   ]
+  };
 })
